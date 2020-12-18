@@ -1,0 +1,1850 @@
+ CURSO EM VÍDEO 
+
+ ++USO DO LINUX (ONDE É USADO O LINUX)++
+ 
+ Servidores 70% roda linux (um dos sistemas UNIX);
+ Cruster de alto desempenho (100% usam linux)
+ Sistemas Embarcados (Android)
+ Games (PS 2 teve porte do Linux) nos PS3 e PS4 Utilizam o FreeBSD (Padrão UNIX), Assim como 
+ os MACs onde a parte do Kernel e livre, porém o sistema grático é pago.(proprietário).
+
+ Obs: a parte de rede do windows vem do FREEBSD.
+ Curiosidade:  
+ Atualmente o linux mantém projetos em linux, ao contrário da afirmação do STEVE BALLMER chamar o linux de * *,
+ o SATYA NADELLA afirmou que amavam linux, inclusive a Microsoft é uma mantenedora da LINUX FUNDATION.(mantenedora PLATINUN).
+
+ FIREFOX OS
+ WEB-OS  em televisores, sendo que algumas usam o ANDROID TV | LG usa WEB-OS
+ TIZEN DA SANSUNG
+
+ Usado em escolas em PAIZES como na SUIÇA para sistemas educacionais de maneira a reduzir custos 
+ Projeto prefeituras de Barcelona, MUNIC, VIENA. 
+
+ NO BRASIL
+ Forças Armadas, não somente por questões do custo mais também porque possuem acesso aos códigos fontes
+
+ EMPRESAS QUE USAM LINUX
+ IBM  - " Linux o futuro é aberto ".
+ INTEL
+ AMD
+ GOOGLE
+
+ EMPRESAS 
+ SHELL
+ PETROBRAS  - (POSSUEM SUPOERCOMPUTADOR PARA PROJETOS DE PROSPECÇÃO DE PETRÓLEO)
+ PIXAR
+ ORACLE (ORACLE LINUX)
+ BOING
+ MOTOROLA 
+ SONY
+ CISCO 
+ NOVEL 
+ HP 
+ NASA 
+
+
+ ++ DISTRIBUÇÃO USADA NO CURSO ++
+ LINUX MINT - INTEFACE CINAMOM, FORMATO ELEGANTE PARA QUEM ESTA COMEÇANDO - UMA INTERFACE PARECIDA COM WINDOWS
+
+ Curiosidade - Sistema OpenWRT utilizada em roteadores WIFI, outro exemplo RAPSPERY PY.
+
+ MITOS = Achar que todos softwares para linux é de graça, existem softwares pagos, o que não é nada de errado.
+ Existem softwares gratuítos que não é livre. ou seja live para uso, mais o código não é aberto. exemplo clássico
+ WHATSAPP, ele e gratis ninguem pagou mais usa. porém ninguem altera.
+
+ retrocomputaria (computação gráfica).
+
+ ++ DE ONDE VEIO O LINUX ++
+
+ O Inicio em 1965 nos laboratórios da BELL LABS, que pertencia a AT&T, para quem não conhece ou não sabe, os transistores
+ foram criados lá nessa empresa, começou desenvoler um projeto de um sistema operacional de tempo compartilhado que era 
+ MULTICS, era um projeto de empresa junto com o governo Americano. em 1969 A BELL saiu do projeto e começou a desenvolver
+ seu próprio sistema operacional chamado UNIX (UNIPLEXED INFORMATION AND COMPUTING SYSTEM), dois desenvolvedores e em particular
+ DENNIS RITCHIE que faleceu a pouco tempo, das mãos desse homem sairam a linguagem C e UNICS, foi um dos primeiros compiladores da 
+ linguagem B, o outro desenvolvedor KEN TOMPSON, o sitema estava sendo feito em ASSEMBLER, linguágem de máquina, porém a linguagem
+ não é portável ou seja, na época não rodava em comptuadores de diferente arquitetura, teria que reescrever o código. entãnto para isso
+ eles portaram o sistema para uma linguagem chamada BCPL, dessa linguagem que posteriormente virou a linguagem B, após tantas modificações
+ na linguagem rebatizaram para linguagem C. (evolução da linguagem A).
+
+ Em 1973 o UNIX se tornou forma, mdou a nomenclaruta que era UNICS se tornando UNIX com "X". para esclarecimento em 1970a BEL LABS que pertencia 
+ a AT&T estava em um processo antitrush, processo relacionado a monópolio no mercado de telefonia, possuindo 60% do mercado americano
+ o que impossibiliou a venda do UNIX, caso começacem vender esse sistema a investigação do dpto de comércio os acusariam de exercer
+ também monopólio em sistemas de computadores.
+
+ Então A BELL LABS decidiou passar o sistema para quem quisar porém sem suporte, caso  voce quisesse uma cópia do sistema operacional 
+ teria que enviar uma carta para a AT&T, uma fita de 9 mm então eles copiavam o sistema nessa fita. O que aconteceu? muitas empresarias
+ que pegaram o sistema, (código fonge) foram adaptando as suas necessidades, dai surgiram vários sabores do sistema operacional. dessas
+ um dos sistemas mais famoso da humanidade foi o FREEEBSD 4.4. uma versão que foi levada para Universidade BERCLEY na Califórnia, então
+ quando ouvidos falar de FREEBSD, NETBSD e o próprio núcleo DARVIN do MACOS 10, uma curiosidade é que foi desenvolvida a arquitetura TCP/IP
+ que é a base da internet que conhecemos, década de 70, como várias outras estruturas.com essa evolução comeram a surgir várias vesões
+ do sistemas, a própria IBM possuia uma versão chamada AIX. exemplos como SOLARIS da SUN, IRIX DA SILICON GRAPHICS, AIX DA IBM, MACOS 10
+ XENIX, USIX.
+
+
+ FIM DOS ANOS 70, AT&T JA HÁVIA SIDO DIVIDIDA, COM A CRIAÇÃO DAS BELLs(EMRPESAS MENORES), ENTÃO DECIDIRAM COBRAR DE QUEM ESTAVA USANDO 
+ O SISTEMA, UMA BRIGA QUE SE ARRASTOU DO FINAL DO ANOS 70 A MEIO DOS ANOS 90 NA JUSTIÇA AMERICANA. ENTÃO PARA DEFNIIR SE UM SISTEMA FOSSE
+ PADRÃO UNIX, DEVEIRA OBEDECER UM CONJUNTO DE REGRAS, E QUEM DETERMINA ESSAS REGRAS? UM COMITÊ CHAMADO POSIX ( PORTABLE OPERATION SYSTEM 
+ INTERFACE BASE ON UNIX)  LIGADO A IEEE (INSTITUTO DE ENGENHEIROS ELÉTRICOS ELETRÔNICOS), PARA QUEM NÃO SABE O WINDOWS OBEDECE VÁRIAS DESSAS
+ REGRAS, QUE DETERMINA SE UM SISTEMA É UNIX.
+
+ NO FINAL DOS ANOS 70 COMEÇOU A BRIGA NA JUSTIÇA, SURGIU EMPRESAS QUE QUERIA TRABALHAR COM ISSO, ENTÃO SURGIU UM CIDADÃO, (HACKER VELHO)
+ BARBUDO, CABELUDO, (RICARHD STALLMAN) INCLUSIVE UM AMIGO QUE HOSPEDOU O STALLMAN NO RIO DE JANEIRO, SOMENTE APENASU UMA SEMANA PEDIU 
+ UM BALDE PARA LAVAR O CABELO. OU SEJA NÃO TOMOU BANHO. INCLUSIVE DURANTE UMA PALESTRA O MESMO TIROU CRAKA DO PÉ E COMEU.
+
+ ENTÃO NA ÉPOLCA ESSE MESMO HACKER VELHO ERA PESQUISADOR CENTRO DE INTELIGÊNCIA ARTIFICIAL DO MIT (MASSACHSETTS INSTITUTE OF TECHNOLOGY) 
+ E VINHA DE UMA LONGA TRADIÇÃO HACKER. O QUE TINHA DE CONCEITO NA ÉPOCA ERA QUE AS EMPRESAS NÃO VENDIAM SOFTWARES, VENDIAM HARDWARE
+ O SOFTWARE ERA UM ACESSÓRIO. (A MICROSOFT QUE COMEÇOU COM A POLITICA DE VENDER SOFTWARE), ENTÃO COMO STALLMAN VINHA DE UMA TRADIÇÃO
+ NÃO DE VENDER SOFTWARE MAIS SIM COMPARTILHAR CÓDIGO, ENTÃO LOGO ELE PENSOU, "APRENDI VENDO CÓDIGO DOS OSUTROS " E AGORA  COMO SERÁ O
+ FURUTO DAS NOVAS GERAÇÕES COM ESSA POLITICA DE CÓDIFO FECHADO, ENTÃO VVEM AI O CÚMULO DA HISTÓRIA DA IMPRESSORA, A XEROX DOOU UMA
+ IMPRESSORA PARA O LABORATÓRIO QUE ELE TRABALHA NO MIT, E HAVIA UM PROBLEMA DE UM SENSOR QUE AS VEZES O PAPEL ENRROLAVA E COMO ERA UMA
+ IMPRESSORA SÓ, TERIA QUE LEVANTAR A TODO MOMENTO PARA IR RESOLVER. ENTÃO ELE SOLICITOU A XEROS UMA CÓPRIA DO DRIVER PARA FAZER ALTERAÇÕES
+ PARA CASO O PAPEL EMBOLASSE PARA QUE A IMPRESSORA OS AVISASSEM. A XEROX NÃO FORNECER O CÓDIGO FONTE, ESSE FATO ACONTECER POR VOLTA DE 1982
+ ENTÃO ELE ARGUMENTOU QUE NÃO TERIA PROBLEMA ELE ASSINARIA UM CONTRATO DE QUE NÃO DIVULGARIA O QUE TINHA NO CÓDIGO, MESMO ASSIM A XEROX
+ SE NEGOU A FORNECER O CÓDIGO FONTE DA IMPRESSORA. O QUE FOSSE A GOTA DE ÁGUA.
+
+ NO ANO DE 1983 ESSE CIDADÃO PUBLICOU O MANIFESTOU GNU, (GNU NOT IS UNIX ) E DECLAROU QUE TINHA INTERESSE EM PRODUZIR UM SISTEMA OPERACIONAL
+ PADRAO UNIX COMPLETAMENTE LIVRE, SO LEMBRANDO O UNIX NÃO ERA LIVRE, FOI DISTRIBUIDO E DEPOS PASSOU A COBRAR (MUDOU DE IDEIA).
+ DECORRENTE A ISSO A BRIGA JUDICIAL SOBRE AS LINCEÇAS DO UNIX ESTENDEU ATÉ 1995 O DEIXANDO O UNIX PARADO AGUARDANDO O QUE IRIA ACONTECER.
+ ENTÃO STALLMAN DECIDIU FAZER O SISTEMA OPERACIONAL, A SABER, UM SISTEMA OPERACIONAL E COMPOSTO POR TRÊS PARTES 
+ UM NUCELO DE SISTEMA
+ UM CONJUNTO DE BIBLIOTECAS PARA PODER ACESSAR O NÚCLEO
+ UM CONJUNTO DE UTILITÁRIOS
+
+ O QUE ELE DECIDIU, ELE FEZ AS BIBLIOTECAS E COMEÇOU A REGIMENTAR COM O QUE TINHA DE INTERNET, COMEÇOU A ENVOLVER OUTRAS PESSOAS NO PROJETO
+ FIZERAM O CONJUNTO DE UTILITÁRIOS,  FALTANDO APENAS O NÚCLEO DO SISTEMA (HURD) A COISAS ANDARAM AE 1991 QUANDO ENTRA O LINUX TORVALDS NA HISTÓRIA.
+ SO PARA CONSTAR, STALLMAN SAIU DO MIT E CRITOU A FUNÇÃO SOFTWARE LIVRE (FSF), O PROJETO GNU E UM PROJETO DA FSF.FSF.ORG.
+
+ 1991 - LINUX TORVALDS ERA UM ESTUDANTE DE COMPUTAÇÃO NA UNIVERSIDADE DE HELSINK, NERD DO TIPO CLÁSSICO. ELE GANHOU UM 80386 PROCESSADOR DA ÉPOCA
+ ENTÃO COMEÇOU A VER UM TRABALHO DE UM PROFESSOR CHAMADO ANDREW TANEBAUM, QUE DESENVOLEU UM SISTEMA CHAMADO MINIX (MINI UNIX).
+ ENTÃO ELE COMEÇOU A MECHER, FAZER ALTERAÇÕES, ESTUDAR ESSE MINI SISTEMA OPERACIONAL, CHEGOU UM PONTO QUE ELE ESBARROU NA LICENÇA, PORQUE ELE 
+ TINHA LINHA LIMITAÇÕES POR CONTA DA LICENÇA. EMBORA ELE TINHA RESSALVAS QUANTO AO MINIX,  E SUA ESTRUTURA. A IDEIA DO MINIX PRO KERNEL ERA 
+ MUITO AVANÇADA.
+
+ ENTÃO LINUX RESOLVER DESENVOLVER SEU PRÓPRIO SISTEMA OPERACIONAL, ENTÃO EM OUTUBRO DE 1991 LINUX SOLTOU A PRIMEIRA VERSÃO DO KERNEL 
+ DO LINUX VERSÃO 002, PEGANDO ALGUMAS COISAS DO GNU. NASCEU ENTÃO O PRIMEIRO KERNEL DO LINUX. NA REALIDADE ELE NÃO QUERIA O NOME LINUX,
+ A PRIMEIRO NOME DO KERNEL LINUX PROPOS FREAX, COMO ALUSÃO AO UNIX. PORÉM O PESSOAL QUE HOSPEDAVA DA UNIVERSIDADE DE HELSINK, DA FUNET PROPOS
+ O NOME "LINUX", E ELE CONCORDOU, ATÉ HOJE EXISTE O FTP DESSE PROJETO, ONDE O LINUX COMEÇOU.
+
+ ENTÃO ELE COMEÇOU A DESENVOVER, ABRIU O PROJETO, LIBEROU NA USINET NOS GRUPOS DE DISCURSÃO E FALOU "OLHA" TO COMEÇANDO A FAZER QUEM QUISER 
+ ME AJUDAR? E FOI APARECENDO PESSOAS ENGAJADAS AJUDANDO NO PROJETO. INCLUSIVE UM BRASILEIRO FOI MANTENEDR DE UM DOS KERNEL DO LINUX. MARCELO
+ TOSATII. 
+
+ COM ISSO LINU CONTINUOU DESENVOLVENDO, ATUALMENTE CONTINUA TRABALHANDO NO KERNEL LINUX, ATUALMENTE GRADUADO E MESTRADO E TRABALHA EM UM LABORATÓRIO
+ DE PESQUISA QUE É BANCADA PELA LINUS FUNDATION, COM PESSOAS DO MUNDO INTEIRO TRABALHANDO NO DESENVOLVIMENTO. INCLUINDO A MICROSOFT QUE PAGA 
+ PROFISSIONAIS PARA PARTICIPAR DO DESENVOLVIMENTO DO LINUX, COMO UMA MANTENEDORA PLATINUM. ALIAS GOOGLE TAMBÉM É EMPRESA MANTENEDORA.
+
+ A PARTIR DESSES ACONTECIMENTOS AS COISAS COMEÇARAM A PIPOCA NO MUNDO LINUX, A PLATAFORMA GRÁFICA QUE EXISTIA ERA O X11 PORTADO PARA LINUX.
+ E AI COMEÇOU TER TODO O DESENVOLVIMENTO EM TORNO DO SISTEMA OPERACIONAL.
+
+ OS MAIS PURISTAS NÃO GOSTAM DE CHAMAR DE LINUX  PORQUE TRATA DE DE UMA JUNÇÃO DE PROJETOS GNU/LINUX.
+
+ A DISTRIBUIÇÃO MAIS ANTIGA DO MUNDO LINUX O SLAKEARE DE 1993 E CONTINUA NA ATIVA, A PRINCIPIO DESENVOLVIDO POR UM CARA SOMENTE, PATRICK VOLKERDING
+
+ REDHAT - RECENTEMENTE COMPRADA PELA IBM, MAIOR EMPRESA LINUX DO MUNDO. 20 BILHÕES.
+
+ DEBIAN - CURIOSIDADE DE-'VEM DE DEBORA QUE ERA SUA ESPOSA' IAN="IAN MURDOCK' CRIADOR DA DISTRIBUIÇÃO. FALECIDO RECENTEMENTE.
+ OUTRA CURIOSIDADE, TODOS OS NOMES QUE DAS VERSÕES DA DEBIAN RECEBEM O NOME DOS PERSONAGENS DO TOY STORY, HUD, BOSTER, STREET, JESSY.
+ UBUNTU POR EXEMPLO É UM ADJETIVO, NOME DE UM ANIMAL E VAI SEGUINDO A LETRA. 
+
+ AGLUMAS OUTRAS VERSÕES
+ FEDEORA
+ UBUNTU -  (Mark com a idéia do ubuntu, foi para o espaço, sul africano, na volta criou a canonical e a canonical decidiu criar u ubuntu
+          ubuntu é uma palavra do idioma ZULU que quer dizer humanidade através dos outros, ou seja "eu sou o que sou pelo que vocẽ é" 
+          o Símbolo do Ubuntu, para quem não entende são 3 pessoas de mãos dadas, uma das disbituições que tornou o linux mais acessível.
+          "linux para seres humanos".
+ GENTOO    - Distro mais complexas para usuários iniciantes, uma caracteristia de não possuir um instalador, ou seja tudo tem que ser compilado.
+ SLAKEARE  - 
+ DEBIAN
+ MANDRIVA
+
+ DISTRBIBUIÇÕES PARA DISTRIBUIÇÕES
+
+ Várias distribuições a partir das principais.
+ Slakeare
+      
+ Debian -> Ubuntu, Mint, kubuntu, lubuntu, edubuntu. Lmde(Linux Mint Debian Edition - atualiza a cada 2 anos).
+
+
+ Redhat
+
+ Do Redhat - saiu a conectiva, mandrake que depois virou mandriva (mandrake era uma distribuição francesa) 
+
+
+ ++LICENÇAS E LIBERDADES++
+
+ Uma licença determina o que você pode fazer com uma produção Intectual.
+
+ SOFTWARE SHAREWARE - Usa por um período, gostou pagou.
+ SOFTARES ADWARE - Inclui banner de propaganda, pode usar porém com propaganda, não quer propaganda, PAGA.
+ LICENÇA POR ASSINATURA - Pode usar o software enquanto estiver pagando um valor mensal, exemplos (Softwares da Adobe)
+ LICENÇA GRATIS - Permite uso do sotware porém sem acesso ao código fonte. (WHATSAPP)
+
+ Licença Youtuber - Licença especial para criadores dos youtubers, exemplo, pode compartilhar o link, usar como referência, transmitir o video
+                   o que você não pode é baixar esse vídeo e vender, não pode baixar o video e subir no seu perfil.
+
+ (CC) Creative Commons - Sistema de licença para Material para Geração de Mídia., possui vários níves, incluind podendo limitar a liberade
+                        do Material.
+
+ Para Softwares existem vários tipos de licença.
+
+ Exemplo MAC-OS é gratis não livre, porém so pode ser instalado em uma maquin dimencionada pela APLLE.
+
+ LICENÇAS DE CÓDIGO ABERTO
+ GPL - Criada por Richard Stalmman, FSF Free Software Fundation, existem trẽs níveis de licença GPL 1,2, e 3 mais usada é 2
+      garante 4 liberdades,
+        0 - Executar programa para o que vocẽ quisar;
+        1 - Estudar o programa, examinar o código fonte e aprender
+            com ele;
+        2 - Modificar o programa - alterar o programa para seus propósitos, adaptá-lo; 
+        3 - Distribui, Redistribuir desde que mantenha o principio de
+            como pegou (LIVRE); BSD ja permite que vocẽ possa fechar o código, a microsoft usa muita coisa de rede do BSD no windows.
+
+ LGPL - Licença do Apashe 
+ MSPL - Licença da Microsoft 
+ BSD - 
+ MINT - Parte do androide é gerenciado pela Licença do MINT.
+ MPL  - 
+
+ Slakeare - possui licença agregada a contrato de  suporte
+ Curiosidade - IPHONE (era uma marca da Gradiente)
+
+
+ ++A PERGUNTA (COMO GANHAR DINHEIRO COM LINUX) ++
+
+ NÃO GANHAM DINHEIRO COM O SOFTWARE, MAIS SIM COM O SERVIÇO AGREGADO.
+ INCLUSIVE VOCÊ PODE VENDER DISTRIBUIÇÕES LINUX
+ SERVIÇOS, TREIAMENTO, SUPORTE, DESENVOLVIMENTO SOFTWARE, ADAPTAÇÕES, CERTIFICAÇÕES.
+
+ ISAC NEWTON ( SE EU VI MAIS LONGE, FOI PORQUE SUBI NO OMBRO DOS GIGANTES )
+
+ ALTERNATIVA AO WHATSAP (SIGNAL) NÃO MANTÉM DADOS, SOFTWARE LIVRE.
+ 
+ HISTÓRIA DO TUX (LOGO DO LINUX)
+ Larry Ewing em 1996. 
+
+ LOGO DO ANDROIDE -> BUGDROIDE
+
+ ++INSTALAÇÃO MINT++
+
+ BENEFÍCIOS - INTUITIVO (PARECIDO COM INTERFACE DO LINUX) EM TERMOS DE POSICIONAMENTO DE ICONES E ELEMENTOS.
+ INTERFACE CINNAMON -> INFERFACE LEVE
+
+ Informação: A partir do OFFICE 10 ja vem com suporte a documentos OPENDOCUMENTS que é o formato adotado pelo libreoffice
+
+ :) INSTALAÇÃO 
+
+ VERSÃO ESCOLHIDA: LMDE 3 | SUPORTE PARA 4 ANOS
+
+ FONTE: www.linuxmint.com (todos os linux mints tem nome de mulher)
+  Procure (menu superior procure por LMDE 3) até este curso estava nessa versão - suporte para 
+
+ Também tem a opção de comprar (Aqui o custo é da mídia não do SO :) lembre-se disso.
+
+ Ao abrir link donwload vai encontrar as opções (fontes do TORRENT) espelho da universidade Federal do Paraná.
+
+ :) GERAR PENDRIVE DE INSTALAÇÃO
+ 
+ Baixe o YUMI -Multiboot USB Creator (pendrivelinux.com)
+
+ De o BOOT com o PENDRIVE, o sistema e carregado pra memória, após inicialização do sistema. porém esta na memória.
+
+ Na área de trabalho esta o instalador ( De dois cliques para iniciar )
+
+ Escolha o idioma
+
+ Escolha Fuso Horário
+
+ Escolha o teclado (tem opção para testar a prévia do teclado)
+
+ Personalize, inseira foto, seus dados, nome de usuário senha, iniciação da seção e nome do computado.
+
+ Escolha a tabela de partição, caso escolha SIM ele ira redimencionar as partições automaticamente de maneira a alocar o sistema.
+
+ Marque a opção Instalar o GRUB
+
+ Tela final mostra as alteraçõs que iram ser realizados.
+
+ Só aguardar.
+
+ Obs. existem distribuições CHANCELADAS pelo projeto GNU  que são restritas apenas a códigos abertos.
+
+ O DEBIAN não é uma dessas distirbuições por conter um repositório para contriuintes que não necessáriamente são códigos abertos.
+
+ Exemplo Driver na NVIDIA NUVO.
+ Poré esta em desenvolvimento do driver para código aberto.
+
+ "PRIMEIRO A LIBERDADE DEPOIS A ELEGÂNCIA"
+
+ Após concluir e iniciar o sistema será mostrado uma tela de BEM VINDO.
+
+ :) P3NDRIVE LINUX COM ETCHER
+
+ Erro na instalação, instalador trava na Logo.
+ 
+ Ferramentas para criação de PENDRIVEs Bootaveis 
+ 
+ ->LinuxLive USB Creator (LILI) tem opção de donwload - exclusivo para linux. 
+ ->Rufus (PORTABLE) e Instalável (Cria sistemas para todos os Windows)
+ ->BalenaEtcher (https://balena.io/etcher/) usado para criação de boot para todos os sistemas operacionais
+
+ Baixe e instale o BALENAETCHER. arraste a imagem para a tela do software, confirme e pronto, aguarde a conclusão.
+
+ Caso apresente erro, fique travado no logo do mint e não acesso o sistema, refaça os procedimentos para criação do pendrive
+ com instalador do mint usando uma das ferramentas apontadas acima.
+
+  :( PARA REUTILIZAR SEU PENDRIVE NOVAMENTE, CONSIDERANDO QUE APOS USO DO MESMO PARA INSTALAR O SISTEMA OPERACIONAL  E 
+ APRESENTAR PROBLEMAS PARA REUSO DESSE PENDRIVE, SEGUE OS PROCEDIMENTOS ABAIXO.
+
+  :) Para corrigir o sistema de arquivos do seu pendrive, apos instalação, ja na tela do mint, vai no botão iniciar e procure por synaptics
+  que é o gerenciador de isntalação de pacotes do mint.
+
+  :) Procure uma ferramenta chamada GPARTED, algumas distribuições essa ferramenta ja vem instalada.
+
+  :) Seleciona o dispositivo (SEU PENDRIVE)
+
+  :) Com PENDRIVE seleiconado, va em criar tabela de partição, escolha MSDOS mesmo. mande aplicar.
+ 
+  :) Desmonte o pendrive, desconecta e reencaixa novamente.
+  
+  :) Mande atualizar para redectar o Pendrive.
+
+  :) E crie um sistema de partição novamente.
+
+  :) Mande aplicar as operações pendente. e PRONTO.
+     ja pode usar seu pendre de boa.
+
+
+
+INSTALAÇÃO BÁSICA DE PROGRAMAS NO LINUX 
+
+Uma maneira grafica de instalar aplicativos no linux de maneira fácil é utilizando a GERENCIADOR DE APLICATIVOS
+localizado no menu ADMINSITRAÇÃO -> GERENCIADOR DE APLICATIVOS, é como se fosse o play store do android.
+seu mascote é um coyote (com um pincel na boca) jascote WILBER.
+
+Nessa loginha de aplicativos ainda disponibiliza aplicativos em flatpak bem como o SNAP são pacotes universais.
+
+SINAPTICS
+Gerenciador de pacotes, muito usado para atualizar seus programs inclusive atualizar o sistema inteiro
+linux (distribuição)
+
+
+WINE - Wine Is Note Emulator -> Implementação live da API do windows que traduz as chamadas, pega as chamadas
+de um sistema de um prorama windows que faz chamada pro kernel windows e traduz para o Linux, logo ele é uma 
+implementação livre do windows, desenvolvimento em progresso. nem todas as ferramentas funcionam completamente
+100%.
+e um projeto de engenharia reversa.
+
+Observação: SINAPTICS (janelinha do APT) criação da conectiva 
+
+
+INSTALAÇÃO AVANÇADA DE PROGRAMAS LINUX 
+
+INSTALAÇÃO USANDO SINAPTICS (GRÁFICA)
+ Procure o SYNAPTIC
+ Nas telas a esquerda listam as (CATEGORIAS)
+ Na tela a Direita (Lista os pacotes disponível para aquela categoria)
+ 
+ Informação: Repositórios DEBIAN são repositórios livres, porém o mint possui repositórios de contribuição
+             como também traz os não livres, a Debian prioriza que seus repositórios sejam todos códigos aberto.
+             
+
+
+INSTALAÇÃO USANDO O TERMINAL (CONSOLE)
+
+  apt - ADVANCED PACKAGE MANAGE - gerenciar de pacotes de linux 
+  
+  ex. 
+  apt install htop
+
+  apt + install + "nome do htop"
+
+  REMOVENDO PACOTE OBSOLETOS (ao remover pacotes "apt remove "nome do pacote") ele deixa bibliotecas sem uso no 
+  sistema, assim basta usar o comando abaixo para limpar essas bibliotecas.
+
+  apt-get autoremove
+  
+  gdeb - Gerenciador de pacotes (em outras palavras é uma interface gráfica para o DPKG)
+
+  dpkg - Insalador de pacotes pré-compilados
+
+  usando o DPKG
+  
+  |- Removendo pacote 
+     dpkg --remove "nome do pacote"
+
+  |- Instalando um pacote 
+     dpkg --install "nome do pacote"
+
+   PESQUISANDO PACOTE USANDO APT
+
+   apt search "nome do pacote ou parte do pacote "
+  
+   LIMPANDO CACHE
+   apt clean
+
+   LIMPANDO BIBLIOTECAS NÃO UTILIZADOS
+   apt autoremove
+ 
+  :) USO DO TERMINAL 
+    EMULADOR DE TERMINAL - por baixo um interpretador de comandos
+    
+    ls               |  lista pasta / diretorios somente o nome  
+    ls -l ou --long  |  listagem longa de apenas pastas com outras informações
+    ls -h            |  listagem de maneira mais humana
+    ls --all         |  listagem de arquivos ocultos 
+                        se criar um arquivo iniciando com . ele fica oculta
+    pode também reunir os comandos ex. ls -la | ls -lah
+
+    .  -> aponta para o prórpio diretório em que você esta 
+    .. -> aponta para o diretório anterior 
+    
+    cd /   | volta par ao diretório raiz 
+
+    curiosidade pasta LOST/FOUND - criada quando formata o sistema de arquivos ,quando um bloco 
+do disco esta defeituso vai para esse diretório.
+   
+    Ao plugar um dispositivo USB de forma transparente ao usuário ele monta esse dispotivo na pasta /dev/usb (exemplo) e associa ele a uma pasta que poderá ser acessada.
+
+    comando ./ de onde estiver para frente
+
+    no history de comandos linux guarda até os 2000 últimos comandos digitados.
+   
+   
+
+ANOTAÇÕES CURSO LINUX -- DEBIAN (ESTUDONAUTA)
+
+INTEPLETADOR  DE COMANDOS
+
+Sobre o SHELL
+ - Ao entrar um comando correto ele apenas executa, não te informa que o caomndo esta correto.
+ - Caso apresente erro apenas se o interpretador de comando identifificar que o comando de entrada esta errado
+
+   # CONSIDERAÇÕES
+     Comandos corretos não precisam de FEEDBAK 
+     Comandos deve ser claros e dentro das normas
+     Os comandos são externos ou seja, os comandos estão todos no /bin (executáveis)
+     Comandos todos são com letras minusculas (CASE SENSITIVE)
+
+Ex. 
+     COMANDO + PARÂMETRO + ARGUMENTOS
+
+     Observando sempre o espaço entre os mesmos.
+
+     PARÂMETROS são usados para modificar o resultado de um comando.
+
+     Os PARÂMETROS Podem ser 
+     -h => Padrão posix 
+     --help => Padrão GENTOO
+
+     ARGUMENTOS São informações que você passa ao comando.
+   
+     para os os comandos existem os manuais que poder ser consultados.
+     Ex. 
+	man ls  (lista manual correspondente ao comando ls)
+
+     
+GNU/LINUX - DEBIAN
+
+Porque o Debian?
+
+ - Linux como Sistema ÚNICO. (Maquina mais modesta)
+ - Linux com Dual BOOT (Usando particionamento)
+ - Fazer uma Instalação usando uma Máquina Virtual.		
+
+Debian é uma das distribuições mais antigas (1994) desenvolvida por um grupo de mais de 200 pessoas
+então seguramente, é um projeto cooperativo de software livre do mundo.
+
+DEB - Débora
+IAN - Ian Murdock
+
+Ian recentemente veio a falecer porém a distro continua no mercado, e amplamente usado
+DEBIAN é uma das distribuições talvez mais usadas do mundo, suas versões são somente lançadas
+após muitos testes, log e considerada pronta quando relamente esta pronta.
+Não existe pressão para sair uma nova  versão a cada 6 meses ou a cada 3 meses.
+
+Uma versão da DEBIAN leva certa de 3 ou quatro anos para sair, possui uma política de 
+desenvolvimento em três níveis.
+ - STABLE (Estável)
+ - INSTABLE (Instável)
+ - TESTING (Teste)
+
+ESTÁVEL
+Versão mais antiga, com pacotes obsoletos, mais seguramente estável, com pouquíssima
+chance de ter problemas.
+
+INSTÁVEL
+São pacotes mais novos, versões mais atualizadas, porém ainda poderá ocorrer alguns 
+problemas.
+
+TESTE
+Loteria, mais chances de ocorrer ocorrer  problemas.
+
+DEBIAN não é mantida  por empresa (site: www.debian.org), é uma fundação que apoia
+a SPI  que banca a DEBIAN, possui suporte a mais de 12 arquiteturas, e 15 sub arquitetuas.
+
+X86
+AMD 64 
+DEC ALPHA
+VMS
+SPARK
+MACHINTOCH CLÁSSICO
+RPC 
+ARM
+ARM64
+
+Debian é tão flexível que caso queira, pode usar um KERNEL BSD, HURD, FREE BSD, as 
+atualizações dela são constantes, não é necessário possuir um CD para fazer UPGRADE
+o que é legal, pode ir mantendo atualzizado, há e uma curiosidade: todos os nomes
+das verões da DEBIAN são nomes dos personagens da animação TOY STORY.
+exemplo, a versão usada nesse curso é  DEBIAN STRECH, porém ja teve o SQUEEZE, no momento
+está na versão 9 será o BUSTER o cachorro, a versão teste é o CID, o  garotinho malvado que quebra os brinquedos.
+
+INSTALANDO O DEBIAN 
+Preparando o PENDRIVE com 
+DEBIAN
+
+1 - Para criar o pendrive - Baixe o programa YUMI (pendrivelinux.com)
+    Caso deseje usar outro programa para criar seu boot use o Unetboogin (unetbootin.github.io
+
+2 - Baixe também a ISO da distribuição DEBIAN (site: www.debian.org)
+ 
+Obs: Não será uma instalação COMPLETA para isso seria necessários vários volumes (CD/DVD)
+
+A Distribuição a ser utilizada será a NETINST que é uma insalação mais leve. E um instalador
+em modo texto, esse instalador terá tudo necessário a instalação, e ao final quando escolhermos
+os recurs a serem adicionados a maquina ele irá descer da internet os demais pacotes.
+uma vantagem desse procedimento é que iremos baiar as versões mais novas dos pacotes.
+
+DEBIAN LIVE
+Permite bootar a maquina com live cd e a partir do icone de instalação você poderá instalar 
+caso deseje. no seu computador.
+
+AMBIENTE DE TRABALHO
+A DEBIAN oferece vários ambientes
+CINAMON (mesmo usado no mint) 
+KDE 
+LXDE (Ambiente mais enxuto)
+XFCE (Ambiente também leve)
+GNOME (Usado no ubuntu e mais conhecida) - usaremos esse.
+
+INSTALAÇÃO LIMPA (CONSIDERANDO QUE O COMPUTADOR NÃO TENHA NADA)
+1 - CONFIGURE O BOOT PELO PENDRIVE
+2 - ESCOLHA A DISTRIBUIÇÃO  "DEBIAN INSTALLER"
+3 - ESCOLHA O INSTALADOR MODO GRAFICO
+4 - PRIMEIRA TELA (ESCOLHA O IDIOMA)
+5 - SEGUNDA TELA  - LOCALIDADE (ESCOLHA A LOCALIDADE) 
+6 - TERCEIRA TELA - TECLADO (ESCOLHA O IDIOMA DO TECLADO)
+7 - QUARTA TELA  - LOCALIDADE (ESCOLHA O PAÍS - CORRESPONDENTE AO MAPA DO SEU TECLADO)
+    (APOS ESSE PASSO SERÁ CARREGADO ALGUNS AQUIVOS ARQUIVOS NECESSÁRIOS)
+8 - QUINTA TELA - NOME DA MAQUINA (DE UM NOME PARA A MAQUINA)
+9 - SEXTA TELA - NOME DE DOMÍNIO (CASO ESTEJA EM UM DOMÍNIO - DEIXE PADRAO | LOCALDOMAIN)
+10 - SÉTIMA TELA  - ESCOLHA A SENHA DE ROOT (CONTA ADMINISTRATIVA DO SISTEMA)
+11 - OITAVA TELA - CRIAR UMA CONTA DE USUÁRIO (DE UM NOME PARA O USUÁRIO DA MAQUINA)
+12 - NONA TELA - NOVAMENTE SERÁ SOLICITADO UMA SENHA (DESSA VEZ DE UMA SENHA PARA O USUÁRIO CRIADO)
+13 - DÉCIMA TELA - CONFIGURAÇÃO DO RELÓGIO (FUSO HORÁRIO) - BRÁSIO POSSUI 4 FUSOS HORÁRIOS
+14 - PARTICONAMENTO DO DISCO ( NO CASO COMO A MAQUINA ESTA ZERADA ) MANTEMOS A OPÇÃO ASSISTIDO - USAR O DISCO INTEIRO (AQUI O PRÓPRIO SISTEMA SE ENCARREGARÁ DE PARTICIONAR O DISCO INTEIRO.
+
+15 - ESCOLHA O DISCO A SER REALIZADO A INSTALAÇÃO
+16 - NO PRÓXIMO PASSO - TELA SEGUINTE VOCÊ TERÁ OPÇÕES PARA INSTALAÇÃO DO SISTEMA.
+      - Todos os Arquivos em uma partição (para iniciantes)
+          Uma boa prática e manter a PARTIÇÃO /home serparada até por movito de caso
+          ocorrea algum problema voce 
+      - Partição /home separada
+      - Partições /home /var e /tmp separadas
+17 - PROXIMA TELA SERÁ MOSTRADO UM MAPA DE COMO FICARA AS ALOCAÇÃO DAS PARTIÇÕES.
+
+18 - TELA PRÓXIMA  (CONFIRME AS ALTERAÇÕES) 
+
+19 - AGUARDE O PROCESSO DE INSTALAÇÃO
+20 - APÓS A INSTALAÇÃO DO PACOTE BÁSICO SERÁ MOSTRADA UMA TELA SOLICITANDO POSSIBILIDADE DE USO DE UM 
+     ESPELHO DE REDE PARA PARA COMPLEMENTAR A INSTALAÇÃO BÁSICA, MARQUE "SIM" PROXIMA TELA
+     ESCOLHA O ESPELHO DE REDE COMO DO BRÁSICO, POIS OS PACOTES SERÁ BAIXADOS MAIS RAPIDAMENTE
+     NA PRÓXIMA TELA ESCOLHA O REPOSITÓRIO, DENTE A LISTA OPTE POR MANTER CASO QUEIRA PODERA ESCOLHER OUTRO.
+     MAIS EXEMPLO MANTEMOS FTP.BR.DEBIAN.ORG.
+
+21 - APÓS A CONFIGURAÇÃO DO ESEPLHO DE REDE SERÁ REPORTADO UMA TELA, CASO ESTEJA ATRAZ DE UM
+     PROXY DE REDE, CONFIGURE NESSA ETAPA,  CASO NÃO APENAS MARQUE CONTINUAR. 
+
+22 - ELE INSTALARA O GRUB - GERENCIARDOR DE BOOT.
+
+23 - ESCOLHA ONDE SERÁ INSTALADO O GRUB, ESCOLHA O HARD DISK, CASO SO TENHA UM, ESCOLHA ESSE 
+     MESMO E CONTINUE.
+
+24 - FINALIZE A INSTALAÇÃO. (SERÁ REINICIALIZADO O SISTEMA)
+
+25 - SERÁ REINICIALIZADO O SISTEMA, VOCÊ CAIRA NA  TELA DE LOGIN (GDM) QUE É UM GERENCIADOR
+     DE LOGIN.
+
+
+
+- LISTAGEM ARQUIVOS
+  Cores azul - pasta
+  Cores verde - executáveis ou script
+  Cores Vermelho - arquivos compactados
+  Cores Verde - Links 
+  
+  obs: essas cores podem ser alteradas.
+
+
+- REFERÊNCIA GLOBAL (Caracteres Curinga)
+  * - Faz referência ao nome completo ou restante de um arquivo ou diretório
+  USO:
+     ls -l /user/bin/x* (Lista arquivos que iniciam com a letra X;
+     
+     ls -l /user/bin/*z* (Lista arquivos a letra Z aparece no inicio ou Fim, algum lugar que tenha Z
+  
+     ls -l /user/bin/*ze (Lista todos que terminan com as letras ze
+     
+     ls -l /user/bin/*.q* (Lista todos que terminam com ponto que apos o ponto possuam letra Q
+   
+    ******************************************************************************************************
+     ? - USAMOS PARA FAZER UMA REFERÊNCIA A UMA LETRA NAQUELA POSIÇÃO
+     
+   USO 
+     ls -l /user/bin/x?  (Lista arquivos que possuam apenas uma caracteres apos o X, não importa o caracter
+     
+     ls -l /user/bin/*.q?? (Lista arquivos terminem com Q e dois carcteres apos)  
+   
+     ls -l /user/bin/*z? (Arquivos que tenha qualquer coisa antes da letra Z porém apenas um caractere após
+  
+     [ ] Usa para fazer refencia a uma faixa de caracte de um arquivo ou diretório
+      
+         USO:
+             ls -l /user/bin/x[t-z]  (lists arquivos onde os caracteres após o x esteja no intervalo T-Z
+             ls -l /user/bin/x[t-z]* (lista arquivos onde os caracteres após o x esteja no intervalo T-Z o * reporta qualquer caracter após o intervalo.
+             ls -l /user/bin/x[t-z][i-k] (Lista diretórios 
+	     ls -l /user/bin/x[t,z]* (lista arquivos que comecem com X e o segundo carater seja T ou Z, o tereceiro qualquer um.
+	     ls -l /user/bin/x[a-e,i,o,u]* (lista arquivos que comecem com X e o segundo carater seja A  a E, o tereceiro qualquer um.
+             ls -l /user/bin/x[^a-e,i,o,u]* (lista arquivos que não possuam o caracteres entre os COLCHETES porém e que começem com a LETRA X.
+             ls -l /user/bin/x[a-e,i,o,u]* (lista arquivos que comecem com X e o segundo carater seja A  a E, o tereceiro qualquer um.     
+  
+********************************************************************************************************** 
+            { } Expandir e gerar strings para pesquisa de padrões.
+ 	  
+             USO:
+             ls /usr/bin/x{fd,kb}*  (Busca que comecem com a letra a primeira letra X e o segunda caracter na sequência que encontra-se nos colchetes.
+
+             ls /usr/bin/x*{ki,kb}* (Busca arquivos com comecem com X segundo caractere não conhecemos, segundo KI ou KB.
+ 
+**********************************************************************************************************
+
+COMANDOS MANIPULAÇÃO DE DIRETÓRIOS
+
+MKDIR - CRIAR DIRETÓRIO (MAKE DIRECTORY)
+RMDIR - REMOVER DIRETORIO (REMUVE DIRECTORY)
+CD - CHANGE DIRECTOY
+
+ - Criar vários DIRETORIOS
+mkdir -p /Trabalho/Notas/Receber
+    -p vem de Parents (PAI)
+
+    - Criar uma pasta com espaço em BRANCO
+    ex.
+    mkdir gildasio bizerra brito
+    
+    observe que ele ira criar uma pasta para cada nome, e não a pasta "GILDASIO BIZERRA BRITO"
+    sera criado uma pasta GILDASIO uma BIZERRA e uma BRITO.
+    
+    DUAS FORMAS DE USO CORRETO: 
+    ex1:
+    mkdir gildasio\ bizerra\ brito 
+    \ (contra barra) : diz para ignorar o caracter próximo caractere que é um espaço em branco.    
+  
+    ex2:
+    mkdir "gildasio bizerra brito"
+    obs: pode ser aspas simples ou duplas.
+
+
+APAGAR PASTA 
+    rmdir "pasta" (pasta em que estar vazio)
+
+APATAR PASTA NÃO VAZIA
+    rmdir -rf "pasta) (quando a pasta não estiver vazia)
+
+
+MANIPULAÇÃO DE ARQUIVOS
+
+PARTE 1
+
+CAT - Pegar o conteúdo de arquivo e enviar para saída padrão, o PADRÃO é a tela.
+ ex: cat /etc/services  (mostra o arquivos services na tela)
+     cat -n /etc/services (mostra o arquivo os numeros das linhas )
+     cat -s /etc/services (encolhe os espaços em branco)
+     zcat (caso o arquivo esteja compactado com bgzip, ele ira descompactar e mostrar na saída pdrão)
+     bzcat (caso o arquivo esteja compactado com bz2 mostrara os arquivos compactados na saída padrão)
+
+TAC - Mesma coisa do cat, porém ao contrário, apenas em vez de mostrar da primeira para ultima linha
+      ele imprime na tela da última linha para a primeira.
+
+RM - Comando usado para apagar arquivos, diretórios e subdiretórios
+
+     Ex.
+      rm -r  (Apaga pasta e dentro dela outras pastas com arquivos)
+      rm -f  (Apaga diretórios e subdiretórios sem perguntar)
+      rm -rf (Apaga diretorios e arquivos sem perduntar nada)
+      rm -rf -v (modo verbose mostra processo de exlusão)
+      rm -i "arquivo" (Ira perguntar da exelusão de cada arquivo, porém no caso de muitos arquivos será trabalhoso para isso use o comando rm -I (MAIUSCULO))
+      rm -I (Pergunta apenas uma se deseja apagar o arquivo)
+
+
+CP - Copia arquivos  
+MV - Move arquivos ou renomeia arquivos 
+
+     Ex.
+       cp /etc/t* .  (copia apenas  arquivos etc/começa com letra t para o diretorio atual . (ponto identifica diretório atual) 
+
+       cp -r /etc/t* . (copia pastas e subpastas para o diretório corrente)
+       -r -  copia pastas e subpastas
+
+       cp -f /etc/t* . (copia sem pedir para sobre pastas e subpastas)
+       -f - Não pergunta se é para sobrepor os arquivos (apenas sobrepoie sem perguntar) 
+       -v - modo verbose, mostra o que estamos fazendo.
+       -i - Ira perguntar se deseja sobrepor para cada arquivo
+       
+MV 
+      Ex.
+      Mesma coisa do CP.
+      mv p* terminfo/
+
+      Renomear arquivos
+      mover ele para mesma pasta apenas renomeando o nome
+      rm nome1 nome2 /tmp
+
+
+MODULO 2
+
+1 NSTALAÇÃO DE PROGRAMAS 
+2 GESTÃO DE PACOTES
+3 SISTEMA DE ARUIVOS
+4 FORMATAÇÃO, MONTAGEM E INFORMAÇÕES OBRE DISCO
+5 GESTÃO DE PROCESSOS
+ 
+PACOTES LINUX 
+
+Pacotes no LINUX => 
+São arquivos compactados que possuem ARQUIVOS e BIBLIOTECAS para a 
+instalação de um PROGRAMA.
+
+o PROGRAMA(PACOTE)  a ser instalado e caso seja necessário ele irá instalar as bibliotecas necessárias, então existe toda uma árvore de dependências criadas com os programas que irão ser necessários. Logo se for instalar a exemplo um navegador: ele ira procurar todas as bibliotecas necessárias e tudo que será necessário para a instalação do mesmo, incluindo seus vínculos de dependência.
+
+PERMITE você usar repositórios na internet, como também permite que você atuazlize sua maquina a partir da internet.
+
+FORMATOS  (EMPACOTAMENTO)
+Gentoo usa PORTABLE (baseado em versões FREEBSD)
+RedHat usa RPM
+Debian usa DEB 
+
+Nem todos os programs estarão disponíveis nos repositõrios, porque existem várias diferenças 
+em questão de repositórios.
+
+A DEBIAN por exemplo não te oferece programas que não sejam livres. Caso deseje instalar um 
+programa que não seja livre, você terá que habilitar aquele repositório, ou acresentar ele
+na sua relação para a instalação do programa desejado.
+
+Exemplos: SKYPE, DRIVERS DE VÍDEO no caso da NIVIDIA,  não exatamente que seja um programa pago
+porém seu código e fechado, não esta aberto.
+
+Gerenciador de pacotes
+DEBIAN - DPKG - APT
+REDHAT - RPM
+
+Podem ocorrer problemas de DPENDÊNCIA
+mesmo sendo muito rato.
+
+Versões estável da DEBIAN
+Versão estável - versão oficial disponível 
+verstão unstável - versão anterior 
+Vesão Frosen - versão pre lançamento, momento de procurar falhas, fazer as correções, nada 
+de novo é implmentado, somente correção de erros, essa versão FLOSEN um dia se tornará estável
+Versão Teste (antes da frozen ) -> Pacotes que não são modificals durante algum tempo, possuem alguma instabilidade.
+Versão INSTÁVEL (conhecida como  SID | personagem do toy story - > Esta sofrendo modificações, atualizações, o ciclo de tota distribuição  DEBIAN começa na versão  INSTÁVEL, para TESTE, FROZEN e INSTÁVEL. sempre é esse CICLO, seu CICLO é lento, são mais de 12 arquiteturas, em média a 
+cada 3 anos, 3 anos e meio. uma pesquisa aponta como a vesão mais usada para SERVIDORES, 25% dos servidores  
+ 
+RECAPITULANDO
+
+INSTAVEL -> RISCOS ACONTECE, PROGRAMAS NÃO ESTAREM FUNCIONANDO -> TESTE (PACOTES QUE NÃO TEM MODIFICAÇÕES DURANTE ALGUM TEMPO) , QUANDO A VERSÃO TESTE PASSA PARA ESTÁVEL NESSA FASE ELA 
+PASSA POR UM ESTÁGIO DE CONGELADO (FROZEN) PARA AS CORRREÇÕES SEREM FEITAS, AI ELA SE TORNA  UMA VERSÃO ESTÁVEL. 
+  
+*****************************************************************************************
+INSTALAÇÃO DE PACOTES
+
+Torno de 50 000 pacotes que podem ser instalados a partir dos repositórios
+*ESTAVEIS 
+*INSTÁVEIS 
+*NÃO LIVRES
+*CONTRIBUIÇÕES
+
+****************************************************************************************
+
+INTALAÇÃO EM MODO GRAFICO
+
+No modo GRAFICO você possui uma interface para instalação em modo gráfico (PROGRMAS)
+uma central de programas (podemos assim dizer) todos distribuidos em categorias ou 
+caso queira pode também pesquisar determinado aplicativo.
+
+...Obs: Vale lembrar que para toda instalaçõa será  necessário a permissão e ROOT
+
+
+SOFRWARES E UPDATES - Ferramenta de gerenciamento de repositõrios para updates
+
+*GUIAS*
+*Aplicativos Debian*
+
+DSFG - Debian Fundation Softwares Guardline, aplicativos compátiveis com as normas da DEBIAN
+mais que usam dependências que não são livres esta no repositório CONTRIB.
+
+APLICATIVOS NÃO COMPÁTIVEIS COM A SOFTWARE GUARDLINE (NON-FREE)
+
+CÓDIGO FONTE.
+
+Poderá também trocar os servidores de atualização, no caso do Brasil leva vantagem, pois é 
+mais rápido.
+
+*OUTROS SOFTWARES*
+pode acrescentar o CDROM/DVD para fazer instalação a partir do CD/DVD
+
+*ATUALIZAÇÕE DE SEGURANÇA*
+Permite agendar a frequência de verificação de UPDATES
+
+*AUTENTICAÇÃO*
+Importação de CHAVES - se o fornecedor é confiável 
+
+
+*DEVELOPER*
+Caso esteja utilizando a versão TESTE.
+
+
+PACOTES VIA TERMINAL
+
+Instalar como administrador
+
+su - apenas su no comando ele permite trocar para conta administrador 
+
+
+FERRAMENTAS PARA INSTALAÇÃO DE PROGRAMAS VIA LINHA DE COMANDO 
+APT
+APT-GET
+APTITUDE
+
+
+*COMANDO*
+Primeiro passo antes de realizar una instalação via linha de comando é autalizar a lista de pacotes disponíveis.
+
+para isso rode o comando 
+apt update
+
+INSTALANDO PROGRAMAS
+apt install "nome do pacote"
+
+ATUALIZAR PACOTES
+apt upgrade 
+
+apt full upgrade (ataulização mais profunda - irá remover pacotes)
+
+PROCURAR PACOTES
+apt search "nome do pacote"
+
+VERIFICAR INFORMAÇÕES DO PACOTES
+apt show "nome do pacote"
+
+obs.. cada pacote na DEBIAN tem um mantenenedor 
+
+REMOVENDO PACOTE
+apt remove htop
+
+Obs: Pacotes sugeridos não são obrigados a serem instalados.
+
+INSTALANDO PACOTES .DEB BAIXADOS EM REPOSITÓRIOS
+DPKG - ferramenta para manipulação de pacotes .DEB
+
+dpkg -i  "nome do pacote"
+i= install
+
+VARIANTES DPKG
+dpkg -l (lista pacotes instalados )
+dpkg -r (Remove pacotes deb)
+dpkg P (Remove pacote e todas suas configuraçõs)
+P= Purge 
+
+apt list - (Lista de todos os programas que estão disponíveis para instalação)
+apg show "home do pacotes" (informações do pacote) 
+
+=========================================================================
+SISTEMAS DE ARQUIVOS
+
+sem anoteções
+
+========================================================================
+
+FORMATAÇÃO DE PENDRIVERS
+
+VARIAS FORMAS 
+
+Linha de comando:
+
+
+Interface Gráfica: Botaão direito referente ao dispositivo e va a opção
+formatar - sigua as orientações.
+
+lsbslk - mostra de maneira mais fácil informações sobre partições.
+
+Desmontando dispostivos
+umount /dev/"dispositivo"
+
+Particionamento de PENDRIVER
+
+sistema de partições GPT
+
+Sitema de partição completo, substituto do DOS, vantagens 
+coomo não mais a necessidade de partiões primárias e/ou estendeidas
+trabalha com até 128 partições no disco.
+sistema muito mais eficiente.
+
+porém maioria dos dispotivos ainda existem no sistema DOS.
+
+PARTICIONANDO PENDRIVE EM SISTEMAS DOS 
+
+Comando
+
+fdisk /dev/"dispositivo"  
+
+p => ver partições 
+d => deletar partições
+n => cria nova partição 
+t => Muda o tipo sistema de arquivos
+L => Lista os tipos de sistemas de arquivos disponíveis 
+a => Deixa como inicializável a partição 
+
+
+bloco => Espaco de 1 KB
+superbloco => Fica no inicio do dispotivo, onde ele guarda as informações sobre o sistema.
+ele faz várias copias do superbloco.
+NÓS - INDICES => são blocos do sistema que guardam informações sobre o sistema.
+ 
+****************************************************************************
+
+INFORMAÇÕES SOBRE DISCOS 
+
+Comandos para ver informações do DISCO
+
+DF - Disk Free
+DU = Disk Usage
+
+Parâmetros DF
+df -a (Traz todos os sistemas de arquivos )
+df -h (Apresenta a informação de forma máis fácil de compreender - multiplos 
+      de 1024)
+ 
+df -H (Apresenta a informação em multiplos de MIL)
+df -l (Lista apenas o que é local)
+df -t vfat (lista sistemas de arquivos VFAT)
+df -i (Traz informações sobre Nós índices)
+
+Obs: Nós corresponde ao número de arquivops que vocẽ pode ter
+
+df -i -h (combinando ambos os comandos)
+
+DU - Mostra o espaço ocupado por um diretório e subdiretório.
+
+du (Varre o diretorio que esta e coma quqnatidade em uso)
+
+Parâmetros 
+
+du -h (Visualizção melhorada 
+
+du -h -s (mostra somente o total usado em disco do diretório passado)
+
+du -H (contabiliza o espaço usado em multiplos de 1000)
+
+
+PROCESSOS NO LINUX 
+
+Estados do Processo
+- EXECUTANDO
+- ESPERANDO
+- PRONTO
+- SUSPENSO
+- NÃO SUBMETIDO
+- COMPLETO
+
+Processo ( uma instância de um programa de computador que esta sendo executado)
+
+	Esta instância tem ó código do programa que esta sendo executado, como sua 
+atividade atual. tem o programa EXECUTÁVEL e traz junto um conjunto de informações
+que são necessárias para a execução to processo.
+
+	Em resumo, é o programa sendo executado e o ambiente em torno dele.
+	
+	Possui:
+	o Código executável
+	o Espaço de Endereçamento (Região de memória usada por ele)
+	o Dados do S.O (os outros processo que aquele processo criou)
+	o Arquivos que foram abertos por ele
+	o Atributos no que trata de Permissões que ele tem
+	o Questões do Estado da CPU (Questões relacionadas ao registrador do processador)
+
+	Todo o ato de colocar o PROCESSO em EXECUÇÃO e tirá-lo nós chamamos de 
+ESCALONAMENTO, este válido para todos os sistemas operacionais.
+
+	Você possui alguns tipos de processos que você vai lidar.
+
+	o CPU BOUND (Orientado ao processador) tempos de execução determinado pelo processador, a exemplo
+	  um CÁLCULO, uma compactação de ARquivos, processos que utilizaram muitos recursos do processador.
+	  em detrimento dos dispositivos de entrada e saída.
+	o I/O BOUND (Processos orientados a ENTRADA X SAÍDA)
+          Exemplo - Banco de Dados não ha muita execução a nivel de processador
+	  porém exigirá escritas no disco.
+	
+COMUNICAÇÃO ENTRE  PROCESSOS ENTRE SI (COMUNICAÇÃO ENTRE PROCESSOS)
+
+	 SINAIS
+
+	 Trocam informações através de sinais, dependendo do Sistema OPeracional
+existem vários sinais, no linux são 64 sinais possíveis.
+São as formas como os processos se comunicam e como também nos usuários nos comunicamos.
+com os processos.
+
+	 HIERARQUIA
+	 Um processo cria um segundo, um processo PAI, ele cria um processo filho
+esse também criara outro processo, o que se torna uma árvore onde uns estão vinculados a outros.
+
+	 Ao enviar um sinal para finalizar um processo PAI este também irá finalizar todos seus 
+processos filhos.
+
+	 ESTADOS DO PROCESSO
+	 o EXECUTANDO (Pode esta sendo processado pelo processador)
+	 o ESPERANDO (Pode estar em um estado de espera, significa que ele foi executado, e por algum motivo foi posto na fila de espera.
+	   fica aguardando a vez dele para ser colocado novamente em processo.
+         o PRONTO (Pronto para ser poso em processamento, porém ficam em estado de pronto)
+         o SUSPENDO (Foi submeitido posto em execução, porém eta parado, nesse estado não esta na fila de excução.)
+           fica aguardando um sinal ou do usuário, ou de um outro processo par ser 
+	   posto novamente na fila.
+
+	 o NÃO SUBMETIDO (Não foram submetidos a execução) esta parado.
+	   um executável parado.
+	 o COMPLETO (Processo foi executado, realizou toda sua tarefa e concluir,
+	   ai ele é finalizado.
+
+CRIAR PROCESSOS
+	 Momento que Micro e ligado, abrir um programa, um programa que ao executar, 
+chama outro programa, uma tarefa agendada.
+ 
+
+PROCESSO CONCLUSO
+	 Ocorre quando muda de estado para COMPLETO, concluir toda a execução dele
+normalmente, foi fechado normamente. pode ocorrer um erro que foi gerado, falha de execução (Erro fatal)
+exemplo uma divisão por 0, causaria uma excessão e ele seria interrompido. ou por
+cancelamento, envia-se uma sinal para ele ser encerrado.
+
+ESTADOS DE PROCESSOS
+
+EXECUTÁVEIS (Executado)
+DORMENTE (Aguardando algo para entrar me execução) 
+PARADO (Não pode ser executado)
+ZUMBIS  (Processo considerado morto mais ainda existe)
+
+
+===========================================================================
+SISTEMAS OPERACIONAIS 
+===========================================================================
+
+	Os primeitos sistemas operacionais na década de 50 realizaram processamentos
+em lote. como assim:
+
+	Existia uma fila de execução, onde a tarefa era submetida e essa tarefa era
+executata, era submetido a execução, este ia para a fila e a saída era enviado a exempolo
+para um papel.
+
+	Isso perdurou no brasil até o final dos anos 80, era uma forma de evitar
+que o computador ficasse ocioso, acelerava o processamento, diferentes prioridades.
+	
+	Porém não havia ineração com  a máquina, isso começa a mudar quando vem
+os primeiros sistemas oparacionais de tempo compartilhado. (SISTEMAS TIME-SHARING).
+
+	MULTICS
+	UNIX 
+
+	Mais afinal o que (TIME-SHARING): 
+	Programas a serem executados que são os processos serão colocados em execução.
+porém eles serão executados durante uma fatia de tempo, a um intervalo de tempo, ex. 10ms, ao concluir esse tempo, ele irá pegar esse processo e o colocara, 
+na fila de execução, coloca no final da fila., fica fazendo esse cículo de execução.
+todo esse processo chamamos de ESCALONAMENTO.
+
+	Em processadores atuais já são mais sofesticados, a exemplo, processos 
+	CPU BOUND, podem ficar mais tempo em execução, ja processo mais orientados 
+a ENTRADA/SAÍDA  I/I BOUND ficam menos tempo em processamento.
+
+	Processos com mais prioridades, esses processo furam digamos assim uma posição
+na fila de execução.
+
+	Processo com menos prioridades podem ficar no fim da fila por mais tempo.
+
+	Totos sistemas atuais, LINUX, WINDOWS, MAC funcionam em ambientes multiprocessados
+e com tempos compartilhados.
+
+	O LINUX é multiusuário, vem da herança do UNIX, ele é um sistema MULTITAREFA.
+
+	SISTEMAS REAL-TIME
+
+	Sitems de tempo compartilhado um processo pode mandar um sinal para outro, com certa
+flexibilidade, dentro de um intervalo de tempo.
+
+	Em sitemas REAIS possuem tempos pre-definidos, existem prazos, caso a resposta.
+não seja entregue dentro daquele tempo determinado, ocorre uma FALHA.
+estes sistemas são usados em vários serviços, onde ha necessidade de existir 
+esses prazos definidos.
+
+	- Hospital, sistema opercaional que esta operando um equipamento médido.
+esta monitorando os batimentos cardíacos de um paciente, este tem que avisar os médicos 
+caso haja uma alteração nos batimentos.
+	- Eles tem que ser previsíveis, pode antecipar o comportamento dele independente
+de falhas, de sobrecarga, variaçoes de hardware.
+	- Adotados em missões criticas
+	Usinas nucleares, sistemas para aviões, tudo que envolve uma situação 
+que pode ser crítica, onde uma falha pode gear um problema muito sério, eles
+são adotados com sistemas operacionais de tempo real.
+
+	Exemplo:
+	Sistema que opera dentro de um conjunto de um freio abs de um carro, aviões caça.
+
+	LINUX NÃO E UM SISTEMA OPERACIONAL DE TEMPO REAL, embora existam algumas implementações
+para colocar algum recurso de tempo real, a exemplo:
+	- QNX - aplicações embarcadas
+	- IBM - AIX - 
+	- VXWORKS, ja usados em sistemas de Câmeras fotográficas, caixas eletrônicos.
+	- FREE RTOS - Implmentação em kernel 
+	- RED HAT REAL TIME - Implmentação da RED HAT 
+	- TI RTOS 
+	- AMX
+	- CMX
+	- BASIC RTOS
+	São bem específicos voltados para aplicações embarcadas, em dispositivos 
+em equipamentos limitados em termos de recursos, pouca memória, sem hd, baixo
+recurso de processamento.
+
+=============================================================================
+PROCESSOS - INTERFACE GRÁFICA  
+=============================================================================
+
+Monitor do Sistema - apresenta lista de processos em execução bem como uso
+dos recursos de HARDWARE E TRÁFEGO DE REDE.
+
+GNONE-SHELL - Gerenciador de Janelas do GNOME-3
+GNONE-SOFTWARE - Monitorar alguma atualização 
+PULSE AUDIO - Gerencidor do adatador de som 
+SERVIÇOS VINCLUADOS AO TRACKER - SERVIÇO PARA COOERDENAR TODO O HD 
+MELHOR E OTIMIZAR AS BUSCAS EM DISCO.
+GDM3 - Gerenciamento de login na interface gráfica.
+
+Também poderá ordenar por processos do usuário, ou todos os processos incluindo
+os do sistema, incluindo ordenação por PRIORIDADE DE PROCESSO, ou atinda todas suas
+dependẽncias, ou seja todos os processos filhos criados a partir de um processo
+pai.
+
+obs... Alguns serviços ao final consta uma letra D, que mostra que esse processo
+esta em execução em modo DAEMON.
+
+MATANDO UM PROCESSO:
+
+ - Seleciona o processo, e va na opção "terminar processo", ou ainda poderá oberter
+informações detatlhadas sobre o processo.
+
+lembre se somente poderá eliminiar os seus processos.
+a menos que esteja como ROOT ai sim poderá matar qualquer processo.
+
+===========================================================================
+PROCESSOS - TERMINAL
+===========================================================================
+
+Comandos 
+
+PS - tabela com informações de processo carregados no Sistema com o 
+
+PID - Numero de Identificação do processo, Pseudo terminal que o processo esta ativo 
+Tem em que o processo esta em execução, e o comando.
+
+PS - parâmetros 
+
+ps --help simple  (Lista de parâmetros simples)
+
+ps -f (Traz mais informações sobre o processo como:
+    PID - Numero do processo
+    PPID - Número do processo PAI - processo que inicio 
+    STIME - Hora que o processo foi criado
+
+ps -e -f (Lista de todos os processo inclusive suas ramificações)
+
+ps -ef --forest (mostra os processo em estrutura de arvore)
+
+pstree  (Mostra somente os processo em forma de uma arvore)
+
+pgrep (Variação do grep, permite pegar pelo nome do processo)
+
+top (Monitor do sistema em modo terminal)
+
+Obs: prioridade de processo no linux, se quiser a prioridade maior o número de que ser menor 
+     que varia de -19 a +20.
+     tem como alterar a prioridade, porém esta não pode ser com processos em execução.
+Status -
+S - processo SLEEPING (dormindo)
+R - Execução
+% Dae memória 
+
+na tela do top para sair pressione Q, caso queira, caso pressione a tecla
+H enquanto estiver na tela do top, teremos um help, ou ainda pressione a tecla
+Z ele irá colocar em colorido 
+
+IO TOP - aplicação que lista processo que estão usando mais o HD
+NTOP - processos de rede 
+HTOP - Equivalente ao TOP (Interface melhor) 
+
+ENVIANDO SINAIS AOS PROCESSOS 
+
+kill - envia sinal para matar um processo
+kill -l - Lista todos os sinais 
+man 7 signal - consulta página do manual dos sinais 
+
+sinais mais usados: 1,3,9,15
+
+sinal 1 => SIGHUP (suspender processo) , você poderá colocar esse proceso
+em primeiro plano ou em segundo plano
+
+Exemplos: 
+kill -1 "numero do processo" (pode ser que esse processo seja fechado
+por não poder ser posto em suspensão)
+
+kill -3 "numero do processo" (Solicite o encerramento normal do processo)
+
+kill -9 (Fecha processos travados)
+        quando manda fechar o processo e por algum problema este não fecha 
+        poderá usar o kill -9 para forçar o fechamento do mesmo.
+        mesmo que tenha algo carregado na memória tudo será eliminado.
+
+killall (Mata todos os processo passando o nome do processo)
+        usando o KILLALL você passa o nome do sinal e não o número
+
+killall -l (Lista os parâmetros do killall)
+
+
+COLOCAR UM PROCESSO EM PRIMEIRO PLANO 
+
+execute o programa na linha de comando sem parâmetro 
+nota que firacara bloqueado o shel 
+
+Comandos 
+jobs  (Lista os processos em segundo plano)
+fg (traz o processo novamente para o primeiro plano e com isso travga o terminal novamente)
+para poder interagir precione CTRL + Z e digite BG no comando 
+e volta a interagir novamente
+
+
+programa + & (comercial) ja executa o programa em modo segundo plano.
+
+na lista dos processo em segundo plano gerado pelo comando JOBS
+para trazer um programa para primeiro plano rode 
+fg %"processo"
+
+
+================================================================
+PERMISSÕES
+================================================================
+            Dono           +               Grupo                  +           Outros(convidado)
+Pessoa que criou o arquivo +   Grupo de usuários o qual o arquivo + Permissões para outros (não dondo, não grupo) 
+                               Pertence
+               
+
+/etc/passwd   (Arquivo onde ficam os usuários cadastrados na maqina 
+gildasio:x:1000:1000:GILDASIO,,,:/home/gildasio:/bin/bash
+   
+gildasio:usuário
+x:Senha do usuário, o "X" siginfica que a senha esta armazenda em outro arquivo
+1000:Id do usuário
+1000:Grupo do usuário
+GILDASIO,,,:Nome do usuário
+/home/gildasio:Diretório Home do usuário
+/bin/bash: Inerpletador de comando que esta usando 
+
+Obs: o sitema criar usuário para trabalhar com processos.
+
+/etc/group
+
+TIPOS DE PERMISSÕES 
+R - > Permissão de leitura (Você pode ver o conteúdo de um documento, Em uma pasta permite listar o conteúdo)
+W - > Permissão de Gravação (Pode alterar o conteúdo desse arquivo, ou apagar o arquivo/diretório)
+X - > Permissão de Execução (Permite que você execute um arquivo -sendo esse executável, caso seja uma PASTA deve ter permissão 
+      pelo menos de leitura e execução.
+
+===================================================================================
+PERMISSÕES ESPECIAIS 
+===================================================================================
+s -> quando você coloca na permissão de acesso ao dono (mais para arquivo)
+S
+t (stick bit) -> quando habilit ele para um diretório impede que usuário excluam arquivos que não são donos.
+                 caso um diretório esteja com essa permissão e voce coloca um arquivo la dentro, você podera
+                 apagar o seu arquivo mais não os dos outros.
+
+==================================================================================
+ATRIBUTOS (oculto, sistema, arquivo e somente leitura)
+==================================================================================
+Diferentes das permissões, são caracterítiscas estabelecidas para arquivos
+
+Comantos 
+lsattr  ( Lista arquivos  e atributos)
+chattr (alterar atributos para arquivos )
+
+chmod - usado para altear permissões em pastas 
+chmod -R propaga as permissões em pastas e subpastas 
+
+chmod u+w,g+x,o-r arquivo  - (liga permissão escrita para usuário, liga permissão execução para grupo, desliga permissão de leitura para outros.
+
+chmod ugo+w "arquivo" liga permissões de escrita para usuario,grupo e outros. em pastas apenas altera as permissões da pasta, ignora o que estiver dentor.
+
+chmod ugo+w -R Música/   - Liga permissões de escrita para usuario, grupo e outros e todos arquivos dentor da pasta.
+
+
+PERMISSÕES BASE OCTAL
+
+0 - Nenhuma pemissão
+1 - Permissão de Exeucção
+2 - Permissão de Gravação
+3 - Permissão de GRavação e Execução 
+4 - Permissã de leitura 
+5 - Permissã ode leitura e execução 
+6 - Permissão de leitura e gravação
+7 - Permissão de leitura gravação e execução
+
+Permissões aplicadas da esquerda para direita 
+
+Exemplos:
+chmod 755 "pasta" -R  (Aplica permissões de leitura,execuçao e gravação para usuario, leitura e execução para grupo e leitura e execução para outros.
+
+Leitura das permissões é da direira para esquerda (OUTROS, GRUPOS E USUÁRIO)
+
+============================================================================
+USANDO NANO
+============================================================================
+arquivo de configuação do nano ~/.nanosrc
+
+
+nesse arquivo inclua as linhas referente as configurações
+para dos tipos de que deseje editar 
+include /usr/share/nano/c.nanorc
+
+===========================================================================
+INSTALAÇÃO SNAP
+===========================================================================
+SNAP - Conceito criado por um grupo chamado SNAPCRAF, onde vocẽ tem um paco
+       fechado de programas, onde você tem todas as dependências ali dentro.
+
+INSTALAÇÃO: sua instalação podera ser feita via apt-get ou outra depdendndo
+       da distribuição a ser usada. Após instalação do pacote SNAP, podera 
+       usár o mesmo para instalação de pacotes SNAP. 
+       Instalação:
+       "apt insall snapd"  ("D" porque irá instalar um serviço no sistema que
+       gerencia os SNAPS)
+
+       INSTALAÇÃO SNAP
+       apt install snapd
+      
+       SITE DO SNAP:
+       https://snapcraft.io/share
+
+==========================================================================
+PREPARANDO UMA MAQUINA LINUX PARA DESENVOLVIMENTO
+==========================================================================
+
+Instalando o PORTUGOL STUDIO
+
+
+OBS: alguns pacotes vem na extensão .run, apos baixar liga a permissão de execução X
+para este arquivo e roda., e o caso do PORTUGL STUDIO.
+
+Instalando o PYCHARM (Programação em PYTHON)
+
+snap install pycharm-community --classic
+
+ATUALIZAR O PACOTE
+snap refllesh pycharm-community (conecta ve se tem alguma versão mais nova e atualiza)
+
+ATUALIZANDO O CORE
+snap reflesh core
+
+LISTANDO OS PACOTES
+snap list 
+
+INSTALANDO O CODE:BLOCKS (PROGRAMAÇÃO EM C)
+
+linux ja vem com compilador C instalado que é o GCC
+
+INSTALANDO FERRAMENTAS 
+apt install build-essential (meta pacotes - existe para ter todos os outros como depdência dele)
+                             ao instalar ele, esse instala todos os outros que são necessários.)
+
+INSTALANDO A IDE PARA DESENVOLVIMENTO C
+PARA INSTALAR ESSA IDE É NECESSÁRIO CONFIGURAR O REPOSITÓRIO E ACRESCENTE A LINHA
+"deb http://ftp.debian.org/debian stretch-backports main"
+
+INSTALANDO
+apt update _ atualiza os repositórios
+
+apt -t stretch-backports install codeblocks
+
+
+INSTALANDO NODEJS (VSCODE - Visual Studio Code)
+
+snap find nodejs (pesquisa a aplicaçãodo NODEJS no repositório snap)
+snap install node (caso reporte uma informação apontando para um outro local orientando
+                  a utilizar um outro comando apontando um outro canal, siga as instruções,
+                  como no caso ocorrido aqui.
+
+snap install --edge node --classic
+
+snap find visual (pesquisar o pacote)
+snap install code --classic  (code - nome do pacote do visual studio no snap)
+
+obs:
+snap list (lista pacotes instalados)
+snap remove "nome do pacote" (remove pacote instalado via snap)
+
+==================================================================================
+INSTALANDO O INTELIJ
+==================================================================================
+
+snap install intellij-idea-community --classic
+
+INTELIJ - Java, kotlin.
+
+
+=================================================================================
+INSTALANDO O ANDROID STUDIO
+=================================================================================
+snap install android-studio --classic
+
+=================================================================================
+COMANDOS SNAP
+================================================================================
+snap help (ajuda do snap)
+snap refresh core (atualiza o proprio snap)
+snap list (lista pacotes instalados)
+snap reflex "pacote" (atualiza pacotes instalados)
+
+****MÓUDLO 4 ****
+
+COMANDOS 
+==================
+
+clear  | limpa tela.
+
+date   | data e hora do sistema em formato americando dia mês e hora 
+         porém permite mudar o formato.
+	 Exemplos comando date:
+
+	 date +%d-%m-%m-%y  (DIA MÊS E ANO)
+
+         date +%A-%f-%m-%y (ex. quinta 30-05-2019.)
+
+         ALTERANDO DATA DO SISTEMA (Somente como usuário ROOT)
+         
+	 date 12250815 (mes dia ano hora minuto)
+
+COMANDO PARA BUSCAR INFORMAÇÕES DA MÁQUINA 
+
+df -h     | Mostra uso dos dispositivos de armazenamento na maquina 
+
+free      | Quanto de memória livre a máquina tem 
+
+free -m   | Mostra memória disponível mais megabytes para melhor entendimento
+
+free -g   | Mostra memória disponível em Gigabytes
+
+free -h   | Mostra informações em formato mais humano
+
+free -b   | Mostra informações da memória em bytes !!SEM CHANCE 
+
+COMANDOS DE MEMÓRIA DE TEXTOS
+
+more      | Exibe exibe o  texto tela a tela 
+
+less      | Exibe conteúdo em tela  Permite melhora navegação do texto na tela, como também permite realizar busca no arquivo visualizado.
+
+head      | Mostra as 10 primeiras linhas de um arquivo 
+
+head -n4  | Mostra as 4 primeiras linhas do arquivo (parâmetro -n4)
+
+tail      | Mostra as 10 ultimas linhas 
+
+tail -n2  | mostra as 02 ultimas linhas  
+              
+tail -f   | mostra em tempo real a edição de um arquivo, interessante para consulta de logs. CTR C para sair 
+
+sort      | Ordena em ordem crescente (ordenação padrão como texto)
+
+sort -n   | Indica ordenação como número.
+
+wc        | Conta o número de linhas palavras e bytes no texto.
+
+wc -c     | Quantidade de  caracteres 
+
+wc -l     | Quantas linhas 
+
+wc -w     | quantas palavras 
+
+
+COMANDOS DIVERSOS 
+
+time      | Medir o tempo gasto para você executar um programa
+	    Exemplo:
+            time ls 
+
+touch     | Usado para criar um arquivo 
+            exemplo:
+            touch "nome do arquivo"
+            
+            Você poderá também usar o touch para mudar a hora e data da 
+            criação do arquivo como:
+            touch -t mêsdiaano1145 "nome do arquivo"
+
+uptime     | reporta o tempo que a máquina esta ligada 
+
+dmesg      | mostra mesnagens de inicialização da máquina 
+
+su         | permite você mudar de usuário sem fazer logout
+
+su - root  | leva você para o diretório raiz do usuário, caso não use o "traço", deixa você na pasta onde está.
+
+
+sync       | grava o cache de disco na memória RAM., exemplo do seu uso 
+             syncroniza os dados em uso no pendrive para apos desmonstar.
+
+uname      | Retorna informações da máquina
+             uname -a | Retorna nome do sistema, nome da máquina, versão
+             do kernel, qual é o linux que está usando, quando o kernel
+             foi compilado, qual a arquitetura.
+
+
+NÍVEIS DO SISTEMA 
++NÍVEIS DE EXECUÇÃO DO SISTEMA+
+
+man runlevel   |  Página manual do RUNLEVEL 
+
+Obs. somente um único nivel ativo 
+
+0 - Desliga o sistema 
+1 - Mono usuário - modo de recuperação
+2,3,4 - Multiusuário - Padrão, nível sem interface gráfica
+5 - Interface gráfica 
+6 - Reboot - Reinicia a maquina.
+  
+Comandos 
+reboot - reinicia a maquina (Permissões de adminsitrador)
+halt  - Desligar a máquina (parâmetros -f (forçar desligamento)
+
+shutdown -h +10 | Planeja desligamento em 10 minutos 
+shutdown -c     | Cancela o desligamento da máquina 
+shutdown -h now | Desliga na hora, sem frescura
+
+comandos acima somente com usuário administrador, ou usuário com permissão
+de administrador. (usando o SUDO)
+
+usuário comun no modo gráfico pode realizar o desligamento.
+
+
+LIGAÇÕES (PONTEIRO QUE APONTA PARA OUTRO ARQUIVO - ATALHOS )
+
+conceitos ligações.
+
+hard link - ligação forte.
+simbolic linkc  - Ligação simbólica -> Ligação fraca 
+
+Características LIGAÇÃO FORTE ( HARDE LINK )
+ - Não permite ligações em partições diferentes
+ - Não permite realizar esse tipo de ligação como usuário comum.
+
+Obs: hardlink é tratado como um arquivo comum. 
+
+O mais usado é a lilgação simbólica ( Ligação fraca )
+ - Este arquivo apens contém o caminho para chegar a outro arquivo.
+
+comando para maniuplar link simbólico  -ln
+
+Exemplo:
+
+	ln -s /etc/motd mtd
+-s -Simbólico 
+
+O link pode ser alterado o nome, copiar para outra pasta.
+
+BUSCANDO CONTEÚDO
+
+Comando GREP (Usado para localizar ocorrências dentro de um texto)
+
+Exemplo:
+
+grep tcp /etc/services  ( Irá localizar a palavra TCP no arquivos services dentro de /etc)
+
+nesse seguimento da família você ainda tem o EGREP e o FGREP
+
+Parâmetros GREP
+
+Exemplos:
+
+SABER O NOME DO ARQUIVO QUE CONTÉM DETERMINADA PALAVRA 
+grep -l tcp /etc/services
+-l = Busca apenas noems dos arquivos que contém a palavra TCP.
+
+FAZER UMA BUSCA EM TODOS OS ARQUIVOS QUE ESTÃO DENTRO DE UMA PASTA INCLUINDO 
+SEUS SUBDIRETÓRIOS (BUSCA RECURSIVA)
+
+grep -r tcp /etc/services
+
+AGRUPANDO PARÂMETROS (
+
+grep -r -l tcp /etc/services
+ 
+grep -r -l -i tcp /etc/services 
+
+-i = Ignora maiuscula e minusculas no texto procurado, se não passar parâmetros
+ele irá pesquisar a palavra em minuscula.
+
+NUMERANDO A BUSCA (MOSTRA O NÚMERO DA LINHA CORRESPONDENTE A OCORRÊNCIA)
+
+grep -i -n tcp /etc/*
+
+MOSTRANDO A O NÚMERO DA LINHA QUE ESTA FAZENDO A BUSCA, PORÉM A LINHA INFERIOR 
+TAMBÉM.
+
+grep -i -n -A 1  tcp /etc/sysctl.conf
+
+MOSTRANDO O RESULTADO DA BUSCA EM COLORIDO 
+grep -i -n -A 1 tcp /etc/sysctl.conf --color=auto
+
+OCULTANDO AS MENSAGENS DE ERROS DURANTE A BUSCA 
+-s 
+grep -i -n TCP /etc/*
+
+FGREP - mesmo que grep -F (REALIZA BUSCAS UM POUCO MAIS RAPIDO) 
+F= Fast.
+
+EGREP - msmo que grep -E (BSUCA ESPECIFICA PARA LOCALIZAR EXPRESSÕES REGULARES)
+
+grep -s -E "tcp|udp" /etc/* --color=auto ou 
+egrep -s "tcp|udp" /etc/*" --color=auto
+-s = Suprimir as mensagens de erros. 
+
+BUSCA AVANÇADA (PROCURAR ARQUIVOS NO DISCO)
+
+LOCATE
+
+no DEBIAN o locate não vem instalado.
+    apt install mlocate (comando instala o locate)
+
+Locate  atualiza de tempos em tempo 
+para forçar sua atualização rode o comando:
+
+     "updatedb"
+Comando:
+
+	locate fstab (localiza o arquivo FSTAB no disco)
+        locate -S (apresneta estatistica do banco de dados dele updatedb)
+
+WHEREIS  (localizar arquivos com páginas de manual fontes executáveis no comando)
+
+Comando:
+
+       whereis ls (fornece executáveis e páginas de manual do comando ls)
+
+
+APROPOS (Usando para pesquisar comandos para determinadas tarefa)
+
+Comando:
+       apropos move (Faz uma busca no sinapse das páginas de mnaul para localizar essa informação)
+
+
+
+BUSCA AVANÇADA  (PERMITE FAZER BUSCA NÃO SO PELO NOME MAIS 
+POR TAMANHO, POR DATA, TIPO..VÁRIOS PARÂMETROS)
+
+FIND 
+
+Obs: se você não setar o caminho onde ele irár buscar as informações ele partirá
+     do diretório corrente de onde você esta.
+
+
+Comandos:
+
+     find /etc
+
+     find /etc/ -name "*.conf"  (todos arquivos .conf da pasta /etc/)
+     
+     find /etc/ -name "*.conf" -type f (Busca somente por arquivos)
+     -type  f = file 
+     -type  d = diretório
+
+     find /etc/ -namae "*.conf" -type f -size -50k (Busca arquivos com menos de 50 kBYTES)
+     para arquivos maiores usar: + - m=mega, k=kbytes 
+
+     find /etc/ -maxdepth 2 -name "*.conf" -type f -size -2k (pesquisa em um nivel de profunidade de dois diretórios.
+     -maxdepth = Profundidade da busca.
+     Obs: inclua o maxdepth no começo do comando, pois se colocar abaixo apresentará erro.
+
+     find /etc/ -maxdepth 2 -name  "*.conf" -type f -size 2k atime -30 (Busca arquivos acesssados com menos de 30 dias .
+     acime=Tempo que você acessou o arquivo
+    -30=Menos 30 dias 
+
+     APLICANDO AÇÕES NA BUSCA DO FIND
+     
+     find /etc/ -maxdepth 2 -name "*.conf" -type f -size -50k -atime -2 -exec cp {} /temp/ \;
+     -exec = executa o comando cp para copiar o resultado na pasta tmp, obseve que para finalizar
+             comando use a barra invertida e o ;
+
+     find /etc/ -name "*~" -delete (Excui arquivos temporários)
+
+
+
+ARQUIVOS COMPACTADOS 
+
+FILEROLER - Gerenciador de compatcação para interface gráfica LINUX.
+	
+        {Permite gerenciar várias formatos de compactação}
+
+No linux ja existem algumas ferramentas de compactação:
+
+TAR   - Programas para agrupar os arquivos. (não compacta, apenas empacota), porém você pode aplicar
+       um compactador em cima, os quais podem ser o GZIP e o BZIP2.
+
+GZIP  - É um formato muito comun, rapido para compactar e rapito para descompactar, taxa de compressão boa.
+
+BZIP2 - Mais lento para compactar, porém possui uma taxa um pouco melhor de compactação.
+
+Também permite trabalhar com formatos ZIP, para isso basta apenas instalar o pacote, como:
+
+Comando: 
+	apt install zip unzip rar unrar p7zip  (precisa também instalar o UNZIP)
+
+
+Exemplos:
+TAR:
+
+tar cfv arquivo.tar *.conf  
+  c => Criar o arquivo.
+  f => Forçar
+  v => Verbose (Mostra o que esta fazendo)
+
+Compactando arquivo tar.
+  gzip arquivo.tar
+
+
+Descompactando
+  gunzip arquivo.tar.gz
+
+GZIP2
+  bzip2 arquivo.tar
+
+
+AGRUPANDO COM TAR E JA COMPACTANDO
+
+  tar -cfvz arquivo2.tar.gz *.conf 
+
+para usar o BZIP2 basta trocar o z pelo J como:
+
+   tar -cfvj arquivo2.tar.bz2 *.conf
+
+
+DESCOMPACTANDO (X)
+
+   tar -xfvz arquivo2.tar.gz 
+
+DESCOMPACTANDO BZIP2
+
+   tar -xfvj arquivo2.tar.bz2
+
+DESCOMPACTANDO PARA DENTRO DE UM DIRETORIO 
+
+   tar -xfvj arquivo2.tar.bz2 -C "diretorio"/
+ 
+-C -Descompactar dentro diretório.
+
+PBZIP2 - usa todos os nucleos do seu processador no processo de compactação e descompatação.
+
+
+CRIAÇÃO DE CONTAS (USUÁRIOS)
+
+Comandos:
+
+	useradd (utilizado para adicionar usuários)
+        userdel (comando utilizado para excluir usuários)
+        usermod (modificar configurações de usuários)
+
+user -D (mostra configuraões padrões para criação do usuários, caso não estabeleça parâmetros)
+
+Exemplos:
+
+	useradd -c "um usuários qualquer" -d /home/usuario -g 100 -m -s /bin/bash -u 1001 alguem 
+         -c = Campo comentários, pode colocar o nome completo do usuário
+         -d = Diretório pessoal da nova conta 
+         -g = Grupo primário da nova conta (100)
+         -G = Caso queira que ele faça parte de outro grupo complementar
+         -m = Cria a pasta /home do usuário
+         -M = Não cria a pasta /HOME do usuário
+         -n = Não cria um grupo com mesmo nome do usuário
+         -s = Qual interpletador de comando será usado.
+         -u = Defini numero do grupo do usuário (caso não estabeleça ele criara o primeiro dispoinivel.
+         -U = Cria um grupo com mesmo nome do usuário
+
+Para verificar se o usuário foi criado use o comando:
+
+	 getent passwd (vai listar os usuários)
+
+DEFININDO UMA SENHA PARA O USUÁRIO
+
+	 passwd "nome do usuário"  so permite sendo usuário root 
+
+LOGANDO COM O USUÁRIO NOVO
+
+         su - "nome do usuário"  (SU PERMITE LOGAR COM NOME DE OUTRO USUÁRIO")
+         - => Indica que quando logar ira para a pasta do próprio usuário
+
+
+MANIPULANDO CONTAS 
+
+Ver as contas 
+
+Comando
+
+	getend (Permite ver as entradas nos bancos de dados administrativos)
+
+ 	getent passwd (Lista todas as contas criadas) - mesma coisa que o conteúdo do arquivo PASSWD
+
+	Obs: Você visualizara várias nomes de contas, a exemplo:
+	     mail
+	     nobody...
+             etc, isso porque o linux trabalha com a ideia de atribuir processos a usuários não
+	     privilegiados.
+
+Para capturar informações específicas de um determinado usuário, rode o comando
+	getent passwd "nome do usuário"
+
+
+FAZENDO ALTERAÇÕES EM UMA CONTA DE USUÁRIO (Basicamente mesmos parâmetros do USERADD com 
+	     algumas diferenças em termos de parâmento como o "-a - APPEND par adicionar
+	     usuários a um grupo, ou -G maiusculo para adicionar usuário a um grupo sem
+ 	     remover o mesmo dos demais grupos ao qual já pertence)
+
+Exemplos:
+	Comandos:
+	Alterando novo diretório de login de um usuário, exemlo do usuario 'alguem"
+
+	#usermod -d /home/alguém -m -l ninguem alguem 
+	-m( Altera o caminho da pasta home do usuário, -m(Movendo ele para nova pasta )
+        -l(Alerando novo login de AGLUEM PARA NINGUÉM)
+	
+APAGAR USUÁRIO (USERDEL)
+
+	Comandos:
+	 userdel "usuário" (apaga usuário)
+	 user del -r (Apara usuário e sua pasta /home)
+
+	 userdel -f -r "usuário" (Exelui conta do usuário, pasta home, spool de mensagens e
+	 arquivos de terceiros que estejam dentro da pasta desse usuário)
+
+

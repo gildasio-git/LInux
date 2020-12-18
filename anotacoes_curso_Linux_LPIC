@@ -1,0 +1,30 @@
+SISTEMA DE PARTIÇÕES
+
+DEFINIR UM SISTEMA DE PARTIÇÕES PARA DISPOSITIVO 
+comando:
+mkfs -t ext3 /dev/(dispositivo) 
+
+DEFINIR PARTIÇÃO VFAT EM UM DISCO DO SISTEMA
+mkfs -t vfat /dev/sdb2
+
+OUTRA FORMA DE DEFINIR SISTEMA DE PARTIÇÃO
+mafs.ext3 /dev/sdc1
+
+
+PARTIÇÕES DE SWAP
+
+formatad como partição de SWAP
+
+mkswap /dev/"dispositivo"
+
+INCLUINDO A PARTIÇÃO SWAP
+swapon /dev/"Nome do Dispositivo"
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+MOSTRAR INFORMAÇÕES DE DISPOSITIVOS (Discos)
+comando 
+file -s /dev/(dispositivo)
+
+
