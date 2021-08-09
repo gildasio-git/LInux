@@ -1,0 +1,16 @@
+EXTRAINDO IAMGENS DE ARQUIVOS PDFs.
+
+Realizar a instalação do pacote poppler-utils conforme abaixo 
+
+PASSO 1
+# apt-get install poppler-utils
+
+PASS 2
+# pdftohtml ARQUIVO.pdf QUALQUER_NOME.html
+
+Após isso será gerado um arquivo HTML com duas outras páginas HTML exibindo as páginas individuamente em estrutura de FRAMERS .
+
+porém pode indenfiticar as imagens e extraí indiviudalmente apenas as imagens
+desejadas.
+
+;)
