@@ -1,0 +1,131 @@
+COMANDOS TMUX (GERENCIADOR DE TERMINAL VIA CONSOLE )
+
+Neste tutorial, mostraremos como usá-lo tmux, É um aplicativo que permite dividir a janela de um terminal em várias janelas. Em uma janela, várias instâncias de terminal abertas podem ser semelhantes tela GNU ou Byobu. O Tmux é ideal para acelerar a atividade do terminal, especialmente se você é um administrador de sistema que precisa gerenciar vários terminais em um dispositivo.
+
+Para instalar o Tmux no Ubuntu ou Debian
+
+Tmux é uma ferramenta nos repositórios oficiais do Debian e Ubuntu. Isso torna incrivelmente fácil de instalar! Nós usamos o APT, o gerenciador de pacotes para o Debian e Ubuntu. Com este gerenciador de pacotes, podemos instalar, desinstalar e atualizar pacotes sem se preocupar com dependências. Primeiro, você precisa acessar seu servidor VPS sobre o SSH. Dê uma olhada no nosso PuTTY tutorialse você tiver dificuldades.
+
+Direitos de administrador são necessários para instalar o Tmux. Por isso, recomendamos adicionar sudo ao comando.
+
+Execute este comando para instalar o utilitário:
+
+sudo apt instala o tmux
+
+Em seguida, recomenda-se confirmar a versão instalada. Podemos fazer isso com o seguinte comando:
+
+tmux -V
+
+O Tmux está corretamente instalado e pronto para uso.
+Começando com o Tmux
+
+Tmux é uma aplicação baseada em sessões. Quando você executa um utilitário, uma nova sessão é aberta. Pode haver vários terminais em cada sessão porque o Tmux é um multiplexador de terminal.
+
+Para usar o Tmux, precisamos abrir uma nova sessão. Isso é feito com o comando:
+
+tmux novo
+
+Quando as sessões começarem, veremos o mesmo terminal, como de costume, exceto por uma barra verde na parte inferior. Essa barra indica a sessão ativa e que estamos usando o Tmux. Você também pode ligar para a sessão. Você pode fazer isso digitando o seguinte comando ao criar um comando:
+
+tmux novo -s [session_name]
+
+O principal benefício do Tmux é que ele permite diferentes instâncias de terminais em uma única janela. Em outras palavras, em uma sessão. Além disso, podemos acessá-lo de forma rápida e fácil a partir do teclado.
+
+Para encerrar uma sessão, você deve digitar o seguinte comando:
+
+saída
+
+Usando prefixos para controlar o Tmux
+
+O tmux é baseado em comandos que executam determinadas tarefas. No entanto, para executar esses comandos, você deve primeiro usar um prefixo. O prefixo diz ao Tmux que um comando está sendo executado. Por padrão, o prefixo é CTRL + B.
+
+Portanto, o caminho certo para estruturar um comando Tmux é:
+
+    + Comando
+
+Isso significa que temos que pressionar as teclas CTRL + B e depois o comando. Por exemplo, para criar uma nova sessão, o comando é C, Portanto, para criar uma nova sessão, você deve pressionar CTRL + B e próximo C-CTRL + B, C,
+Alguns comandos para ajudar
+
+Outra característica fantástica do Tmux é que podemos "salvar" uma sessão em particular. Por exemplo, se usarmos htop e desanexar o comando quando rodarmos o Tmux novamente, descobriremos que o processo continua a funcionar. Isso é muito útil para executar instruções que demoram mais para serem executadas, como B. fusíveis.
+
+Vamos começar uma nova sessão digitando estes comandos na linha de comando:
+
+tmux novo
+
+Vamos executar o htop nesta nova sessão. O Htop é uma ferramenta para monitorar recursos do sistema.
+
+Então, usamos o comando para resolver. Então, primeiro insira pressionando CTRL + B e então o comando D, Vamos ver que temos a próxima mensagem no terminal.
+
+Agora temos que retornar à nossa "sessão anexada". Para fazer isso, nós executamos o seguinte comando no terminal:
+
+tmux anexar -t [session_name]
+
+Como não temos um nome para a sessão, usamos o valor 0. O comando é assim:
+
+tmux anexar -t 0
+
+E vamos voltar para a nossa sessão anterior.
+
+Você pode usar o comando para executar várias sessões C, Para navegar entre eles, usamos o número de identificação. Por exemplo, a primeira sessão que criamos a partir do terminal regular seria 0, Quando criamos outra sessão, ela corresponde ao número 1,
+
+CTRL + B, 1
+
+A sessão atual é exibida na barra verde na parte inferior da janela.
+
+Podemos ver quantas sessões do Tmux estão abertas com o seguinte comando:
+
+tmux ls
+
+Gerenciar painéis
+
+Aprenda como editar painéis de terminais. Podemos dividir a janela horizontalmente com o comando
+"
+
+Ele teria que ser … CTRL + B, ".
+
+E fazer o mesmo, só na vertical – CTRL + B,%.
+
+Para alternar entre os painéis, você pode – CTRL + B, tecla de seta.
+
+E então podemos navegar por cada um dos painéis. Se você quiser fechar apenas um, pressione – CTRL + D
+Lista de comandos do Tmux
+
+Finalmente, vamos compartilhar um arquivo com você para referência:
+sessões
+Comece uma nova sessão	
+
+tmux
+
+Inicie uma nova sessão com um nome 	
+
+tmux novo -s [name]
+
+Iniciar uma sessão anexada 	
+
+tmux anexar #
+
+Se a sessão do tmux tiver um nome 	
+
+tmux anexar -t [name]
+
+Lista todas as sessões do tmux 	
+
+tmux ls
+
+Sair do utilitário 	
+
+saída
+
+Tratar janela
+Nova janela 	
+
++ c
+Próxima janela	+ n
+Listar todas as janelas	+ w
+Renomear uma janela	+
+Lidando com painéis
+Divide o painel verticalmente	+%
+Divide a placa horizontalmente	+ "
+Excluir painel	+ x
+Mostrar número do painel	q
+Alterne entre os painéis	+ Tecla de seta
