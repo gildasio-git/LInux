@@ -1,0 +1,7 @@
+CONCATENAR ARQUIVOS VIDEO COM FFMPEG
+
+
+ffmpeg -f concat -safe 0 -i concatenar.txt -c copy video-completo.mp4
+
+-I -> Aponta para  relação de arquivos inseritos em arquivos de texto.
+      lembre se que antes de cada linha inserir a palavra file
