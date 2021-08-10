@@ -1,0 +1,13 @@
+CONCATENANDO IMAGENS COM FFMPEG
+
+Exemplo 1
+
+ffmpeg -i "imagen1.jpg" -i "imagen2.jpg" -filter_complex hstack output.jpg
+
+Exemplo 2
+
+ffmpeg -pattern_type glob -i "*.jpg" -filter_complex hstack output.jpg 
+
+OBS: Esse ultimo comando pode apresentar erro.
+
+
