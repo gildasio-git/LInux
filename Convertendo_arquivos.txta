@@ -1,0 +1,7 @@
+    # apt-get install imagemagick. Para converter:
+    ls. output.jpg.
+    convert output.jpg output.png. $ ls. output.jpg. ...
+    file output.* output.jpg: JPEG image data, JFIF standard 1.01. ...
+    $ man convert.
+
+   obs: pode ser usado para conversão em arquivos PDFs
