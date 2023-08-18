@@ -66,7 +66,7 @@ Secundary GPT Header |
 * BOOTLOADER
 
 GLUB | (Mais de um estágio)
-|--------|
+|----|
 Estágios|
 grub4.efi|
 módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptografia, usar volumes lógicos 
