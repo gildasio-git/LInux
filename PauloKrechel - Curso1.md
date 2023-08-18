@@ -52,7 +52,7 @@ conhecimento o entendimento de como funciona o sistema de particionamento gpt, t
  * Possui Tabela GPT primária e secundária parao caso de algum problema ocorrer.
 
 Estagios | 
----------|
+|--------|
 Protective MBR |
 Primary GPT HEADER |
 Entry1 Entry2 Entry 3 Entry4 |
