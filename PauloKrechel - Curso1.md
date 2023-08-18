@@ -105,3 +105,9 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 
 ![Alt text](image-5.png)
 >LOGIN
+
+![Alt text](image-6.png)
+>Caso tenha instalado um ambiente gráfico será chamado uma tela que chamamos sde gestor de login gráfico.
+
+![Alt text](image-7.png)
+>Ambiente DESKTOP, exemplo MATE, DE - Desktop Enviroment.
