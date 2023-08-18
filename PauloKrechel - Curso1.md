@@ -86,3 +86,19 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 >É uma imagem de disco, ou melhor é uma imgem de disco, se olharmos dentro ele terá uma porção do  kernel, módulos que não estão no arquivo do kernel mais que são necessários para a sua maquina conseguir ter acesso ao dispositivo principal onde eta o sistema, ou seja seu HD, ele vai incluir esses módulos que são necessário para dar boot ao seu sistema. Quando você instala uma nova versão de kernel, um novo **INITRD.IMG** é montado com as coisas fundamentais que a sua máquina precisa ter acesso a raiz de iretorios e montar o \ , ou seja ter acesso a esturuta de diretório, possui um tamanho 8 a 20 MB porque também tem como a gente interferir como ele é criado. A exemplo posso criar um initrd.img em minha maquina, leva ro hd para outra e não funcionar, dar boot até que refaça o arquivo com os módulos necessários, o nome do arquivo também apresenta o nome da versão ao kernel, cada kernel tem um INITRD.IMG.
 
 ![Alt text](image.png)
+
+* TELAS
+![Alt text](image-1.png)
+>BIOS - Identificando os dispositivos
+
+![Alt text](image-2.png)
+>Menu GLUB 
+
+![Alt text](image-3.png)
+>Carregando o INITRD E KERNEL - papel do BOOTLOADER.
+
+![Alt text](image-4.png)
+>SCRIPT INIT DENTRO DO INITRD.IMG - CARREGANDO TODOS OS SERVIÇOS NECESSÁRIO PAR FUNCIONAR.
+
+![Alt text](image-5.png)
+>LOGIN
