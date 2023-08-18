@@ -34,3 +34,30 @@ conhecimento o entendimento de como funciona o sistema de particionamento gpt, t
 * Libreboot
 
 <h3>PARTICIONAMENTO</h3>
+
+* dos/MBR -> 4 partições, 2TB
+* GPT - Guid Partition table
+* GUID - Globally Unique Identifiers
+* 128 partições, 9ZB -> 1ZB 1 bilhão de Tb.
+
+* MBR (512) bytes.
+ * stage 1 
+  * Primeiros 64 bytes (contém a tablea de partições DOS)
+  * Pŕoximos 446 bytes (contém o bootloader) programa que da início ao carregamento do sistema operacional, os bootloaders mais moderno ainda usam um stagio após esse para somente depois começarem as partições.
+
+ * stage 1,5
+   
+
+* GPT 
+ * Possui Tabela GPT primária e secundária parao caso de algum problema ocorrer.
+
+Estagios | 
+Protective MBR |
+Primary GPT HEADER |
+Entry1 Entry2 Entry 3 Entry4 |
+Partition 1 |
+Partition 2 |
+Remaining Partitions |
+Entry1 Entry2 Entry3 Entry4 |
+Eentrries 5-18|
+Secundary GPT Header |
