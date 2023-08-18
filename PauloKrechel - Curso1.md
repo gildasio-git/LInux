@@ -111,3 +111,23 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 
 ![Alt text](image-7.png)
 >Ambiente DESKTOP, exemplo MATE, DE - Desktop Enviroment.
+
+
+* PRINCIPIOS DO UNIX
+ * HISTÓRICO
+ >1956 | KEN THOPSON E DENNIS RITCHIE que começaram nos laboratŕios BELL LABS, MIT, AT&ET, Desenvolvendo um sistema chamado **MULTICS** algo como múltiplus, mais essa junção dessas empresa não deu muuito certo devido terem finalidade divergentes, interesses específicos.
+
+>1969 | Começaram a desenvolver um sitema chamado UNICs -> Unix origem do 'X' do GNULINUX em assembry.
+
+>1973 Começaram a desenvolver um sistema operacional chamado UNIX em uma linguagem chamada 'C'.
+
+>KEN THOMPSON é o criador da linguagem B que mesmo apesar do tempo um dos criadores da linguagem GO.
+
+>IDEIAS | Uma coisa, bem feira, trabrarem juntos, texto interface universal.
+
+
+>MODELOS | KISS **Keep It Simple Stupid** ou seja mantenha isso simples.
+
+>MODULAR | FLuxo da informação "fluxo -> pipe -> cano, exemplo " **programa1 | programa2** simples combinado  -> complexo.
+
+>ABSTRAÇÃO | Representação arquivo árvore, som, impressora, FHS - Filesystem Hierarchy Standard, que começa no /.
