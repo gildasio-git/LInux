@@ -51,7 +51,7 @@ conhecimento o entendimento de como funciona o sistema de particionamento gpt, t
 * GPT 
  * Possui Tabela GPT primária e secundária parao caso de algum problema ocorrer.
 
-Estagios | 
+ESTRUTURA| 
 |--------|
 Protective MBR |
 Primary GPT HEADER |
@@ -62,3 +62,12 @@ Remaining Partitions |
 Entry1 Entry2 Entry3 Entry4 |
 Eentrries 5-18|
 Secundary GPT Header |
+
+* BOOTLOADER
+
+GLUB | 
+|--------|
+Estágios|
+grub4.efi|
+módulos|
+/boot|
