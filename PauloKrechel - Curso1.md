@@ -146,8 +146,8 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 
   ![Alt text](image-9.png)
 
-DIRETÓRIO | 
-|--------|
+DIRETÓRIO | Descrição
+|--------|-----------
 / | Diretório Raiz
 /proc| Processos
 /dev |Dispositivos
