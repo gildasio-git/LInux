@@ -75,7 +75,9 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 >Quando utilizamos a UEFI não precisa de vários estágios porque a UEFI é capaz de entender o sistema de arquivos, portando é capaz de pegar um glub todo, não sendo estágio por estágio e que constuma estar em um arquivo que no caso do **grub** se chama grub64.efi, e esse grub64 também contém os vários módulos necessários, como módulos de rede, sistema de arquivos etc.
 
 * KERNEL
->O Kernel dentro da nossa estrutura de diretório, ele é um arquivo, apenas um arquivo **/vmlinuz/boot/vmlinuz-5.6.13-gnu5-> 15 MB**  esse **z** porquqe esse arquivo fica compactado dentro da nossa estrutura de diretórios, localizaod dentro do /boot. Esse não tem tamanho fisico depedendo das complicações gerais, a menos que venha pdronizado da equipe do debian. mais nada impede de você compilar seu próprio kernel.
+>O Kernel dentro da nossa estrutura de diretório, ele é um arquivo, apenas um arquivo **/vmlinuz/boot/vmlinuz-5.6.13-gnu5-> 15 MB**  esse **z** porquqe esse arquivo  [FHC](https://refspecs.linuxfoundation.org/fhs.shtml)
+  * Wwol - Cadas programa de um jeito!
+  * Unix like - "Cada coisa no lugar definido"fica compactado dentro da nossa estrutura de diretórios, localizaod dentro do /boot. Esse não tem tamanho fisico depedendo das complicações gerais, a menos que venha pdronizado da equipe do debian. mais nada impede de você compilar seu próprio kernel.
 
 >Módulos | nem tudo que ta no código do kernel esta nesse arquivo do kernel, esta separado, em módulos, o que da um tamanho de 300 MB em média. O que acontece todos os dispositivos que o kernel tem suporte e que na compilação foram determinados para serem compilados, alguns são includos no próprio kernel que chamamos de **módulos BUITIN ou embutidos** e outros tantos foram separados. Então quando vocẽ instala um pacote de kernel, você vai instalar além do arquivo que é o kernel que é esse supramencionado acima, como também um conjunto enorme de módulos queq totalizam ai em torno de 300MB. E justamente por essa formulação modular voce leve o hd que instalou em uma maquina e levar para outra ele vai funcionar embora os hardwares sejam diferentes, lógico que desde que a arquitetura seja a mesma, porque o kernel em tempo de execução, quando ta rodando conversando com os barramentos descobre que hardware e módulo é necessário.
 
@@ -139,6 +141,35 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 >Originado Em 1996 quando começaram os trabalhos para definição desse PADRÃO juntamente com a comunidade do BSD - Univserisdade da Califórnia. Hoje é mantido pela LINUX FUNDATION.
  * fonte:
  [FHC](https://refspecs.linuxfoundation.org/fhs.shtml)
+  * Wwol - Cadas programa de um jeito!
+  * Unix like - "Cada coisa no lugar definido"
+
+  ![Alt text](image-9.png)
+
+DIRETÓRIO | 
+|--------|
+/ | Diretório Raiz
+/proc| Processos
+/dev |Dispositivos
+/boot | Kernel, initrd
+/bin | binários (E) Binários essenciais para o sistema
+/sbin | binários (adm) Essenciais para adm do sistema 
+/lib | bibliotecas - Biblioteca de funçãos que são usadas pelos programas que estão no /bin e /sbin
+/etc | Configuração - Aqui todos os programs colocam seus arquivos de configs, para programas maiores com mais arquivos de config. tem um subdiretorio dentro do /etc
+/media | Removíveis | monta conteúdo pendrives HDs etc..
+/mnt | Temporários - MOntagem termporários de volumos 
+/root |Usuário ROOT - Diretório particular do usuário root 
+/home | usuários  - Perfil dos usuários 
+/var | Variável - Conteúdo variável, ex. servidores web suas páginas ficam em um subdiretório nessa pasta, assim como dentro desse diretíro esta o /var/log que serve para monitorar mensagem de programas.
+/tmp | Arquivos temporários - conteúdo desse diretório é apagado quando desliga o sistema 
+/usr/bin | Binários de instalação de programas que não são os oficiais encontram -se nesse diretório
+/usr/sbin | Binários de administração do sistema 
+/usr/lib | Biblioteca que os programas contidos no /usr/bin e usr/sbin estão aqui nesse diretório.
+/usr/share | Aquivos independente da arquitetura x86 x64
+/usr/share/doc | Documentação dos programas dentro desse diretório, cada programa tem seu subdiretório.
+/usr/share/man | Manuais dos programas. 
+
+![Alt text](image-8.png)
 
 
 * Referẽncias
