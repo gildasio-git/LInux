@@ -138,7 +138,7 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 * Origem 
 >Originado Em 1996 quando começaram os trabalhos para definição desse PADRÃO juntamente com a comunidade do BSD - Univserisdade da Califórnia. Hoje é mantido pela LINUX FUNDATION.
  * fonte:
- [FHC](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbWlqMXBxNC15OXNpTWszMEU2OVA5YzFxWGhyQXxBQ3Jtc0tsbzJKZ1phWDBiWFBZbkx4eHdUZmVBTWF4WUhRbmpNVGxtMi1UWFZSV0lvb29oUWxySGM2aFBNbDBLNkFsMVNCLTc2c0UxRFNhY1NLR1hwMGY5Z1lHb1JBWjh3cVctUW15OG80RmE4c3BEckRZNVZkNA&q=https%3A%2F%2Frefspecs.linuxfoundation.org%2Ffhs.shtml&v=aq2f6Gtftyc)
+ [FHC](https://refspecs.linuxfoundation.org/fhs.shtml)
 
 
 * Referẽncias
