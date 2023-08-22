@@ -188,9 +188,9 @@ DIRETÓRIO | Descrição
 12. head (ler primeiras linhas de texto)
 13. --help  (ajuda)
 14. man (manual)
-15. | (PIPE concatenar comandos)
-16. > (direcionar saida)
-17. >>  (acrescentar conteúdo ao final de um arquivo de texto)
+15. `|` (PIPE concatenar comandos)
+16. `>` (direcionar saida)
+17. `>>`  (acrescentar conteúdo ao final de um arquivo de texto)
 18. cp (copiar arquivos/diretórios)
 
 [MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
