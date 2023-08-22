@@ -172,6 +172,30 @@ DIRETÓRIO | Descrição
 ![Alt text](image-8.png)
 
 
+<PROGRAMAS - LINHAS DE COMANDO >
+
+1. cd (Alterar diretório)
+2. ls (Listar conteúdo de diretórios)
+3. mv (mover)
+4. mkdir (criar diretório)
+5. rmdir (remover diretório vazio)
+6. rm -rf (remover diretório não vazio)
+7. cat (ler conteúdo de arquivo de texto)
+8. less (paginár tela)
+9. grep (filtrar termos)
+10. find (localizar)
+11. tail (ler ultimas linhas texto)
+12. head (ler primeiras linhas de texto)
+13. --help  (ajuda)
+14. man (manual)
+15. | >pipe (concatenar comandos)
+16. > (direcionar saida)
+17. >>  (acrescentar conteúdo ao final de um arquivo de texto)
+
+[MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
+[MATERIAL DE APOIO](https://cotidianoti.com.br/Comandos-basicos-linux/)
+  
+   
 * Referẽncias
 * Idéia Geral
 * Princípais Diretórios
