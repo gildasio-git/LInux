@@ -172,7 +172,7 @@ DIRETÓRIO | Descrição
 ![Alt text](image-8.png)
 
 
-<PROGRAMAS - LINHAS DE COMANDO >
+<COMANDOS BÁSICOS - PROGRAMAS>
 
 1. cd (Alterar diretório)
 2. ls (Listar conteúdo de diretórios)
@@ -191,11 +191,12 @@ DIRETÓRIO | Descrição
 15. | >pipe (concatenar comandos)
 16. > (direcionar saida)
 17. >>  (acrescentar conteúdo ao final de um arquivo de texto)
+18. cp (copiar arquivos/diretórios)
 
 [MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
 [MATERIAL DE APOIO](https://cotidianoti.com.br/Comandos-basicos-linux/)
-  
-   
+
+
 * Referẽncias
 * Idéia Geral
 * Princípais Diretórios
