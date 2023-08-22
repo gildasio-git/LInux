@@ -181,7 +181,7 @@ DIRETÓRIO | Descrição
 5.  rmdir (remover diretório vazio)
 6.  rm -rf (remover diretório não vazio)
 7.  cat (imprime saída do conteúdo de arquivo de tela)
-8.  less (paginador de tela)
+8.  less (paginador de tela e permite pesquisar temro usando o `\`)
 9.  grep (filtrar termos)
 10. find (localizar)
 11. tail (ler ultimas linhas texto)
