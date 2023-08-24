@@ -193,8 +193,9 @@ DIRETÓRIO | Descrição
 17. `>>`  (acrescentar conteúdo ao final de um arquivo de texto)
 18. cp (copiar arquivos/diretórios)
 
-[MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
-[MATERIAL DE APOIO](https://cotidianoti.com.br/Comandos-basicos-linux/)
+* [MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
+* [MATERIAL DE APOIO](https://cotidianoti.com.br/Comandos-basicos-linux/)
+
 
 
 * Referẽncias
