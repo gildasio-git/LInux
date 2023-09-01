@@ -202,3 +202,10 @@ DIRETÓRIO | Descrição
 * Idéia Geral
 * Princípais Diretórios
 * Passeio
+
+<h3>EDITORES DE TEXTO PURO</h3>
+
+* Plain text
+  ~Forma de representação de codificação~
+* ASCII e derivados
+* Unicode -> utf-8 compatível 
