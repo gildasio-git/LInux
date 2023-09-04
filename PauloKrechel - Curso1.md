@@ -240,6 +240,18 @@ DIRETÓRIO | Descrição
     * (https://www.youtube.com/watch?v=UUzW46SeLhg)
     
 
+* SOBREVIVÊNCIA NO "VIM"
+ * [Material de apoio](https://github.com/calangohc/apresentacoes/tree/master/vim-magnun) 
+
+ * MODOS
+   * COMANDO
+   * VISUAL
+   * INSERÇÃO
+   * LINHA DE COMANDO
+
+<h3>PACOTES</h3> 
+
+
 
 * ASCII e derivados
 * Unicode -> utf-8 compatível 
