@@ -35,9 +35,12 @@
 `find /var/log -type f -mmin 20`#pesquisa arquivos modificados a 20 minutos 
 `find /var/log -type f -mmin -20`#pesquisa arquivos modificados a menos de 20 minutos 
 `find /var/log -type f -mtime +1 -mtime -3` #pesquisa arquivos modificados a mais de um dia e a menos do que 3 dias
-
-
-
+`find /var/log  -type f -size +600k -size 6000k `#pesquisa arquivos com mais de 600k e menos que -6000k
+`find /var/ -type -size +2M -size 3M` #pesquisa arquivos com mais de 2M e menos que 3M
+`find /var/log -type f -newer arq1`#pesquisa arquivos modificados mais recentemente que o arq1
+`find / -type  f -gid 42`#pesquisa arquivos cujo grupo desse arquivo tem o numero 42
+`find / -type  f -group shadow 42`#pesquisa arquivos cujo grupo seja shadow
+`find / -type `
 
 
 
