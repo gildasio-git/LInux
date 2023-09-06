@@ -44,7 +44,7 @@ Comando | Descrição
 `find / -type f -user usario` | #Pesquisa arquivos que pertença a um determinado usuário.
 `find /var/log -type f -name *.gz -delete` | #Pequisa tudo que foi compactado na pasta /var/log e deleta 
 `find / -type f -name *.gz -print0` | #Printa o resultado da saida do comando na tela, usando um separador binário 0, usado para passar o resultado para outro comando como o exemplo abaixo
-`find / -type f -name *.gz -print0 | xargs -0 file` | #Obttém o resultado do primeiro coamdno e envia ao xargs que prepara a lista formatada., usado quando possuir um número arquivos em os comandos não irão conseguir listar.
+`find / -type f -name *.gz -print0 "|" xargs -0 file` | #Obttém o resultado do primeiro coamdno e envia ao xargs que prepara a lista formatada., usado quando possuir um número arquivos em os comandos não irão conseguir listar.
 `find /etc -type f -name *login* -exec root {} ";"` |#Busca todos os arquivos que inclui a palavara login nele, e como -exec -> realiza um comando para cada linha correspondente aos arquivos listados  jogando o resultado no {}
 `find /etc/ -type f -name *login* -exec grep -n root {} ";"` | #Equivalente ao comando acima porém insere o parâmetro -n para mostrar o número da linha, ou ainda com grep -l para saber somente o arquivo.
 `find /etc/ -type f -name *login* -exec cp {} /tmp ";"` | #Variação do comando acima, porém agora esta copiando o resultado para o diretório /tmp, lembre-se que o resultado estará dentro de '{}'.
