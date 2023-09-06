@@ -4,8 +4,10 @@
 
 * Exemplos:
 
-`find /var/log` #traz apenas a lista de arquivos diretório log
-`find /var/log -type f` #procura apenas arquivos de tipo comum
+Comando | Descrição
+-------------------
+`find /var/log` | #traz apenas a lista de arquivos diretório log
+`find /var/log -type f`| #procura apenas arquivos de tipo comum
 `find /var/log -type d` #procura por diretórios
 `find /var/run -type p` #procura por arquivos de pipe
 `find /var/run -type s` #procura arquivos de socket 
