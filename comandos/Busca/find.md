@@ -37,10 +37,17 @@
 `find /var/log -type f -mtime +1 -mtime -3` #pesquisa arquivos modificados a mais de um dia e a menos do que 3 dias
 `find /var/log  -type f -size +600k -size 6000k `#pesquisa arquivos com mais de 600k e menos que -6000k
 `find /var/ -type -size +2M -size 3M` #pesquisa arquivos com mais de 2M e menos que 3M
-`find /var/log -type f -newer arq1`#pesquisa arquivos modificados mais recentemente que o arq1
-`find / -type  f -gid 42`#pesquisa arquivos cujo grupo desse arquivo tem o numero 42
-`find / -type  f -group shadow 42`#pesquisa arquivos cujo grupo seja shadow
-`find / -type `
+`find /var/log -type f -newer arq1`#pesquisa arquivos modificados mais recentemente que vocẽ esta comparando, no caso acima o arq1
+`find / -type  f -gid 42`#pesquisa arquivos cujo grupo dono do arquivo tenha o  numero 42
+`find / -type  f -group shadow 42`#pesquisa arquivos cujo grupo seja shadow, tudo que pertença ao grupo shadow
+`find / -type f -uid 1000` #pesquisa todos arquivos que pertença ao UID 1000 (usuário 1000)
+`find / -type f -user usario` #Pesquisa arquivos que pertença a um determinado usuário.
+`find /var/log -type f -name *.gz -delete`  #Pequisa tudo que foi compactado na pasta /var/log e deleta 
+`find / -type f -name *.gz -print0` #Printa o resultado da saida do comando na tela, usando um separador binário 0, usado para passar o resultado para outro comando como o exemplo abaixo
+`find / -type f -name *.gz -print0 | xargs -0 file` #Obttém o resultado do primeiro coamdno e envia ao xargs que prepara a lista formatada., usado quando possuir um número arquivos em os comandos não irão conseguir listar.
+`find /etc -type f -name *login* -exec root {} ";"`#Busca todos os arquivos que inclui a palavara login nele, e como -exec -> realiza um comando para cada linha correspondente aos arquivos listados  jogando o resultado no {}
+`find /etc/ -type f -name *login* -exec grep -n root {} ";"`#Equivalente ao comando acima porém insere o parâmetro -n para mostrar o número da linha, ou ainda com grep -l para saber somente o arquivo.
+`find /etc/ -type f -name *login* -exec cp {} /tmp ";"`#Variação do comando acima, porém agora esta copiando o resultado para o diretório /tmp, lembre-se que o resultado estará dentro de '{}'.
 
 
 
