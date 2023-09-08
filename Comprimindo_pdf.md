@@ -12,7 +12,7 @@
 * Os vários ajustes na opção -dPDFSETTINGS são fornecidos na tabela abaixo. Use-os de acordo com a sua necessidade.
 
 dPDFSETTINGS | DESCRIÇÃO
-------------------------
+-------------|----------
 -dPDFSETTINGS=/screen|Has a lower quality and smaller size. (72 dpi)
 -dPDFSETTINGS=/ebook|Has a better quality, but has a slightly larger size (150 dpi)
 -dPDFSETTINGS=/prepress	|Output is of a higher size and quality (300 dpi)
