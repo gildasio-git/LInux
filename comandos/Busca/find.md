@@ -48,7 +48,7 @@ Comando | Descrição
 `find /etc -type f -name *login* -exec root {} ";"` |#Busca todos os arquivos que inclui a palavara login nele, e como -exec -> realiza um comando para cada linha correspondente aos arquivos listados  jogando o resultado no {}
 `find /etc/ -type f -name *login* -exec grep -n root {} ";"` | #Equivalente ao comando acima porém insere o parâmetro -n para mostrar o número da linha, ou ainda com grep -l para saber somente o arquivo.
 `find /etc/ -type f -name *login* -exec cp {} /tmp ";"` | #Variação do comando acima, porém agora esta copiando o resultado para o diretório /tmp, lembre-se que o resultado estará dentro de '{}'.
-`find /etc -maxdepth 2 - iname *.conf` #Pesquisa arquivos até segundo nível de diretório, ignorando palavras maiusculas e minusculas todos os arquivos .conf contido nesse diretório.
+`find /etc -maxdepth 2 - iname *.conf` | #Pesquisa arquivos até segundo nível de diretório, ignorando palavras maiusculas e minusculas todos os arquivos .conf contido nesse diretório.
 
 
 
