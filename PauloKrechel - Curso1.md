@@ -255,3 +255,84 @@ DIRETÓRIO | Descrição
 
 * ASCII e derivados
 * Unicode -> utf-8 compatível 
+
+<h3>SISTEMAS DE ARQUIVOS</h3>
+<h4>Conceitos</h4>
+
+* Código Fonte
+* Compilador
+* Biblioteca de desenvolvimento
+* Conhecimento Técnico Específico
+
+>PACOTE:
+* Um pacote de software é a menor unidade que pode ser instalado que usa pacotes, um poacote pode contar um único programa. Algumas vezes funciona por si só, apenas pensas daquele programa. Em outras circunstãncias precisa de bibliotecas de funções que são usadas por vários programas, Logo um pacote pode ser compostos por várias dessas bibliotecas. Há pacores ainda de documentação, como dentre outros como :
+  * Fontes
+  * Icones 
+  * Temas de ambiente
+  * Dados
+  * Textos
+
+>Um pacote pode ter mais de um programa, e um programa para funcionar pode precisar de vários pacotes. Porém existem pacotes que podem precisar de dependências, o que são essas **DEPENDÊNCIAS** são outros pacotes que aquele pacote que eu quero instalar precisa para que ele funcione, ou seja um apcote precisa de outro pacote, para que seja instalao o pacote A precisa do pacote B que essa por é necessário para o funcionando do pacote B. Pacotes debian vem recomendando existalação de pacotes dependentes. 
+
+![Alt text](image-11.png)
+
+>O **PACOTE .DEB** nada mais é do que um arquivo compactadom em um formato chamado AR, esse arquivo compactado tem tudo que é preciso para isntalar aquele específico  pacote, como informações do que ele depende, as info daquele pacote vai fazer, quem fez, endereço do desenvolvedor, a imagem acima mostra a estrutura de uma pacote.
+
+* \user
+ * \bin (mostra os binários, ou seja esse pacote instala dois programas)
+
+* \share (informação compartilhada do pacote)
+ * \doc (Onde será alocada toda a documentação de todos os pacotes que são instalados)
+ 
+* \man
+ * \man1 (Manuais do programa - todo programa precisa ter uma página de manual seguindo assim a estrutura de empacotamento das disribuições)
+
+* Pacotes também trazem scripts que são pequenos progarmas interpletados que poderão serem executados em alguns momentos no processo de instalação., antes da instalação, após remoção.
+
+* A instalação de um pacote DEIAN não somente é a instalação de um pacote  e esse pacote realizar o que quizer em seu ambiente, esse pacote é interpletado, é aberto, é observado pelo gestor de pacotes e todas essas ações são praticadas, e existem registros dessas ações, logo é possivel saber quando um pacote foi instalado, se um pacote esta isntalado, usa-se no debian um sistema que consegue gerir, tomar contas dos pacotes para que possamos ter controle do nosso sistema de maneira completa. Um dos arquivos que vem no pacote é o **MD5SUMS** esse aruivo traz o hash da integridade dos arquivos. Cada arquivo que foi incluido por esse pacote é possível verificar mantém a integridade aos que foram produzidos. Podendo a qualquer tempo checar quanto a integridade dos mesmos.
+
+
+<h3> BASE APT</h3>
+
+* INSTALAR 
+* REMOVER 
+  * Remove tudo que o pacote instalou, mais mantém por uma questão de facilidade em alguns pacotes específicos, arquivos de configuração, caso instale um novo pacote ele não substituirá os arquivos ce configuração.
+
+* ATUALIZAR LISTA 
+
+  * Durante a instalação de um pacote , a ferramenta irá verificar existẽncia de dependência e caso precise irá instalar. Importante de tempos em tempos atualizar a base de pacotes disponíveis.
+
+* ATUALIZAR SISTEMA 
+  * compara a versão dos pacotes instalada com as versões diponíveis na lista para instalação, cabe isso ao gestor de pacotes realizar esse processo.
+
+* PURGAR 
+  * Remove o pacote instalado bem como suas ramificações, a exemplo: arquivos de configurações.
+
+* ARQUIVO DEB
+
+<h3>REPOSITÓRIOS</h3>
+
+ * Onde estão localizados  o espelhos dos pacotes disponíveis na WEB., que funciona via HTTP, HTTPS, FTP.
+
+ * /etc/apt/sources.list -  (espelhos de repositórios ficam espalhados pelo mundo inteiro)
+
+ >Com essa estruruta de pacotes para quem não esta acostumado precisa verncer um paradígma de donwloade des progranas exe do universo windows, não há uma gestão de pacotes. Nos pacotes Linux tem seus próprios arquivos, não pode um arquivo estar em dois pacotes ao mesmo tempo, a forma de encontrar um programa é diferente, ou seja é priorizado a fonte oficial do sistema operacional.
+
+<h3> GERENCIADORES DE PACOTE </h3>
+
+ * DPKG 
+ * APT  - 
+ * APT-GET 
+ * APTITUDE
+
+ * SYNAPTIC
+ * GNOME-SOFTWARE
+ * DISCOVER
+ * "LOJINHA" 
+
+ <h3> BÁSICO </h3>
+  
+  COMANDO | Descrição
+|--------|-----------
+apt update | Atuliza 
+ape search pesquisa | pesquisa pacote no repositório
