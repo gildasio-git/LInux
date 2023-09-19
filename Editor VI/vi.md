@@ -25,8 +25,8 @@ Comando | O que faz
 `:s/ssh/SSH` | Pequisa uma string e realiza a substituição, porém apenas a primeita entrada
 `:s/SSH/ssh/g` | Substitui todas as entradas maicusulas SSH para minusculas ssh, porém apenas na mesma linha 
 `:%s/domain/teste/g` | Substitui em todo o arquivo.
-`ESQ+o` | Vai para linha abaixo
-`ESQ+O` | Vai para linha acima 
+`ESQ+o` | Insere uma nova linha abaixo
+`ESQ+O` | Insere uma nova linha acima 
 `ESQ+A` | Vai para o final da linha 
 `ESQ+W` | Navega nos campos 
 
