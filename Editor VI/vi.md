@@ -9,6 +9,8 @@
 
 <h3>MANIPULAÇÃO DE TEXTOS</h3>
 
+Comando | O que faz
+--------|----------
 `DD` | copia linha para memória 
 `ESQ+numero_linhas_para_recordar+DD` | Rercorta números de linhas desejadas.
 `ESQ:40` | Vai para linha 40 do arquivo 
