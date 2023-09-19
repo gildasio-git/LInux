@@ -4,6 +4,7 @@
  `apt install wamerican`
 
 <h3>PRATICANDO</h3>
+
 `cat american-english | grep computer`   - Aqui ele filgra apenas palavras computer, porém não é o suficiente porque precisanos melhorar, ou seja extrair apenas essa palavra da lista e para isso podemos usar uma explressão passando um parâmetro `-E` que diz que estamos passando uma expressão regular para que o SHELL possa entender e devolver o que precisamos.
 
 `cat american-english | grep -E "^computer"`
