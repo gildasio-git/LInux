@@ -14,9 +14,9 @@ Comando | O que faz
 `DD` | copia linha para memória 
 `ESQ+numero_linhas_para_recordar+DD` | Rercorta números de linhas desejadas.
 `ESQ:40` | Vai para linha 40 do arquivo 
-`ESQ:gg` | Vai para o inicio do arquivo
-`ESQ:G` | Vai para o final do arquivo 
-`ESQ:/` | Localiz string dentro do arquivo 
+`ESQ+gg` | Vai para o inicio do arquivo
+`ESQ+G` | Vai para o final do arquivo 
+`ESQ/` | Localiza string dentro do arquivo 
 `u` | Undo Desfaz o último comando 
 `p` | Copia linha ABAIXO
 `P` | Copia linha ACIMA
