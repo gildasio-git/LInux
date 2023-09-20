@@ -343,3 +343,7 @@ apt full-upgrade | Atualização completa, porém caso tenha um pacote instalado
 dpkg -l | Lista todos os pacotes cum sua devida versão que temos instalado em nossa maquina.
 dpkg -L | Saber arquivos que um pacote instalou em nossa maquina esse comando te retorna.
 
+>Obs: cuidados ao remover pacote, observe as dependẽncias, na lista de pacotes  pode mostrar uma sigra `RC` que indica que o pacote foi removido porém seus arquivos de configuração permanecem.
+
+<h3>SISTEMAS DE ARQUIVOS</h3>
+aula 16 ... continua
