@@ -346,4 +346,11 @@ dpkg -L | Saber arquivos que um pacote instalou em nossa maquina esse comando te
 >Obs: cuidados ao remover pacote, observe as dependẽncias, na lista de pacotes  pode mostrar uma sigra `RC` que indica que o pacote foi removido porém seus arquivos de configuração permanecem.
 
 <h3>SISTEMAS DE ARQUIVOS</h3>
+
+* ABTRAÇÕES
+* ANALOGIA
+* CONCEITOS
+* TIPOS
+* CARACTERISTICAS.
+
 aula 16 ... continua
