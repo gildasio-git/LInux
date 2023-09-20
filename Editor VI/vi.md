@@ -4,7 +4,7 @@
 `ESQ+:q!` | Sai sem alterar nada 
 `ESQ+x` |Sai e salva as modificações
 `R` | Raliza o replace de um caractere
-`ESQ:nomearquivo` | Salva o arquivo com outro nome 
+`ESQ:w+nomearquivo` | Salva o arquivo com outro nome 
 
 
 <h3>MANIPULAÇÃO DE TEXTOS</h3>
