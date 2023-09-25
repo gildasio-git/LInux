@@ -376,11 +376,72 @@ Existse um conceito chamado **INODE** que é um espaço na planchetinha localiza
 ![Alt text](image-15.png)
 
 
-
 <h3>SISTEMA DE ARQUIVOS</h3>
 
 ![Alt text](image-18.png)
 
 <h3>JOURNALING</h3>
+<h4>Ordem de escrever - escrita efetiva</h4>
 
->
+
+>Toda vez que o kernel recebe uma ordem para escrever dados no dispositivo de armazenamento, ele anota nessa área chamaa Jornaling que recebeu essa ordem. Quando efetivamente o kernel trocando informações com o disco grava essa informação no disco ele volta la no Jornaling e reaiza um ticket , ou seja uma marcação informando que o arquivo foi gravado. Os sistemas de arquivos que usam esse recurso de Jornaling, eles são mais facilmente recuperados a sua integridade quando por exemplo uma interrupção de energia elétrica, porque quando o sistema volta no Jornaling e verifica algumas operações que não foram tikadas, logo ele sabe os INODES que ficaram sem ou com altearções. em um sitesmta de arquivo que **NÃO TEM JORNALING** no caso o EXT2, esse processo é muito mais demorado porque o programa tem que scanear todos os inodes disponíveis para ver quais estão e quais não estão sendo utilizados, para que a gente tenha certeza que tudo aquilo que a gente ordenou foi efetivamente escrito, a gente costuma usando um programa usado chamado **SYNC** o SYNC diz ao kernel para o kernel acelerar o processo, e ele vai dar essa ordem para escrever efetivamenete tudo que tem que estar  escrito e só é liberado quando tudo estiver devimdamente inscrito. podemos comparar esse procedimento quando recebemos a msg **VOCÊ JA PODE REMOVER SEU PENDRIVE COM SEGURANÇA** todas as ordens para escrever uma informação ou para apagar ja foram realizadas, ou seja o sistema de arquivos está todo integro.
+
+<h4>FRAGMENTAÇÃO (SKLACKSPACE)</h4>
+![Alt text](image-19.png)
+
+1 - Ocupa dois blocos e o pedacinho de um terceiro, o resto não pode ser usado, não tem como ser indexado. (essa parte que não pode ser usado é chamada dE **slackspace**) assim segue os mesmos arquivos em cores divergentes.
+2 - Algum programa mandou apgar-se o arquivo amarelo, ou seja esses blocos estão disponíveis para uso, porém os dados que estavam ali vão continuar da mesma forma sem mexer. 
+3 - Algum momento um outro pograma manou gravar o arquivo azul, esse precisava de 3 blocos e mais ou um outro tanto de espaço, ele irá grava no espaço que antes estava utilizado o bloco amarelo que foi apagado,o restante do arquivo azul terá que ser gravado em blocos disponiveis mais a frente.  Ou seja não foi gravdo de forma contígua, ficando assim o arquivo azul fragmentado, espalhados pelo disco.
+
+>Sistemas como FAT e NTFS são mais sucetiveis a fragmentações, ja em sistemas Linux em sisteams EXT4 é bastante insignificante o nível de fragmentação, embora também exista aplicativo para realizar tal procedimento em linux.
+
+<h4>TIPOS DE SISTEMA DE ARQUIVOS</h4>
+
+SITEMA DE ARQUIVOS | Descrição
+|--------|-----------
+ext2 | usado muito tempo, não possui Jornaling 
+ext e ext4 | Sistemas mais atuais e que possuem sistema de Jornaling
+squartfs, ISO-9660 | São sistemas de arquivos para apenas leitura, ou seja quando cria os dados ja estão todos alí, não tem como editar arquivos, remover ou inserir sobrescrevendo assim os que ali ja existem, são sistemas de arquivos para apenas READ ONLY(somente leitura)
+xfs,jfs,zfs,btrfs | Tipos mais usados em unixlike, GNULinux
+FAT-32,NTFS, ExtFat(pendrivers atuais)  | Sistema de arquivos 
+windows.
+hfs | Sistemas MAC-OS.
+
+* Visualizando sistema de arquivos.
+ * `cat/proc/fileystems`
+
+ * MATERIAL DE APOIO 
+
+  * [Inode](https://pt.wikipedia.org/wiki/N%C3%B3-i)
+  * [Jornaling](https://pt.wikipedia.org/wiki/Journaling)
+  * [Comparação de sistemas de arquivos](https://en.wikipedia.org/wiki/Comparison_of_file_systems)
+  * [Ext4](https://pt.wikipedia.org/wiki/Ext4)
+  * [ReiserFS](https://pt.wikipedia.org/wiki/ReiserFS)
+  * [Btrfs](https://pt.wikipedia.org/wiki/Btrfs)
+  * [NTFS](https://pt.wikipedia.org/wiki/NTFS)
+
+<h4>TRABALHANDO COM SISTEMA DE ARQUIVOS</h4>
+
+ * Dipositivos 
+  * A representação dos dispositivos pousseum diretório específico para eles que é o `/dev` então os discos ou dispoistivos de armazenamento recebe o nome de um arquivo que vai permitir o acesso direto a esse dispositivo como na imagem abaixo:
+
+  ![Alt text](image-20.png)
+
+  >Em maquinas virtuais os dispostivivos recebem o nome de `VD``VDA - Primeiro disco virtual` `VDB-segundo disco virtual`, sequencilalmente nomeando suas partições como `VDA1-primeira partição do primeiro disco` `VDAB-Segunda partipção do primeiro disco` seguindo logiamente para partições quantas tiverem, assim como de mesma forma os discos `VDB1 - Primeira partição do disco B` `VDB2 - segunda partição do disco B.`
+
+  >Em tercnologias mais modernas que usam o discos NVME o arranjo ficará da seguinte forma: `/dev/nvme0n1p1 - Primeira parte  nvme0n1 - Disco, p1 - Partição`
+
+ * Particionamento 
+  
+  ![Alt text](image-21.png)
+
+  >São partes de um disco, no GNU podemos usar mais de um formato de particionamento, o mais habitual é o particionamento GPT e o particonamento DOS/MBR. Nos sistemas GPT podemos alocar até 128 partições, ja em partições DOS/MBR como mostra a figura só poderemos usar 4 partições primárias, ou criar uma partição extenida para inserção de mais partições lógicas.
+
+  <h4>CRIAR FS</h4>
+
+
+
+ * Criar FS(format)
+ * Verificar 
+ * Montar 
+ * Espaço
