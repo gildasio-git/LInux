@@ -480,6 +480,7 @@ hfs | Sistemas MAC-OS.
 >NOTA - Note que com a listagem longa observer que na primeira coluna começa com "b" o quer dizer que trata-se de um dispositivo de blooco, ou seja que o dispositivo envia informações em bloco, trata-se de um arquivo que representa um dispositivo.
 
  * **FORMATAR** - CRIAR O SITEMA DE ARQUIVOS
+ 
  COMANDO | Descrição
 |--------|-----------
 `mkfs.ext4` | Realiza a formatação da partição.
@@ -501,4 +502,20 @@ hfs | Sistemas MAC-OS.
 >NOTA: Integridade é verificar se toda a estrutura da área de controle esta ok, se foi montada adequadamente ou desmontada, toda vez que montamos uma partição é escrito lá que ela foi montada 
 e quando desmontamos essa alteração e realizada para o status de desmontada.
 
-* `fsck.ext4 /dev/sda4`
+ * `fsck.ext4 /dev/sda`
+
+* OBTER INFORMAÇÕES SOBRE O SISTEMA DE ARQUIVOS
+   
+ * `dumpe2fs /dev/sda2` - Traz informações soebre o sistema de arquivos, são várias, uma bacana de ver é a última vez que foi checado, numero de INODES, DATA DE CRIAÇÃO DO SISTEMA DE ARQUIVOS, ULTIMA VEZ QUE ELE FOI MONTADO, ULTIMA VEZ QUE ELE FOI ESCRITO. 
+
+* OBTER O QUE ESTA TOMANDO MAIS ESPAÇO EM SEU DISCO
+ * `du -shc /*`  - Soma a quantidade de epaço usado em todos os diretórios, pode ser usado com a variação **SORT** para ordenar, pode também especificar um diretório  unico como:
+ * `du -shc /home/*`
+
+* MATERIAL DE APOIO 
+
+  * [Hibernação do Windows](https://learn.microsoft.com/pt-BR/troubleshoot/windows-client/deployment/disable-and-re-enable-hibernation)
+
+  * Removendo os metadados nts
+    `mount -t ntfs-3g -o remove_hiberfile /dev/your_NTFS_partition /mount/point`
+
