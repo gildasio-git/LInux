@@ -437,11 +437,68 @@ hfs | Sistemas MAC-OS.
 
   >São partes de um disco, no GNU podemos usar mais de um formato de particionamento, o mais habitual é o particionamento GPT e o particonamento DOS/MBR. Nos sistemas GPT podemos alocar até 128 partições, ja em partições DOS/MBR como mostra a figura só poderemos usar 4 partições primárias, ou criar uma partição extenida para inserção de mais partições lógicas.
 
-  <h4>CRIAR FS</h4>
+ * Criar FS
+  * "FORMATAR" Preparar área de controle.
 
+  `mkfs.ext4, mkfs.vfat,mkfs.reiserfs`
 
+  * "VERIFICAR"  integridades dos arquivos
+   * `fsck`
+   * `win hybernation`
+   * "**embromation** - quando desligamos maquinas com sistemas windows, na realidade ele não desliga totalmente o equipamento, deixa a maquina em um estado intermediário(Hibernado) e caso vocẽ tente escrever nessa partição a partir de um sistema linux estando em dual boot você vai receber uma msg informando que a unidade esta hibernada. "
 
- * Criar FS(format)
- * Verificar 
- * Montar 
+ * MONTAR MÍDIAS 
+
+ ![Alt text](image-22.png)
+ 
  * Espaço
+>Espaço usado em tese seria a soma to total de arquivos gravados no disco, porém lembre-se que nem sempre um arquivo ocupa totalmente um bloco, o que irá gerar uma sobra, sendo aqui um pouco menor do espaço ocupado, é o espaço que não pode ser usado. **AINDA ASSIM** existe um espaço reservado para o usuário **ROOT**.
+
+ ![Alt text](image-23.png)
+
+ <h4>MÃO DA MASSA - CRIANO E APAGANDO PARTIÇÕES</h4>
+
+  * **FDISK**
+
+  >OBS o "*" apontado na partição do disco informa ao BOOT LOADER que ali possui um boot, ou seja ela é inicializável.
+
+>NOTA - Para listar as partitions que o kernel entendeu pode usar o comando `cat /proc/partitions`.
+
+ COMANDO | Descrição
+|--------|-----------
+`fdisk /dev/sda` | diz ao FDISK para trabalhar com o dispositivo diretamente
+`m` | Mostra menu de ajuda 
+`d` | Exclui uma partição, será mostrada numero de partições pedindo para selecionar a partição desejada para apagar, por padrão se apenas pressionar ENTER aparára a última.
+`w` | Grava as alterações, lembre-se caso saia do sistema sem antes confirmar as alterações com pressionando `w` nada será aplicado.
+`g` | Cria uma nova tabela de partições  GPT
+`n` | Cria uma nova partição
+`t` | Escolhe tipo de sistema de arquivo a ser utilizada 
+`ls /dev/sda*` | Para visualizar a lista de partições disponíveis 
+
+>Na dúvida digite `q` para sair da tela.
+
+>NOTA - Note que com a listagem longa observer que na primeira coluna começa com "b" o quer dizer que trata-se de um dispositivo de blooco, ou seja que o dispositivo envia informações em bloco, trata-se de um arquivo que representa um dispositivo.
+
+ * **FORMATAR** - CRIAR O SITEMA DE ARQUIVOS
+ COMANDO | Descrição
+|--------|-----------
+`mkfs.ext4` | Realiza a formatação da partição.
+
+>NOTA - caso queira saber em algum momento o que é acessado quando digitamos um comando, para usar o comando `which mkfs.txt4`, mostra onde esta o binário.
+
+>NOTA - Durante a formatação é preparada a área de controle sobre os blocos que estão sendo usados , os que não esta sendo usados, e o backup desses blocos, quando a gente formata também e criado para aquela partição um **ID** para que quando em um futuro assim desejar, quisera montar automaticamente essa unidade, isso poderár ser feito.
+
+ * Formatado no nosso caso o **SDA2** vamos formatar a primeira partição com o comando:
+  * `mkfs.vfat /dev/sda1`  - Após isso é preciso montar para somente assim puder escrver informações nessa unidade/partição criada/formatada, para isso usamos o comando abaixo:
+  * `mount /dev/sda2 /mnt` - Aqui passamos o comando **mount** o **caminho do dispositivo** e **ponto de montagem**, ou seja o diretório que essa partição será montada.
+ * Demontando partição montada
+  * `sudo umount /mnt`
+
+>NOTA - para visualizar lista de dispositivos de armazamento, bem como seus espaços utilizados e disponíveis use os comandos `df -h` ou `df -H`.
+
+* VERIFICAR A **INTEGRIDADE** DO DISCO
+
+>NOTA: Integridade é verificar se toda a estrutura da área de controle esta ok, se foi montada adequadamente ou desmontada, toda vez que montamos uma partição é escrito lá que ela foi montada 
+e quando desmontamos essa alteração e realizada para o status de desmontada.
+
+* `fsck.ext4 /dev/sda4`
