@@ -519,3 +519,65 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
   * Removendo os metadados nts
     `mount -t ntfs-3g -o remove_hiberfile /dev/your_NTFS_partition /mount/point`
 
+<h3>AULA-18 | RESOLVER PROBLEMAS COM LOGs</h3>
+
+
+* LOGS
+ * Mensagens recebidas e registradas no sistema que permite um adminsitrador realizar autitorias acerca de programas  ou do sistema, de modo que ajude na manutenção e correção de problemas no SO.
+
+
+ * Localização dos arquivos de LOGs
+    `/var/log`
+
+>NOTA: Alguns programas mantém um local próprio seu para manutenção dos seus logs, é o caso do `APT` mantendo um registrode todas a instalação/atualizações que foram feitas encontam-se sem seu repositorio de log.
+
+* SERVIDOR DE LOGS
+ * Possui um programa startado que não possui iteração com o usuário, este fica aguardando uma conexão de rede que vai enviar msgs. No caso os programas, sejam eles tanto locais que rodam na mesma maquina que esse serviço esta em execução, como de outras máquinas ligadas a esse servidor ligados através da rede. A exmplo podemos ter uma maquina servidora de de logs que reunia nela todos logs de um servidor de rede, em resumo o servidor de logs é um servido que recebe mensagens e registro isso de modo que possa ser em determinado momento que seja necessário visualizar esse logs, para fins principalmente de solução de problema.
+    * Sevidores de LOGs disponíveis 
+      * Mensagens locais 
+      * rede 
+        * syslog
+        * rsyslog
+        * syslog-ng 
+
+* CONCEITOS
+![Alt text](image-24.png)
+ * Quadro acima destaca as principais categorias de mensagens recebidas dos logs, bem como seu nível crítico ou não de importância.
+
+
+* PRINCIPAIS ARQUIVOS 
+
+ Localização | Descrição
+|------------|-----------
+`/var/log/syslog` | este mantém a maior concentração de logs do sistema.
+`/var/log/auth.log` | Mantém mensagens de login no sistema, informações de sucesso, falha e tentativas de login.
+`/var/kernel.log` | Mantém mensagens relativas ao kernel do sistema, a exemplo um módulo do sistema que é carregado.
+
+* ENTENDENDO AS MENSAGENS 
+
+ * Estrutura de uma mensagem de log
+  `horário:máquina:programa[processo]<criticidade>:mensagem`
+
+* LOGGER
+ * Trata-se de um programa separado que serve para você usar em script, que através deste você pode encaminhar mensagems para os servidor de LOGs, de modo simples se você digitar o comando `logger e a mensagem` essa mensagem vai aparecer no servidor de log.
+ ![Alt text](image-25.png)
+
+* RTFL
+ * Read The Fantastic Logs
+
+* USANDO O `grep` e `tail -f` PARA LEITURA DOS ARQUIVOS DE LOGs
+
+ Comandos | Descrição
+|------------|-----------
+`ls -lrsh` | lista os arquivos de log de forma l=longa, r=recusivo, s=Tamanho, h=Humano
+`du -shc /var/log/*` | Visualiza o tamanho total dos arquivos de  log está ocupando na máquina.
+`tail -f /var/log/syslog` | Lista em tempo reais captura de logs do sistema, usando o parâmetro -f=folowing, verá que sera mostrado em tempo real as informaçoes do dispositivo inserido na pora usb, como nome do dispositivos, porta usb conectada dentre outras informações, isso graças a um processo chamado **UDEV**, nesse momento um módulo do kernel caso precise, também será iniciado para ser possível o uso desse dispositivo.
+`tail-f auth.log` | Mostra as informações/mensagens, no caso o servidor de logs separa categorias de mensagens em arquivos, no caso aqui será mostrado as mensagens de autenticação, opodendo assim acompanhar os logins realizados e out tentativas de login com sucesso e falha no sistema.
+`tail /var/log/kernel.log` | Exeibe ultimas 10 linhas de logs do kernel,
+`grep fail /var/log/syslog` | Exibe falhas ao carregar módulos
+
+ 
+
+
+
+ 
