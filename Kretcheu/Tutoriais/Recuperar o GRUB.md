@@ -43,5 +43,7 @@
 
 8. aplica o comando `booot`.
 
+9. Após reiniciar, entre no shel e de o comando `update-grup` para ataulizar o arquivo de configuração do grub, o que produz o menu.
+
 !!PRONTO!!
  
