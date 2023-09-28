@@ -584,6 +584,130 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
 
 
 
+<h3>GUIA DE SOLUÇÕES DE PROBLEMAS</h3>
+
+
+>**Resolver um problema é consequência de entender qual sua causa. Mais importante que funcionar é saber o porquê funcinou"**
+
+* GUIA 
+
+ * Definir / Identificar o problema/atividade
+ * Objetivo 
+ * Oque realmente quero fazer?
+ * Estudar o tema.
+ * Estudar e entender os conceitos 
+ * Pesquisar o que vem sendo feito
+ * Planejar 
+
+>DISSECAR as partes envolvidas, Potenciais causas do problema
+
+ * Onde X?
+ * Quando ocorre X?
+ * Como X?
+ * Porque X?
+ * Causa e efeito.
+
+* DIRETRIZES GEARAIS 
+ * Abstração x informática
+ * Exemplo: foto/video
+ 
+* ABORDAGEM do funcionamento, tudo o que precisa para funcionar
+
+ * Calma
+ * Paciência
+ * Entender o que esta fazendo 
+ * O que faz cada parte da linha decomando.
+
+* DIRETRIZES GERAIS 
+ * Observar / investigar
+ * Identificar e entender
+ * Estratégia
+ * Testar
+ * Uma coisa de cada vez 
+ * Variáveis 
+
+* GUIA PRÁTICO 
+ * Rodar num terminal 
+ * Ver logs 
+ * Onde vejo os logs?
+ * Como ver os logs?
+ * `/var/logs`
+ * tail 
+ * grep 
+ * Pesquisar msg de erro 
+ * Palavras chave
+ * msg de erro 
+ * Debian/versão
+ * Português / inglês
+
+* Como pesquisar?
+
+>FONTES
+ * [como pesquisar](https://hotmart.com/pt-br/blog/pesquisa-avancada-no-google) 
+ * [24 Dicas de como pesquisar](https://rockcontent.com/br/blog/como-fazer-uma-pesquisa-no-google/)
+ * [PALESTRA - Mini DebCont](https://www.youtube.com/watch?v=r-K7p5CbCI0)
+
+* RESUMO 
+ * Mudar o "mindset"
+ * Método em construção
+ * Prática 
+ * Estudo 
+  
+  ~~
+  DIVERSÃO e $$
+
+
+   ~~
+<h3>MÓDULOS DO KERNEL<h3/>
+
+ * Conceitos 
+  * Kernel Mnoolítico (lítico=pedra) ou seja "uma peça", a idéia de um kernel monolitico é que as atividades principais no núcleo de um kernel esteja em um único programa e é esse programa que é carregdo quando iniciamos o computador  e o processo de BOOT se dá. Em resumo o **KERNEL LINUX** ele é monolítico, suas tarefas principais desse kernel são uma única peça e são carregadas na hora do BOOT e não são descarregadas em momento nenhum. POrém ao mesmo tempo o kernel do LINUX ele é modular, então exite a possibilidade em que no momento que o kernel seteja  rodando a gente conseguir carregar um módulo, carregar um outro peçado de programa que irá fornecer um **driver (software capaz de comunidar com o hardware )** trocar informações entre o KERNEL eo  HARDWARE para poder as aplicações/ultilitários terem acesso a esse HARDWARE a esse tipo de módulo, a gente chama de **DRIVER**, mais á  módulos também que implmentam funcionalidades, eles não tem haver com o HARDWARE, a exemplo uma funcionalidade de fazer o  **NAT** que possibilita conversão de pacotes para transitar entre uma rede e outra. Outra funcionalidade típica que esta no módulo  é o SISTEMA DE ARQUIVOS podendo ter um módulo que é um programa que consegue entender como é que funciona aquele específico sitsema de arquivos.
+
+  >**FIRMWARE** é um outro conceito, também é um software, mais ele é execuado não no processador principal da maquina que executa o kernel mais em um processador secundário, normalmente o processador de uma placa de rede por exemplo ela tem um processador, que em boa partes da vezes é de uma arquitetura diferente do processador principal da máquina que roda o kernel, esse software e executado naquele dispositivo, e quando um sofware  é executado em um dispositivo, nós o chamamos de **FIRMWARE**
+
+  
+ * Listar
+  * Em dado momento é importante para quem esta administrando, saber quais os módulos estão carregados em determiando momento, para fazer isso tem um programa que é o `lsmod` ou também visualizar na estrutura de diretórios `cat/proc/modulos` que possue todos os módulos carreagdos naquele momento.
+
+
+ * Carregar/Descarregar
+  * Em algumas circunstãncias vocẽ pode querer carrear um módulo, e existe formas para isso.
+   * `modprobe "nome-do-módulo` 
+   * `insmod "arquivo-do-módulo` 
+
+>NOTA: Uma diferença funamental entre o **modprobe x insmod** é que  as vezes um módulo para funcionar as vezes pode precisar de outro módulo seja carregado, o que chamamos de dependência. Quando utilizamos o `modprobe` ele verifica a existência de dependẽncia necessária para aquele módulo que esta sendo carregado, caso seja necessário carregar outros módulos, o `modprobe` da conta de fazer isso. Já o `insmod` carrega exclusivamente aquele módulo, se caso precisar de um outro módulo necessário como dependência, o problema é seu, será informado que o módulo não será carregado por depender de outros módulos.
+
+>NOTA: É comum mensagens de "drivers" de dispositivos faltantes, pessoas reclamnando, porém o problema pode não ser drivers e sim o **FIRMWARE** O QUE OCORRE? a exmplo, a placa de rede está carregada com seus módulos e funcionalidades, rodam programas que vão controlar os dispositivos, saber que dispositivos que estão naquela máquina porque existe módulo do kernel capaz de se cumunicar com os barramentos aos quais os dispositivos estão coenctados, aonde essa placa esta conectada, quando o kernel detecta a presença desse dispositivos ele verifica uma tabela que  ele dispõe para saber que aquele dispositivo de hardware precisa daquele módulo específico e carrega esse módulo, o carregamento do módulo e que vai também carregar o FIRMWARE, logo é muito comum vocẽ ver alguém que instalou um FIRMWARE não livre para um dispositivo WIFI reportando "HÁ REINICIA O SISTEMA" ou seja você não tinha um FIRMARE e instalou um pacote que tem um FIRMWARE você não precisa reiniciar todo o sitema, vocẽ vai precisar descarregar aquele módulo do dispositivo da rede wifi e carrgar novamente, quando vocẽ carrega o módulo a execução do pgorama do módulo trata de carrear o firmeware e a placa de rede ja esta funcionando. Para descarregar um módulo rode o comando:
+
+   * `modprobe -r "nome-do-módulo"` da mesma forma se esse módulo precisou de ter outros módulos dependentes para ser carregado, se esses módulos dependentes estiverem livres, o único módulo que usava essa dependência era esse que vocẽ determinou descarregar, o MÓDPROBE da conta de descarregar todos os outros que somente ele estava dependendo. 
+    * rmmod "nome-do-modulo" também remove um módulo, porém apenas aquele módulo que determinamos, se existirem outors módulos que esse dependia, ele não removerá. 
+
+* Infomações
+ * Em muitas circusnstâncias precisamos descobrir informações dos módulos,licença do módulo, que firmware que o módulo precisa, que parãmetro passar para O carregamento do módulo  que irá modificar a maneira desse módulo funcionar. 
+
+   * `modinfo "nome-do-modulo"`
+   * `modinfo "arquivo-do-módulo"`
+  
+ * Onde estão os módulos - arquivos **.ko**,
+   * `/lib/modules/versão-do-kernel`
+   * `/lib/modules/7.7.10-gnu`
+ 
+NOTA: Se vocẽ compilou um módulo que não veio na distribuição e vocẽ quiser informações desse módulo, ele não estará no local original, então vocẽ vai usar o `modinfo "nome-arquivo-modulo`.
+
+NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kenel ) e funciona em um espaço muito especial porque é um espaço de kernel, não espaço de usuário onde roda nossos aplicativos/programas , por isso que usar um módulo não livre é perigoso sendo usado em  espaço de kernel.
+
+
+ * Automatizar
+
+
+
+
+
+
+
+
+
+
 
 
 
