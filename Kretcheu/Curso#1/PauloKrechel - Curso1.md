@@ -569,7 +569,21 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
 * USANDO O `grep` e `tail -f` PARA LEITURA DOS ARQUIVOS DE LOGs
 
  Comandos | Descrição
-|------------|-----------
+|-------- Existe mecanismos autmáticos de carregamentos dos módulos 
+   * Udev
+    * Incorporada dentro do sistema de inicialização que é o SYSTEMD e a gente pode alterar isso através de alguns arquivos chamados **.rules** que estão no diretório `/etc/udev/rules.d` que possue as definições de como um determinado módulos devem ser carregados, eu posso passar um número de dispositivo e dizer que módulo carregar e coisas desse tipo. 
+
+   * Durante o BOOT
+    * `/etc/modules.conf`
+    * `/etc/modules-load.d` caminho das distros atualmente 
+
+ * Pode  ser conveniente querer que um módulo não deva ser carregdo.
+
+   * Impedir carreagmento
+    * `/etc/modprobe.d/*.conf`
+    * blacklist módulo    
+
+----|-----------
 `ls -lrsh` | lista os arquivos de log de forma l=longa, r=recusivo, s=Tamanho, h=Humano
 `du -shc /var/log/*` | Visualiza o tamanho total dos arquivos de  log está ocupando na máquina.
 `tail -f /var/log/syslog` | Lista em tempo reais captura de logs do sistema, usando o parâmetro -f=folowing, verá que sera mostrado em tempo real as informaçoes do dispositivo inserido na pora usb, como nome do dispositivos, porta usb conectada dentre outras informações, isso graças a um processo chamado **UDEV**, nesse momento um módulo do kernel caso precise, também será iniciado para ser possível o uso desse dispositivo.
@@ -697,8 +711,30 @@ NOTA: Se vocẽ compilou um módulo que não veio na distribuição e vocẽ qui
 NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kenel ) e funciona em um espaço muito especial porque é um espaço de kernel, não espaço de usuário onde roda nossos aplicativos/programas , por isso que usar um módulo não livre é perigoso sendo usado em  espaço de kernel.
 
 
- * Automatizar
+* Automatizar
+ * Existe mecanismos autmáticos de carregamentos dos módulos 
+   * Udev
+    * Incorporada dentro do sistema de inicialização que é o SYSTEMD e a gente pode alterar isso através de alguns arquivos chamados **.rules** que estão no diretório `/etc/udev/rules.d` que possue as definições de como um determinado módulos devem ser carregados, eu posso passar um número de dispositivo e dizer que módulo carregar e coisas desse tipo. 
 
+   * Durante o BOOT
+    * `/etc/modules.conf`
+    * `/etc/modules-load.d` caminho das distros atualmente 
+
+ * Pode  ser conveniente querer que um módulo não deva ser carregdo.
+
+   * Impedir carreagmento
+    * `/etc/modprobe.d/*.conf`
+    * blacklist módulo   - Lisa indicando que aquele módulo não será carregado.
+
+* MÃO NA MASSA
+ * COMANDOS
+
+ Comandos | Descrição
+ ---------|----------
+`lsmod` | Lista os módulos carregados no momento, pode haver módulos que não esteja sendo usado.
+`cat/etc/modulos`| Outra forma de listar os módulos carregados.
+`cat/proc/filesystem` | Como exemplo visualiza todos os sistemas de arquivos que o kernel é suportado.
+``
 
 
 
