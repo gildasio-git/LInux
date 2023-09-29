@@ -672,7 +672,7 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
 
 
    ~~
-<h3>MÓDULOS DO KERNEL<h3/>
+<h3>MÓDULOS DO KERNEL</h3>
 
  * Conceitos 
   * Kernel Mnoolítico (lítico=pedra) ou seja "uma peça", a idéia de um kernel monolitico é que as atividades principais no núcleo de um kernel esteja em um único programa e é esse programa que é carregdo quando iniciamos o computador  e o processo de BOOT se dá. Em resumo o **KERNEL LINUX** ele é monolítico, suas tarefas principais desse kernel são uma única peça e são carregadas na hora do BOOT e não são descarregadas em momento nenhum. POrém ao mesmo tempo o kernel do LINUX ele é modular, então exite a possibilidade em que no momento que o kernel seteja  rodando a gente conseguir carregar um módulo, carregar um outro peçado de programa que irá fornecer um **driver (software capaz de comunidar com o hardware )** trocar informações entre o KERNEL eo  HARDWARE para poder as aplicações/ultilitários terem acesso a esse HARDWARE a esse tipo de módulo, a gente chama de **DRIVER**, mais á  módulos também que implmentam funcionalidades, eles não tem haver com o HARDWARE, a exemplo uma funcionalidade de fazer o  **NAT** que possibilita conversão de pacotes para transitar entre uma rede e outra. Outra funcionalidade típica que esta no módulo  é o SISTEMA DE ARQUIVOS podendo ter um módulo que é um programa que consegue entender como é que funciona aquele específico sitsema de arquivos.
