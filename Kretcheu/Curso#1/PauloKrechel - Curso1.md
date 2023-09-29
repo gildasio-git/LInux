@@ -734,11 +734,112 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 `lsmod` | Lista os módulos carregados no momento, pode haver módulos que não esteja sendo usado.
 `cat/etc/modulos`| Outra forma de listar os módulos carregados.
 `cat/proc/filesystem` | Como exemplo visualiza todos os sistemas de arquivos que o kernel é suportado.
-``
 
 
+>NOTA: Pode ocorrer falha no carreamento do módulo, caso esse dependa de outro módulo. Vocẽ pode consultar os arquivos de dependências de módulos no caminho `/lib/modules/"kernel"/` dentro desse diretório estão alocados uma série de arquivos, dentre eles um que trata das dependências que podera visualizar com o comando `less modules.dep` vai mostrar o nome do arquivo que tem o módulo e se possui dependẽncias vinculadas a ele.
 
 
+ * Tem alguns módulos que podem ser carregados e descarregados porque eles foram compilados separadamente do KERNEL, podendo estes ser também compilados e inclusos no KERNEL, estes módulos não poderão ser descarregados com o kernel em funcionamento., esses módulos embutos também são visualizados no caminho `less /lib/modules/"kernel"/modules.dep`.
+
+ * Exemplos de módlos que podem ser carregados automaticamente
+  * Usando o comando `tail -f /var/log/syslog` e plugar um dispositivo/pendrive poderá observar o carregamento em tempo real desse dispositivo. Ao desconectar o dispositivo o módulo continuara com  o módulo carregado, podendo ser descarregado manualmente, atentando-se para as dependências.
+
+* Listando dispositivos PCI com seus respectivos kernel rodando.
+ * `lspci -nnk`
+
+
+<h3>COMPILAR KERNEL</h3>
+
+* Porque?
+
+ * Pessoal
+  * Para seu deleite, porque quer fazer uma coisa na sua maquina, aprender como tudo funciona.
+
+ * Profissional
+  * Pode ser sua atividade profissional, você pode ter uma maquina com recursos limitados, a exemplo um TIM-CLIENT, um dispositivo embarcado (muito específico) então consegue fazer uma compilação de um kernel para rodar especificamente naquele hardware me questão. Com isso consegue enconomia no sentido que usar apenas o  necessári para seu ambiente, não incluindo recursos que não serão utilizados, ou também pode compilar um kernel para testar um path, uma correção, **testar um path** **habilitar/desabilitar recursos**, caso não possua um dispositivo na sua maquina vocẽ pode desabilitar esse recurso.
+
+* Como?
+* Mão na massa!
+
+
+* O que é?
+
+ * Todo programa possui um código(as linhas de programação que um programador escreveu)aglumas dessas linguagens são interpretadas, o que é isso? Existe um programa na hora que vamos executar esse programa que foi inscrito, existe um outro programa chamado interpretador que vai intepretar cada uma das linhas de programação, que é um código em texto, por isso edição de texto puro, porque o código é um texto, um texto escrito produzidos por seres humanos que conseguem ler, modificar, entender. Alguns programas são interpletados no momento em que ele são executados, como por exemplos: programas feitos em python, shellscript, javascript entre outros. Existem progrmas que podem tanto serem interpretadas como compiladas.
+
+* Compilar 
+
+  * **COMPILAÇÃO** tesmos um pograma que é o compilador que lê o código fonte escrito escrito em texto, e converte isso, transforma para uma quantidade outra de códigos, que são códigos das instruções de um determinado processador de uma determinada arquitetura, então um mesmo programa pode ser compilado pra arquitetura diferentes, porque o compilador conhece a linguagem de pgoramação e conhece o conjunto de instruções daquela arquitetura daquele processador. Logo esse processo de compilação é fazer essa transformação. Essa transformação é feita não hora que o programa vai ser executado, é realizada muito antes, então o programa é compilado apois isso pegamos a versão compliada e executar em um sistema operacional, a essa versão a gente chama de versão binária.
+
+* Kernel e Módulos
+
+  * Quando a gente fala de compilar kernel, a gente ta falando  de compilar o kernel que é um arquivo de kernel, que é aquele que fica no `/boot/vmlinuz` `/lib/modules/versão` é aquele arquivo que a gente vai criar, mais não só aquele arquivo, aquele arquivo vai conter uma porção de partes do kernel como: "**gerenciador de memória", "gerenciador de disco", "gerenciador de processos**" e tudo mais que precisa ter no kernel pra poder funcionar. Mais também quando a gente compila o kernel, a gente compila uma porção de módulos, outros tantos que não estão embutidos naquele arquivo. Eetão os conceitos que estamos falando aqui, são os conceitos de módulos aqui é uma parte do kernel que é compilada separadamente, quando esse módulo é compilado junto desse arquivo a gente diz que é **BUITIN** embutido dentro desse arquivo **vmlinuz** carregado pelo bootloader e não é descarrgado enquanto equipamento esta em funcionamento. Em resumo quando compilmaos o kernel, compila esse arquivo VMLINUX, bem como uma porção de outros programas que são os módulos.
+
+ >NOTA: Embora o pacote com KERNEL e MODULOS compilados pra uma maquina também pode ser incluida em outra maquina, mesmo sendo diferentes. Ainda que na mesma arquitetura, os dipositivos que uma maquina em relação outra seja diferentes, mais o arquivo VMLINUX é o mesmo, os módulos são os mesmos, a estrutura de funcionamento do kernel linux quando rodando é capaz de se comunicar com os barramentos e assim identificar os hardwaers que possui e assim carregar os módulos correspondentes. Por isso que esses pacotes que são distribuidos pelsa distribuições, ele contem a maioria dos módulos de uso comum, por isso atende tanto uma máquina como outra. Mais não impede vocẽ de compilar um kernel mais enxuto, com apenas os módulos que precisa.
+
+* Como?
+  * Instalar ferramentas 
+  * Baixar fontes
+  * Preparar "receita"
+  * Compilar
+
+   * <*> - Buitin: indica que aquele módulo vai ser embutido no kernel, ou seja ele vai fazer parte do arquivo vmlinux.
+   * <M> - Indica que esse módulo será compilado de forma separada
+   * < > - Não vai ser compilado.
+
+>NOTA: Se você quiser compilar depois um outro conjunto de módulos, tem como fazer? tem sim, existem ferramentas que automatizam esse processo **DKMS**.
+
+* MÃO NA MASSA
+ * Cerca de 30 -> 3h.
+
+
+ * Pacotes necessários
+
+ * Para poder compliar o kernel é necessário ter os seguintes pacotes instalados, são eles.
+   
+
+ 1. `apt install build-essential bc kmod cpio flex liblz4-tool libncurses-dev libelf-dev`
+
+ 2. Baixando e desmpacotando os fontes, Agora vamos baixar os fontes do linux e desempacotar.
+`apt install linux-source` | Nas derivadas do debian, é um metapacote, ou seja é um pacote que depende da última versão de source do kernel fornecido pela distribuição, então quando a gente instala esse pacote, quanto á uma nova versão do kernel com alterações com correção de bugs disponibilizada pela sua distribuição, esse pacote também vai ser atualizado, a sua compilação não. Quando sair uma nova distribuição de kernel, você vai ficar sabendo pelas atualizações, ja ue tem o pacote ja compilado que será distribuído  pela distribuição, o pacote fonte também vai ser distribuído, então  o processo de administratr e ter as coisas adequadas com as devidas correções, lógico que se vocẽ instalada o pacote ja disribuido pela distribuição o processo é mais rápido, já a compilação o processo ja é mais demorado. Usando o comando `apt show linux-source` vai saber a dependência do meta pacote, existe um diretório padrão `/usr/src` onde fica porção de arquivos e dentre esses o linux-source correspondente a sua versão de kernel.
+
+ 3. `tar -xvf linux-source-"versãodo kernel` | Desempacotar o pacote linux-souce alocado no diretório /usr/src, após desempacotado sera criado um diretório de mesmo nome correspondente ao linux-source.
+
+ NOTA:Os pacotes que possuem os firwmares não livres estão separados em uma seção **NON-FREE** nos respositórios da distro, e estes não são instalados por padrão, nem sugere a instalação 
+
+ 4. `cd /usr/src/linux-source..`  Acesse o diretório Linux-source.
+
+ 5. `make localmodconfif`  - cria um aruivo de receita baseados nos módulos existentes na maquina, porém se vocẽ tem um dispositivo que não esta conectado nesse momento, o módulo não vai ser compilado, porque o script não vê o módulo carregado, então se quer usar esse disposivivo, conecte o módulo.
+
+ 6. `make menuconfig` - forma genéria de criar um arquivo de receita, será apresentado o menu  com todas as características daquele kernel mais fácil de ser entendido, após selecionar os módulos salve o arquivo .config. você pode usar o da prória maquina copiando o arquivo para o .config como `cp /boot/config-"versãodokernel .config`.
+
+ 7. `make localmodconfig` os script irá pegar o arquivo `.config` analisar os módulos onde irá solicitar permissões dos mesmos. pode manter o padrão, como poder remover ou não determinados módulos.
+ 
+ 10. `time make deb-pkg` - Gera o pacote compilado, com previsão de tempo 
+
+ 11. `ls -lrth` lista os pacotes por ordem descrecente pra ver os pacotes.
+
+ 12. `dpkg -l inux-image-4....` instala o pacote gerado, ou pode usar o `apt install inux-image...` apontando o local para que não tente buscar no repositório. A diferenção é que o dpkg não resolve dpendência, ja o apt sim. Após instlado pode veificar no diretório de boot.
+
+  * `shutdow -r now` reboota a maquina para testar o novo kernel 
+
+
+ >NOTA:outra forma de gerar o arquivo de configuração é rodar o comando `make nconfig` vai tentar ambiente gráfico, pode ser um programa com interface gráfica.
+
+
+>NOTA: Forma genérica de criar receita usando o `make menuconfig` ou `make nconfig`.
+  
+
+>NOTA:Para saber o kernel atual que esta rodando na sua maquina rode o comando `uname -a`.
+
+>OBS; se olhar dentro do diretório `/boot/` la existem os arquivos `vmlinux-versão do kernel` que é o kernel efetivamente, e possui um arquivo chamado `initrd` que é o disco inicial que é montado durante o processo de boot do sistema, de modo a buscar alguns módulos que foram complicados serparadamente para que o kernel necessita para montar o seu  diretório `/` no seu sistema. Mais que não foram lá compilados embutidos no módudo, então esse é o disco de **RAM** inicial, a partir dai o kernel é capaz de montar seu **/** e dar seguimento ao boot. Mais tem um arquivo importante ai assim como cada kernel correspondente, que é justamente a receita de bolo que foi usado para a compilação daquele kernel **config-4.19.0.10-amd64** de acordo com sua versão de kernel, esse é um arquivo texto. Embora seja possível a edição desse arquivo em modo texto, não é aconselhável, existe ferramenta para isso.
+
+
+>MATERIAL DE APOIO
+
+ * Documentação
+  * (https://www.kernel.org/doc/html/latest/)
+  * (https://www.debian.org/doc/manuals/debian-reference/ch09.pt.html#_compiling_the_kernel_and_related_modules)
+  * [Desenolvimento KERNEL](https://www.kernel.org/)
 
 
 
