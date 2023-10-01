@@ -842,12 +842,14 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
   * [Desenolvimento KERNEL](https://www.kernel.org/)
 
 <h3>USUÁRIOS E GRUPOS</h3>
+
   * Conceitos
+  
  ```
 Tema mais de um tipo de usuário, logo podemos categorizar que existem usuários que são pessoas, usuário que ta ligado a uma pessoa que vai usar seu sistema, um usuário no sentido humano da palavra. E ela tem um usuário no sistema significa que ela tem um usuário no sistema, mais há outros tipos de usuários, são usuários de sistema, usuário que server para funcionar um programa,  que serve para funcionar um dispositivo, então o sistema GNU através do kernel linux, ele serpara, distingui essas coisas, conseguindo dar permissões diferentes,  previlégios diferentes, quem vai ou não ter acessos a determinado recurso. 
 Os programas que você executa com seu usuário são executados com as permissões de seu usuário, então isso implica em menores problemas de segurança, porque se houver uma falha em um programa e esse programa esta sendo executado com as suas próprias permissões, o seu usuário regular não tem permissão de alterar o sistema. Logo essa falha não se propaga ao ponto de comprometer todo o Sistema, aliás essa é uma das características principais que faz dos sistemas GNU muito mais seguro que os demais. Outro conceito são os usuários locais e usuários remotos. Porque? porque quando a genta fala de um sistema GNU estamos falando dos usuários que são daquele sistema, são usuários logais, mais alguns serviços podem usar sistemas de autenticação que são externos, que estão em outros computadores e para isso irá fazer  uso de um recurso  do GNU que é o **PAM** que é uma forma de se plugar módulos de autenticação separados, usando tecnologias das mais distintas. Então a gente tem os usuários locais e os usuários remotos. Usuários que são ligados a pessoas e os usuários que fazem parte do sistema.  e também temos o conceito de **GRUPOS** que são junõa de um grupo de usuários que fazem parte de um mesmo grupo. Tudo isso vai interferir no funcionamento do seu GNU linux.
-  
-``` 
+```
+
  * Programas
 
 ```
@@ -864,12 +866,75 @@ userdel|
 usermod| Alterar informações de um usuário
 groupmod| Alterar informações de um grupo 
 
-E a interface gráfica
-```
- * Arquivos 
- * Mão na Massa 
- 
+* Os três primerios são scripts que usam o adduser, são outras ferramentas que também podem ser usadas assim como u serdel, usermod, groupmod, são programas que administram os usuários.
+  
+E a interface gráfica?  É possível realizar atlerações a nível de usuário e grupos utilizando a interface gráfica. Algumas sim, você pode alterar sua senha sem  necessáriamente abrir um terminal, Dependendo do ambiente desktop que você usa irá ter lá terá a possibilidade a alterar as informações do próprio usuário. Existem outros aplicativos gráficos com essa finalidade.
 
+Qual estamos alterando usuários, incluindo, removendo, alterando senhas de usuários, na verdade o que a gente esta fazendo é alterando o conteuodo de alguns arquivos.
+
+Programa | Descrição
+---------|----------
+`/etc/passwd`| Possui a lista de todos os usuários do sistema. usuários locais e de sistemas.
+`/etc/shadow| Possui os hashes(criptografia) da senhas de todos os usuários mantendo essa infomação restrira, a ponto que mesmo o usuário **root** não possua meios de descobrir falcimente essa senha, mais que isso, se dois usuários no mesmo systema possuirem a mesma senha, esse hash é diferente.
+`/etc/group - /etc/gshadow`| Equivalente para grupo o **gshadow` que é o arquivo de senha referente aos grupos.
+
+Quando queremos editar esses arquivos diretamente, tais como alterar informações do usuário, senha, alterar o prompt padrão, interpletador de comandos padrão,  retirar senha, quando queremos incluir ou remover usuários, podemos fazer a edição desses arquivos diretamente. A gente como **root** podemos alterar esses arquivos.
+
+Se você tem um sistema utilizado por mais de uma pessoa não é recomendado editar esses arquivoscom o  editor de texto convencional. Mais usando os recursos:
+
+ * vipw
+ * vigr
+ * vipw -S
+ * vigr -S
+
+Porque esses recursos fazem um lock nos arquivos, ele trava os arquivos de modo que durante o processo de mautenção de usuários, e um programa e/ou outra pessoa tentar alterar esses arquivos, o arquivo está travado, logo você não irá perder as informações nem bacunçar o conteúdo desses arquivos.
+```
+
+ * Mão na Massa 
+
+ Programa | Descrição
+---------|----------
+`adduser`| Cria um usuário, caso queira saber onde esta o script desse arquivo use o comando `which adduser` caso queira saber o que possui esse arquivo use o programa file, `file /sbin/adduser`, ao usuário esse script será  criado o usuário com seu perfil **skell** que é o esqueleto de um perfil contendo as pastas de usuário., os padrões para criação desse usuário estarão dentro do diretório `/etc/adduser.conf`, embora esse script faz uso do **useradd**.
+`passwd "nome usuário`| Caso seja um usuário **ROOT** com esse comando pode altear  as senha do usuário.
+`su "nome usuário" | **su-substitute user** altera o usuário para os usuário desejado, caso esteja logado como ROOT  ao trocar de usuário a senha não será necessária. Se passarmos o comando **passwd** sem passar um nome de usuário, a senha que será trocada sera a senha do usuário corrento que esteja logado no momento.
+
+
+Quando criamos um usuário, um dos arquivos alterados é o /etc/passwd, nessa lista estpa contido todos o usuários de sistema e usuários locais. Sendo:
+
+**/etc/passwd**
+
+`root:x:0:0:root:/root:/bin/bash`
+
+ Linha | Descrição
+-------|----------
+root | Usuário ROOT, o usuário root no sistema unix like sempre tem o numero de identificação como **0**, pode ter mais de um usuário com identifciação **0** mais o habitual que seja apenas o usuário ROOT., caso eu altere o ID de qualquer usuário para o número **0** este então passará a ser também ROOT do sistema.
+`x`| No passado onde agora possui o caractere X ficava o hash da senha.
+`0`| Identificação do usuário 
+`0`| Numero identificado  do GRUPO primário do  usuário.
+`root`| Nome do usuário
+`/root`| Home do usuário - Diretório padrão do usuário 
+`/bin/bash`| Interpletador de comandos do usuário.
+
+Em um usuário convencional que não seja o ROOT, você verá também as informações que preencheu na criação do usuário, tais como, nome completo, sala, fone dentre outros.
+
+Você pode também nesse arquivo criar um usuário na mão, para isso copia a linha do usuário, cole e substitua as informações.
+
+**/etc/shadow** - Arquivo que possue o hash da senha, logo nesse arquivo estará todas as senhas criptografadas  definidas pelos usuários.
+
+**Linha usuário ROOT**
+`root:$6$TXAWADASEFASEFSZ62S3SWAWIVUALSKWOA,XVLXWR:/:18301:0::0:0:root:/root:/bin/bash`
+
+**Linha usuário convencional**
+`ze:$6$WXAISLIGycELfF4SDslfwsalskwialxkvlaselserzvwee:17763:0:999999:7:::`
+
+ Linha | Descrição
+-------|----------
+ze | Usuário
+$6$ | $- Separador que identifica o tipo do algorítmo do HASCHE.
+
+Obs: Existem regras para a geração de senhas, para que essas senhas nã osejam tão elementares, regras esas determinadas pelo arquivo **PAM** porém essas regras valem apenas para  usuários regulares, e não para o usuário ROOT.
+
+NOTA: Caso queira consultar o conteúdo do conjunto de pastas do usuário quando é criado, pode consultar o diretório **/etc/skell**  com o comando `ls -a /etc/skell`, arquivos ocultos inciam com caracter ".". 
 
 
 
