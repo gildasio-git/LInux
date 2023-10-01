@@ -841,6 +841,20 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
   * (https://www.debian.org/doc/manuals/debian-reference/ch09.pt.html#_compiling_the_kernel_and_related_modules)
   * [Desenolvimento KERNEL](https://www.kernel.org/)
 
+<h3>USUÁRIOS E GRUPOS</h3>
+ - Conceitos
+ ~~~
+  Temais de um tipo de usuário, logo podemos categorizar que existem usuários que são pessoas, usuário que ta ligado a uma pessoa que vai usar seu sistema, um usuário no sentido humano da palavra. E ela tem um usuário no sistema significa que ela tem um usuário no sistema, mais há outros tipos de usuários, são usuários de sistema, usuário que server para funcionar um programa,  que serve para funcionar um dispositivo, então o sistema GNU através do kernel linux, ele serpara, distingui essas coisdas 
+  ~~~~ 
+
+  
+ - Programas
+ - Arquivos 
+ - Mão na Massa 
+ 
+
+
+
 
 
 
