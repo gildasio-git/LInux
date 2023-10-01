@@ -842,15 +842,32 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
   * [Desenolvimento KERNEL](https://www.kernel.org/)
 
 <h3>USUÁRIOS E GRUPOS</h3>
- - Conceitos
- ~~~
-  Temais de um tipo de usuário, logo podemos categorizar que existem usuários que são pessoas, usuário que ta ligado a uma pessoa que vai usar seu sistema, um usuário no sentido humano da palavra. E ela tem um usuário no sistema significa que ela tem um usuário no sistema, mais há outros tipos de usuários, são usuários de sistema, usuário que server para funcionar um programa,  que serve para funcionar um dispositivo, então o sistema GNU através do kernel linux, ele serpara, distingui essas coisdas 
-  ~~~~ 
-
+  * Conceitos
+ ```
+Tema mais de um tipo de usuário, logo podemos categorizar que existem usuários que são pessoas, usuário que ta ligado a uma pessoa que vai usar seu sistema, um usuário no sentido humano da palavra. E ela tem um usuário no sistema significa que ela tem um usuário no sistema, mais há outros tipos de usuários, são usuários de sistema, usuário que server para funcionar um programa,  que serve para funcionar um dispositivo, então o sistema GNU através do kernel linux, ele serpara, distingui essas coisas, conseguindo dar permissões diferentes,  previlégios diferentes, quem vai ou não ter acessos a determinado recurso. 
+Os programas que você executa com seu usuário são executados com as permissões de seu usuário, então isso implica em menores problemas de segurança, porque se houver uma falha em um programa e esse programa esta sendo executado com as suas próprias permissões, o seu usuário regular não tem permissão de alterar o sistema. Logo essa falha não se propaga ao ponto de comprometer todo o Sistema, aliás essa é uma das características principais que faz dos sistemas GNU muito mais seguro que os demais. Outro conceito são os usuários locais e usuários remotos. Porque? porque quando a genta fala de um sistema GNU estamos falando dos usuários que são daquele sistema, são usuários logais, mais alguns serviços podem usar sistemas de autenticação que são externos, que estão em outros computadores e para isso irá fazer  uso de um recurso  do GNU que é o **PAM** que é uma forma de se plugar módulos de autenticação separados, usando tecnologias das mais distintas. Então a gente tem os usuários locais e os usuários remotos. Usuários que são ligados a pessoas e os usuários que fazem parte do sistema.  e também temos o conceito de **GRUPOS** que são junõa de um grupo de usuários que fazem parte de um mesmo grupo. Tudo isso vai interferir no funcionamento do seu GNU linux.
   
- - Programas
- - Arquivos 
- - Mão na Massa 
+``` 
+ * Programas
+
+```
+Alguns programas que usamos para administrar os usuários são: 
+
+Programa | Descrição
+---------|----------
+adduser | Adicionar  um usuário
+addgroup| Adiconar um grupo 
+deluser| Excluir um usuário
+passwd| Alterar a senha de um usuário 
+useradd| Adicionar um usuário sem o diretório home 
+userdel| 
+usermod| Alterar informações de um usuário
+groupmod| Alterar informações de um grupo 
+
+E a interface gráfica
+```
+ * Arquivos 
+ * Mão na Massa 
  
 
 
