@@ -979,8 +979,9 @@ Obs: Existem regras para a geração de senhas, para que essas senhas nã osejam
 
 NOTA: Caso queira consultar o conteúdo do conjunto de pastas do usuário quando é criado, pode consultar o diretório **/etc/skell**  com o comando `ls -a /etc/skell`, arquivos ocultos inciam com caracter ".". 
 
-
-
+`MATERIAL DE APOIO`
+(https://www.debian.org/doc/manuals/debian-handbook/sect.user-group-databases.pt-br.html)
+(https://www.guiafoca.org/guiaonline/inicianteintermediario/ch12.html)
 
 
 
