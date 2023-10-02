@@ -1117,3 +1117,11 @@ Editando o arquivo SUDO
 
 <h3>SISTEMA DE INICIALIZAÇÃO SYSTEMD</h3>
 
+* Conceitos
+* História 
+* Polêmcia 
+* Funcionamento 
+* Administração 
+
+
+* Mão na Massa
