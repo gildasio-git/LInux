@@ -1011,11 +1011,95 @@ Classes:
 
 ![Alt text](<Captura de tela de 2023-10-02 08-24-18.png>)
 
+**Aquivos**
 
 Parâmetro | Descrição
 ----------|----------
+`r`|Permissão de leitura
+`w`|Permissão de escrita/alteração no arquivo 
+`x`|Permissão de execução 
+
+**Diretórios**
+Parâmetro | Descrição
+----------|----------
+`r`|Permite listar o conteúdo de um diretório
+`w`|Escrever novos arquivos nesse diretório 
+`x`|Fazer do meu diretório corrente, aquele diretório
+
+![Alt text](image-29.png)
+
+
+PROGRAMAS 
+ * ls -l 
+ * chmod 755
+
+ * classes:ugoa - `u->dono, g->grupo, o->outros, a->todos`
+ * Permissões: `+r, -r,+w, -w,+x,-x`
+
+ * `chwn dono:grupo arquivo` -> Muda o dono e grupo do arquivo
+ * `chgrp grupo arquivo` - Muda apenas o grupo que dono do arquivo
+
+ MÃO NA MASSA
+
+ - Crie um arquivo como `>>"nome do arquivo"`
+ * Crie um diretório `mkdir "nome do diretório"`
+ * Visualize as permissões dos arquivos `ls -l "diretório`
+
+ESTRUTURA DE PERMISSÕES
+
+`-rw-rw-r-- 1 usuario grupo 0 out  2 10:45 arquivo`
+
+Caractere |Descrição  
+----------|----------
+`-` ou `d`| "-" -> indica arquivo, "d"->Indica diretório
+`rw-`| Permissões do dono 
+`rw-`| Permissão do grupo 
+`r--`| Permissões para outros 
+
+>Nota: Tudo no sistema é arquivo, porém existem tipos de arquivos, os arquivos **regulares** onde temos nossas planilhas textos, programas. Ja o Diretório tem um caractere "**d**" que indica que trata-se de um diretório, Também existem outros tipos de arquivos, a exemplo o "**c**" quando enviamos uma informação uma de cada vez,sendo então um tipo de dispositivo de caractere, assim como temos o "**b**" que trata de um dispositivo de bloco.
+
+
+Caractere |Descrição  
+----------|----------
+`b`| Dispositivo de bloco, envio de informações em bloco.
+`c`| Dispositivo de caractere, uma infomação por vez.
+`d`| Diretório 
+`-`| Arquivo 
+`l`| Link Simbólico, aponta para um outro arquivo.
+
+ 
+UMASK - Variável que controla qual é o padrão dessas permissões.
+
+Exemplos:
+
+ * `chmod g+r arquivo` - Dando permissão de leitura para o grupo arquivo.
+
+* `chmod 777 arquivo` - Permissões de leitura, escrita e gravação no arquivo.
+
+* `chmod a-r arquivo` - Remove permissão de leitura para todos, dono, grupo e outros.
+
+* `chmod ug+r arquivo` - Aplica leitura para o dono e para o grupo.
+
+* `chmod -R x+a diretorio` - De forma recursiva ele da permissão de execução para todos os arquivos e subidiretórios contidos nesse diretório.
+
+* `chow dono:grupo diretorio/arquivo` - Muda o grupo e dono do diretório/arquivo 
+
+* `groupadd grupo` - Adicona um grupo 
+
+* `adduser "usuario" "grupo"` - Adiciona usuário a um grupo criado
+
+**As informações sobre os grupos e seus usuários ficam salvas em /etc/group, Neste arquivo é possível adicionar um usuário a um grupo manualmente, basta colocar uma vírgula seguida do nome do usuário que deseja acrescentar**
+
+`professores:x:1002:ítalo, gabriella` - LInha do arquivo **/etc/group**
 
 
 
+>NOTA: Mesmo retirando a permissão de gravacão sendo você dono do aruqivo, ainda pode forçar a gravação com o parãmetro  `:x!` usando o editor VIM. Sendo dono do arquivo você tem precedência para alterar.
 
 
+MATERIAL DE APOIO
+(https://www.guiafoca.org/guiaonline/iniciante/ch11.html)
+
+
+
+<h3>SISTEMA DE INICIALIZAÇÃO SYSTEMD</h3>
