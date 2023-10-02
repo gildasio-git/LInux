@@ -984,11 +984,38 @@ NOTA: Caso queira consultar o conteúdo do conjunto de pastas do usuário quando
 (https://www.guiafoca.org/guiaonline/inicianteintermediario/ch12.html)
 
 
+<h3>PERMISSÃO DE ARQUIVOS</h3>
+
+**CONCEITOS** 
+
+```
+Quem é que recebe as permissões, a idédia do UNIX onde tudo é arquivo, ou seja em que há uma repsentação de tudo, um arquivo, um diretório, um processo rodando na máquina, ele é visto como um arquivo. E as permissões diz respeito justamente aos arquivos, e que vão interferir em todo o funcionamento de um sistema Unix Like.
+
+Então essas informações sobre os arquivos e permissões estão gravadas nas estruturas dos sistema de arquivos, são os **metadados** dos arquivos, não são as informações dos arquivos  como imagem, um programa, mais sim os metadados, informações que estão armazendas na estutura de controle do sistema de arquivos.
+
+É claro que sistema de arquivos diferentes terão de possibilidade de permissão diferentes também, aqui vamos falar do sistema de arquivos **POSIX** Sistemas Operacionais UNIX LIKE.
+
+Um arquivo vai ter uma propriedade, ele sempre tem uma propriedade, a quem ele pertence e as permissões serão dadas em virtude a quem pertence os arquivos.
+
+```
+
+PROPRIEDADE
+
+Classes:
+
+ * Dono -> UID -> Identificação do usuário, dizendo que aquele arquivo pertence a ele, o criador.
+
+ * Grupo -> GID -> Identrificação a um grupo, as permissões dadas a um grupo terão implicações a cada um dos usuários pertecente ao grupo.
+
+ * outros -> Dos demais, todos os demais usuários que não são donos do arquivo e nem façam parte do grupo que é dono do arquivo.
+
+![Alt text](<Captura de tela de 2023-10-02 08-24-18.png>)
+
+
+Parâmetro | Descrição
+----------|----------
 
 
 
 
 
-
-
- 
