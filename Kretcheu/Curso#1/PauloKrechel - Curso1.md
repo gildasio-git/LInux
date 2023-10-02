@@ -882,9 +882,9 @@ Quando queremos editar esses arquivos diretamente, tais como alterar informaçõ
 
 Se você tem um sistema utilizado por mais de uma pessoa não é recomendado editar esses arquivoscom o  editor de texto convencional. Mais usando os recursos:
 
- * vipw
- * vigr
- * vipw -S
+ * vipw - (editor que possibilita altera arquivos de senhas do usuário de forma segura /etc/passwd.
+ * vigr - (Equiavalente acima, porém para alteraração no arquivos gshadow
+ * vipw -S (Alterar shadown, alterar o hashe da senha.
  * vigr -S
 
 Porque esses recursos fazem um lock nos arquivos, ele trava os arquivos de modo que durante o processo de mautenção de usuários, e um programa e/ou outra pessoa tentar alterar esses arquivos, o arquivo está travado, logo você não irá perder as informações nem bacunçar o conteúdo desses arquivos.
@@ -893,7 +893,7 @@ Porque esses recursos fazem um lock nos arquivos, ele trava os arquivos de modo 
  * Mão na Massa 
 
  Programa | Descrição
----------|----------
+----------|----------
 `adduser`| Cria um usuário, caso queira saber onde esta o script desse arquivo use o comando `which adduser` caso queira saber o que possui esse arquivo use o programa file, `file /sbin/adduser`, ao usuário esse script será  criado o usuário com seu perfil **skell** que é o esqueleto de um perfil contendo as pastas de usuário., os padrões para criação desse usuário estarão dentro do diretório `/etc/adduser.conf`, embora esse script faz uso do **useradd**.
 `passwd "nome usuário`| Caso seja um usuário **ROOT** com esse comando pode altear  as senha do usuário.
 `su "nome usuário" | **su-substitute user** altera o usuário para os usuário desejado, caso esteja logado como ROOT  ao trocar de usuário a senha não será necessária. Se passarmos o comando **passwd** sem passar um nome de usuário, a senha que será trocada sera a senha do usuário corrento que esteja logado no momento.
@@ -905,8 +905,8 @@ Quando criamos um usuário, um dos arquivos alterados é o /etc/passwd, nessa li
 
 `root:x:0:0:root:/root:/bin/bash`
 
- Linha | Descrição
--------|----------
+ Identificador | Descrição
+---------------|----------
 root | Usuário ROOT, o usuário root no sistema unix like sempre tem o numero de identificação como **0**, pode ter mais de um usuário com identifciação **0** mais o habitual que seja apenas o usuário ROOT., caso eu altere o ID de qualquer usuário para o número **0** este então passará a ser também ROOT do sistema.
 `x`| No passado onde agora possui o caractere X ficava o hash da senha.
 `0`| Identificação do usuário 
@@ -914,6 +914,47 @@ root | Usuário ROOT, o usuário root no sistema unix like sempre tem o numero d
 `root`| Nome do usuário
 `/root`| Home do usuário - Diretório padrão do usuário 
 `/bin/bash`| Interpletador de comandos do usuário.
+
+**/etc/group** 
+
+ze:x:1003
+
+Identificador | Descrição
+--------------|----------
+`ze`| nome do grupo
+`x` | Indica que a senha esta criptografada em outro arquivo
+`1003 | Identifica o ID do grupo.
+
+**/etc/gshadown**  
+como os grupos podem conter senhas, essas ficam armazenadas nesse arquivo 
+
+Identificador | Descrição
+--------------|----------
+`ze`| Nome do grupo 
+`!`:: | 
+`1003` | Id do grupo 
+`ze` | usuario do grupo
+
+Para visualizar as informações de um determinado  usuário usandos o comando:
+`id "nome do usuário"`
+
+Removendo um usuário
+`deluser "nome do usuário"`
+
+Criando um grupo novo 
+`addgroup "nome do grupo"
+
+Adicionando um usuário no grupo 
+`adduser ze "nome do grupo"
+
+Apagando um grupo
+`delgroup "nome do  grupo"
+
+Adicionando usuário no grupo SUDO
+`adduser ze sudo` - adiciona o usuário ze no grupo sudo
+
+Removendo usário com perfil /home 
+`deluser --home 
 
 Em um usuário convencional que não seja o ROOT, você verá também as informações que preencheu na criação do usuário, tais como, nome completo, sala, fone dentre outros.
 
@@ -925,12 +966,14 @@ Você pode também nesse arquivo criar um usuário na mão, para isso copia a li
 `root:$6$TXAWADASEFASEFSZ62S3SWAWIVUALSKWOA,XVLXWR:/:18301:0::0:0:root:/root:/bin/bash`
 
 **Linha usuário convencional**
-`ze:$6$WXAISLIGycELfF4SDslfwsalskwialxkvlaselserzvwee:17763:0:999999:7:::`
+`ze:$6$WXAISLIGycELfF4SDs$lfwsalskwialxkvlaselserzvwee:17763:0:999999:7:::`
 
  Linha | Descrição
 -------|----------
 ze | Usuário
-$6$ | $- Separador que identifica o tipo do algorítmo do HASCHE.
+$6$ | 6 serparado por cifrão  é uma identificação do algorítimo do hashe.
+$WXAISLIGycELfF4SDs$ | Número aleatório gerado quando se cria/altera a senha de um usuário, copm isso eses número mais mais a senha do usuário é que gera o hashe, logo a senha criada do usuário não esta escrito em arquivo nenhum de maneira que se alguém tiver acesso a esse arquivo não seja fácil de identifciar a senha do usuário. Uma situação onde a senha determinada para usuário x e y seja igual, o número aleeatório gerado é diferente, o que resulta eum um hashe diferente
+
 
 Obs: Existem regras para a geração de senhas, para que essas senhas nã osejam tão elementares, regras esas determinadas pelo arquivo **PAM** porém essas regras valem apenas para  usuários regulares, e não para o usuário ROOT.
 
