@@ -1101,5 +1101,19 @@ MATERIAL DE APOIO
 (https://www.guiafoca.org/guiaonline/iniciante/ch11.html)
 
 
+NOTA: SUDO - elevar previlegios de usuários para nível root, **não são todos os usuários com previlégios para utilizar o SUDO, o usuário cadastrado durante a instalação do sistema é um exemplo de usuário com esse previlégio.
+
+Localização do Arquivo SUDO
+`/var/etc/sudoers`
+
+![Alt text](image-31.png)
+Membros do grupo ADMIN terão previlégios para executar.
+Membros do grupo SUDO a executar todos os comandos
+
+Editando o arquivo SUDO
+`sudo visudo`
+
+
 
 <h3>SISTEMA DE INICIALIZAÇÃO SYSTEMD</h3>
+
