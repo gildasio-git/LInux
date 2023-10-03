@@ -1117,11 +1117,110 @@ Editando o arquivo SUDO
 
 <h3>SISTEMA DE INICIALIZAÇÃO SYSTEMD</h3>
 
+
 * Conceitos
+ * SystemD é um sistema de iniciação, ferramenta usada para dar inicío ao sistema, o funcionamento do sistema e não para instalação de coisas.
+
+ `BIOS/UEFI - >kernel,initram->init->serviços`
+
+ >Nota: **INITRAM** disco inicial que possui as informações necessárias para que o kernel seja capaz de dar prosseguimento na iniciação do SO, montando o sistema Raiz. e esse prosseguimento é justamente rodar um sistema de iniciação, que também chamamos de INIT. este por sua vez é o que vai carregar os serviços que foram configurados para iniciar assim que a maquina seja ligada.
+
 * História 
-* Polêmcia 
+ 
+ * Sistemas de iniciação são bem antigos.
+
+  * BSD Init - Ainda usado em alguns sistemas BSD
+  * System-V - GNULINUX, comuns em sistemas DEBIAN e maioria das distribuições, porém esse não permitira paralelismo, ou seja para carregar um segundo seriço teria que terminar o carregamento do primeiro o que consumia mais tempo, o que possibilitou outras alternavias como os sistemas abaixo:
+   
+   * Upstat  
+   * OpenRC
+   * Runinit
+ 
+   * SystemD 
+    * A criação do SystemD ocorreu em 2010 pelo Redhat, em 2011 o Fedora passou a usar o systemD, entre 2013 e 2014 surgiu uma discursão que antecedia o lançamento da versão estável do Débian versão 8 no sentido de: se iria ser implementado ou se não iria o SystemD, se iria usá-lo como default, ou se iria manter outras formas de iniciar o sistema, enfim, o resulado é que em 2015 quando foi lançado o Débian 8 o Débian optou por mantê-lo como DEFAULT. A partir daí todas a derivaçõe do Débian acababaram seguindo mesmo caminho. Sendo a partir 2015 toda a maoiria passou a usar o SystemD. Dentre algumas controvérsias, houveram uns bugs graves em 2016,2017, bugs de segurança. Existem uma distro derivada do Debina que é o DEVUAN que não usa o SystemD. O que é conhecida por distribuiçõe de protesto.
+
+* Polêmica 
+   * O porquê dessa polêmica? Bem um sistema de iniciação deveria iniciar os serviços, o SystemD faz muito mais do que isso, ele cuida da iiciação dos serviços, mais também cuida do **device manager** iniciação dos dispositivos (gernciamento dos dispositivos) cuida também de login, de rede, logs, ou seja cuida de uma porção de coisas, de certa forma muito centralizador.
+
+    - Init System
+    - Dispositivos -> Device Management 
+    - Login - Login management
+    - Rede -> Network management 
+    - Logs -> Logging management 
+
+* Muitas das polẽmcias é que muita gente acha que o SystemD quebrou a idéia **KISS**, o que é a idéia KISS ? que vem dos principios dos sitemas UNix, é a idéia de que os programas precisam fazer uma coisa simples, porém muito bem feita, e não querer fazer uma porção de coisas. Controvérsias a parte, um outro aspécito de atenção é que muitos arquivos do SystemD etão em formato binário. Muitos desses programas acabam sendo redundante com outros programas que fazem a mesma coisa.
+
 * Funcionamento 
+
+ * O Funcionamento do SystemD se baseia em um conceito chamado   **UNITS** ou unidades, que são algumas coisas que ele vai controlar. elas pode ser chamadas de:
+
+  * target
+  * Sockets
+  * Timers
+  * services
+
+  * Systemctl
+
+Os componentes que fazem parte do SytemD e que controlam serivços são: 
+  * Rede
+  * Dispositivos
+  * Tarefas
+  * Login
+  * Logs etc...
+  
+
 * Administração 
+ * Para administrar vamos usar uma ferramenta chamaca **systemctl** que permite a gente controlar os serviços quanto o funcionamento do serviço e como ele vai se comportar a cada boot.
+ 
+  * E para olhar logs  **journalctl** é a ferramenta que a gente para ter acesso aos registros, os logs dos sitema.
+
+  `sytemctl--no-pager`
+  `exportSYSTEMD_PAPER=""`
+
+  * O systemctl assim como o journalctl funcionam por padrão o que é chamado de pager, ou seja, um programa que página para ele não cuspir todo o conteúdo, para utilizar isso sempre você pode como mostrado acima personalizar uma varíavel, de modo que não irá fazer paginação.
 
 
-* Mão na Massa
+* Estado
+  * Uma das coisas que a gente precisa falar sobre serviços é o status, se o programa esta rodando, se foi carregado  e para isso usamos o programa **SYSTEMCTL**
+
+   * `systemctl status serviço`
+   * `systemctl stop serviço`
+   * `systemctl start serviçoP`
+   * `systemctl restart serviço`
+
+* Comportamento - Estado quem o serviço está após a iniciação da máquina.
+  
+   * `systemctl disable serviço` - Desabilita o serviço de modo que ão irá carregá-lo em um próximo boot.
+   * `systemctl enable serviço` - ao contrário , habilita o serviço.
+   * `systemctl is-enabled servico` - mostra qual comportamento do serviço em um próximo boot
+   * `systemctl mask alvo` - Mascara um serviço, mantendo ele oculto ao sistema, sem funcionamento. Evita que um serviço entre em funconamento sem que você perceba.
+   * `systemctl unmask alvo` - ao contrário desmacara um serviço 
+   * `systemctl list-units-t service` - verifica todas os serviços, todas as unidades correspondetes ao serviço.
+
+* Sistema  - Podemos enxergar o sistema como um todo, e isso é importante em muitas circunstâncias, inclusive para descobrir problemas e solucionar problemas.
+
+   * `systemd-analyze` - mostra todo o tempo que demorou o boot.
+   * `systemd-analyze blame` - Mostra melhor nível de detalhamento da inicialização apontando cada serviço e o tempo que demorou.
+   * `systemctl status` - mostra um geral de tudo, se tudo que estava habilitado para rodar, esteja rodando.
+   * `systemctl --failed`
+
+* No sitema Sytem-V tinha uma idéia de level "runlevel" -> system-V. Ou nível de execução, onde era determinado se o sistema iria inicializar o sistema gráfico, se iniciaria em modo multiusuário, ou monousuário. No Systemd também tem esse tipo de coisa, porém os nomes são diferentes e  a gente chama de alvo.
+
+Obs. esses alvos depende de outros serviços, ou seja ao escolher um alvo outros serviços necessitaram de entrar em funcionamento.
+
+   * `ystemctl get-default` - verifica o padrão 
+   * `systemctl set-default graphical.target` - Padrão gráfico a partir do próximo boot.
+   * `systemctl isolate multi-user.target` - coloca em modo multiusuário sem ambiente gráfico.
+
+
+* Logs
+   * `journalctl -b` - Analisar os logs do boot corrente 
+   * `journalctl -f` - Analisa os logs direto na tela 
+   
+   * `journalctl /usr/sbin/cron`
+   * `journalctl -b -u networking.service` - Análise os logs de um serviço específico.
+   * `journalctl  -f networking.service`
+
+
+
+* Mão na Massa.
