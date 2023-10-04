@@ -1354,7 +1354,7 @@ Comando | Descrição
 
 ### Material de apoio
 
-[SystemD](https://en.wikipedia.org/wiki/Systemd)
-[Debate DEBIAN](https://wiki.debian.org/Debate/initsystem/systemd)
+* [SystemD](https://en.wikipedia.org/wiki/Systemd)
+* [Debate DEBIAN](https://wiki.debian.org/Debate/initsystem/systemd)
 
 
