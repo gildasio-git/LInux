@@ -583,7 +583,8 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
     * `/etc/modprobe.d/*.conf`
     * blacklist módulo    
 
-----|-----------
+Descrição | Comando
+----------|----------
 `ls -lrsh` | lista os arquivos de log de forma l=longa, r=recusivo, s=Tamanho, h=Humano
 `du -shc /var/log/*` | Visualiza o tamanho total dos arquivos de  log está ocupando na máquina.
 `tail -f /var/log/syslog` | Lista em tempo reais captura de logs do sistema, usando o parâmetro -f=folowing, verá que sera mostrado em tempo real as informaçoes do dispositivo inserido na pora usb, como nome do dispositivos, porta usb conectada dentre outras informações, isso graças a um processo chamado **UDEV**, nesse momento um módulo do kernel caso precise, também será iniciado para ser possível o uso desse dispositivo.
