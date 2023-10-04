@@ -1242,7 +1242,7 @@ Comando | Descrição
 --------|----------
 `systemctl status`| Mostra um status da máquina, apontando o nome da maquina, duração do boot, bem como uma estrutura de árvore para melhor visualização, mostarndo a hierarquia, quem chamou quem, no processo de inicialização. De modo que é possível visualizar os processos que estão rodando como os serviços em funcionamento, ajuda para identificar algum problema.
 
-* Abaixo comandos para tratar serviços específicos.
+### Abaixo comandos para tratar serviços específicos.
   
 Comando | Descrição 
 --------|----------
@@ -1268,7 +1268,7 @@ Comando | Descrição
 --------|----------
 `journalctl -b -u ssh`| Informa relatório detalhado dos erros encontrados com determinado processo que por ventura não tenha rodado.
 
-* Comandos de gestão do serviço (Coportamento que o serviço terá)
+### Comandos de gestão do serviço (Coportamento que o serviço terá)
 
 Comando | Descrição 
 --------|----------
@@ -1286,7 +1286,8 @@ Comando | Descrição
 --------|----------
 `systemctl disable ssh.service --now` | Da mesma forma acima porém aqui além de desabilitar ele para o serviço
 
-* Mascarar seriço
+## Mascarar serviço
+ 
 Comando | Descrição 
 --------|----------
 `systemctl mask ssh` | Cria um link simbólico para o /dev/null, ou seja ele não mais iniciará mesmo usando os comandos de start, colocamos um serviço nesse status, quando não queremos que ele inicie.
@@ -1295,14 +1296,14 @@ Comando | Descrição
 --------|----------
 `systemctl unmask ssh.service |  Remove um serviço do status de mascarado
 
-* Obtendo informações de como um serviço funciona
-* 
+## Obtendo informações de como um serviço funciona
+
 Comando | Descrição 
 --------|----------
 `cat ssh.service`| Poderá ver o arquivo responsável por esse serviço, cada serviço possui um arquivo de configuração que defin as informações que vemos, a exemplo a Descrição do serviço.
 
-* Runlevels do SystemD
-* 
+### Runlevels do SystemD
+
 Comando | Descrição 
 --------|----------
 `systemctl X11-common.service`| Mostra o status do serviços gráfico 
