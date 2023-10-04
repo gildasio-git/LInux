@@ -171,24 +171,27 @@ DIRETÓRIO | Descrição
 
 ### COMANDOS BÁSICOS - PROGRAMAS
 
-1.  cd (Alterar diretório)
-2.  ls (Listar conteúdo de diretórios)
-3.  mv (mover)
-4.  mkdir (criar diretório)
-5.  rmdir (remover diretório vazio)
-6.  rm -rf (remover diretório não vazio)
-7.  cat (imprime saída do conteúdo de arquivo de tela)
-8.  less (paginador de tela e permite pesquisar temro usando o `/`)
-9.  grep (filtrar termos)
-10. find (localizar)
-11. tail (ler ultimas linhas texto)
-12. head (ler primeiras linhas de texto)
-13. --help  (ajuda)
-14. man (manual)
-15. `|` (PIPE concatenar comandos)
-16. `>` (direcionar saida)
-17. `>>`  (acrescentar conteúdo ao final de um arquivo de texto)
-18. cp (copiar arquivos/diretórios)
+Comando | Descrição
+--------|----------
+`cd`| Alterar diretório
+`ls` | Listar conteúdo de diretórios
+`mv` |mover
+`mkdir`| Criar diretório
+`rmdir`| remover diretório vazio
+`rm -rf`| remover diretório não vazio
+`cat` | imprime saída do conteúdo de arquivo de tela
+`less` | paginador de tela e permite pesquisar temro usando o `/`
+`grep` |filtrar termos
+`find` |localizar
+`tail` |ler ultimas linhas texto
+`head` |ler primeiras linhas de texto
+`--help`|  ajuda
+`man` | manual
+`|` | PIPE concatenar comandos
+`>` |direcionar saida
+`>>` | acrescentar conteúdo ao final de um arquivo de texto
+`cp` | opiar arquivos/diretórios
+`cp -R`| Copia arquivos e diretórios recusivamente
 
 * [MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
 * [MATERIAL DE APOIO](https://cotidianoti.com.br/Comandos-basicos-linux/)
