@@ -1221,6 +1221,24 @@ Obs. esses alvos depende de outros serviços, ou seja ao escolher um alvo outros
    * `journalctl -b -u networking.service` - Análise os logs de um serviço específico.
    * `journalctl  -f networking.service`
 
+* Mão na Massa
+
+  * Exemplos:
+    * `system-?`
+    * `journalctl -xe`
+    * `sytemctl`
+   
+* Comandos
+
+Comando | Descrição 
+--------|----------
+`systemd-analyse` | Mostra todo o processo de BOOT., mostra em espaço de kernel, as coisas que o kernel cuida quanto tempo levou para carremanto, e  após mostra o espaço de (userspace), ou seja as aplicações, o próprio SystemD, como também o alvo, o graphical.target. Mostar um resumo de tudo que aconteceu naquele boot.
+
+`systemd-analize blame` | Mostra um resumo do carregamento de cada um dos serviços, o tempo que levou para seu devido carregamento. Aqui não sugere o tempo todal de carregamento seja a soma total, at é porque os processos carregados são paralelizados.
+
+`systemctl status`| 
 
 
-* Mão na Massa.
+      
+
+  
