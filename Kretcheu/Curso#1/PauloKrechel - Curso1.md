@@ -674,17 +674,18 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
    ~~
 <h3>MÓDULOS DO KERNEL</h3>
 
- * Conceitos 
-  * Kernel Mnoolítico (lítico=pedra) ou seja "uma peça", a idéia de um kernel monolitico é que as atividades principais no núcleo de um kernel esteja em um único programa e é esse programa que é carregdo quando iniciamos o computador  e o processo de BOOT se dá. Em resumo o **KERNEL LINUX** ele é monolítico, suas tarefas principais desse kernel são uma única peça e são carregadas na hora do BOOT e não são descarregadas em momento nenhum. POrém ao mesmo tempo o kernel do LINUX ele é modular, então exite a possibilidade em que no momento que o kernel seteja  rodando a gente conseguir carregar um módulo, carregar um outro peçado de programa que irá fornecer um **driver (software capaz de comunidar com o hardware )** trocar informações entre o KERNEL eo  HARDWARE para poder as aplicações/ultilitários terem acesso a esse HARDWARE a esse tipo de módulo, a gente chama de **DRIVER**, mais á  módulos também que implmentam funcionalidades, eles não tem haver com o HARDWARE, a exemplo uma funcionalidade de fazer o  **NAT** que possibilita conversão de pacotes para transitar entre uma rede e outra. Outra funcionalidade típica que esta no módulo  é o SISTEMA DE ARQUIVOS podendo ter um módulo que é um programa que consegue entender como é que funciona aquele específico sitsema de arquivos.
+### Conceitos 
+
+Kernel Mnoolítico (lítico=pedra) ou seja "uma peça", a idéia de um kernel monolitico é que as atividades principais no núcleo de um kernel esteja em um único programa e é esse programa que é carregdo quando iniciamos o computador  e o processo de BOOT se dá. Em resumo o **KERNEL LINUX** ele é monolítico, suas tarefas principais desse kernel são uma única peça e são carregadas na hora do BOOT e não são descarregadas em momento nenhum. POrém ao mesmo tempo o kernel do LINUX ele é modular, então exite a possibilidade em que no momento que o kernel seteja  rodando a gente conseguir carregar um módulo, carregar um outro peçado de programa que irá fornecer um **driver (software capaz de comunidar com o hardware )** trocar informações entre o KERNEL eo  HARDWARE para poder as aplicações/ultilitários terem acesso a esse HARDWARE a esse tipo de módulo, a gente chama de **DRIVER**, mais á  módulos também que implmentam funcionalidades, eles não tem haver com o HARDWARE, a exemplo uma funcionalidade de fazer o  **NAT** que possibilita conversão de pacotes para transitar entre uma rede e outra. Outra funcionalidade típica que esta no módulo  é o SISTEMA DE ARQUIVOS podendo ter um módulo que é um programa que consegue entender como é que funciona aquele específico sitsema de arquivos.
 
   >**FIRMWARE** é um outro conceito, também é um software, mais ele é execuado não no processador principal da maquina que executa o kernel mais em um processador secundário, normalmente o processador de uma placa de rede por exemplo ela tem um processador, que em boa partes da vezes é de uma arquitetura diferente do processador principal da máquina que roda o kernel, esse software e executado naquele dispositivo, e quando um sofware  é executado em um dispositivo, nós o chamamos de **FIRMWARE**
 
   
- * Listar
+### Listar
   * Em dado momento é importante para quem esta administrando, saber quais os módulos estão carregados em determiando momento, para fazer isso tem um programa que é o `lsmod` ou também visualizar na estrutura de diretórios `cat/proc/modulos` que possue todos os módulos carreagdos naquele momento.
 
 
- * Carregar/Descarregar
+### Carregar/Descarregar
   * Em algumas circunstãncias vocẽ pode querer carrear um módulo, e existe formas para isso.
    * `modprobe "nome-do-módulo` 
    * `insmod "arquivo-do-módulo` 
@@ -843,12 +844,10 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 
 <h3>USUÁRIOS E GRUPOS</h3>
 
-  * Conceitos
+### Conceitos
   
- ```
 Tema mais de um tipo de usuário, logo podemos categorizar que existem usuários que são pessoas, usuário que ta ligado a uma pessoa que vai usar seu sistema, um usuário no sentido humano da palavra. E ela tem um usuário no sistema significa que ela tem um usuário no sistema, mais há outros tipos de usuários, são usuários de sistema, usuário que server para funcionar um programa,  que serve para funcionar um dispositivo, então o sistema GNU através do kernel linux, ele serpara, distingui essas coisas, conseguindo dar permissões diferentes,  previlégios diferentes, quem vai ou não ter acessos a determinado recurso. 
 Os programas que você executa com seu usuário são executados com as permissões de seu usuário, então isso implica em menores problemas de segurança, porque se houver uma falha em um programa e esse programa esta sendo executado com as suas próprias permissões, o seu usuário regular não tem permissão de alterar o sistema. Logo essa falha não se propaga ao ponto de comprometer todo o Sistema, aliás essa é uma das características principais que faz dos sistemas GNU muito mais seguro que os demais. Outro conceito são os usuários locais e usuários remotos. Porque? porque quando a genta fala de um sistema GNU estamos falando dos usuários que são daquele sistema, são usuários logais, mais alguns serviços podem usar sistemas de autenticação que são externos, que estão em outros computadores e para isso irá fazer  uso de um recurso  do GNU que é o **PAM** que é uma forma de se plugar módulos de autenticação separados, usando tecnologias das mais distintas. Então a gente tem os usuários locais e os usuários remotos. Usuários que são ligados a pessoas e os usuários que fazem parte do sistema.  e também temos o conceito de **GRUPOS** que são junõa de um grupo de usuários que fazem parte de um mesmo grupo. Tudo isso vai interferir no funcionamento do seu GNU linux.
-```
 
  * Programas
 
