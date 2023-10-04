@@ -583,7 +583,7 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
     * `/etc/modprobe.d/*.conf`
     * blacklist módulo    
 
-Descrição | Comando
+Comando   | Descrição
 ----------|----------
 `ls -lrsh` | lista os arquivos de log de forma l=longa, r=recusivo, s=Tamanho, h=Humano
 `du -shc /var/log/*` | Visualiza o tamanho total dos arquivos de  log está ocupando na máquina.
