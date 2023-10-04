@@ -1296,11 +1296,13 @@ Comando | Descrição
 `systemctl unmask ssh.service |  Remove um serviço do status de mascarado
 
 * Obtendo informações de como um serviço funciona
+* 
 Comando | Descrição 
 --------|----------
 `cat ssh.service`| Poderá ver o arquivo responsável por esse serviço, cada serviço possui um arquivo de configuração que defin as informações que vemos, a exemplo a Descrição do serviço.
 
 * Runlevels do SystemD
+* 
 Comando | Descrição 
 --------|----------
 `systemctl X11-common.service`| Mostra o status do serviços gráfico 
@@ -1326,7 +1328,8 @@ Comando | Descrição
 `systemctl status lightdm.servie` | Mostra status do gerenciador de login  gráfico.
 
 
-* Logs
+### Logs
+
 Comando | Descrição 
 --------|----------
 `journalctl -b`| Mostra todas as informações de log do boot atual, de forma paginada, desde o carregamento.
@@ -1337,7 +1340,8 @@ Comando | Descrição
 
 >Nota: o comando `sytemctl --no-paper`Mostra os logs sem paginação, ou enviar para uma variável de ambiente com o comando `export SYSTEMD_PAGER=""`, para descarregar essa variável use `unset SYSTEMD_PAGER`
 
-* Comandos de desligamento
+### Gerencimanto da máquina
+
 Comando | Descrição 
 --------|----------
 `systemctl shutdown`| Desliga 
@@ -1348,6 +1352,7 @@ Comando | Descrição
 `sytemctrl hybrid-sleep`| Coloca suspensão hibrida
 
 ### Material de apoio
+
 [SystemD](https://en.wikipedia.org/wiki/Systemd)
 [Debate DEBIAN](https://wiki.debian.org/Debate/initsystem/systemd)
 
