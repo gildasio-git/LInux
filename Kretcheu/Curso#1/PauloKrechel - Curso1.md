@@ -1276,5 +1276,79 @@ Comando | Descrição
 
 Comando | Descrição 
 --------|----------
-`systemctl disable ssh`| Desabilita um serviço para não carregar automaticamente ao dar reboot na máquina
-  
+`systemctl disable ssh`| Desabilita um serviço para não carregar automaticamente ao dar reboot na máquina, deabilitando os links simbólicos que apontam para o serviço, de forma como internamente o systemD cuida ou não de subir um ou outro serviço.
+
+Comando | Descrição 
+--------|----------
+`systemctl enabled ssh.service --now`| Habilita e coloca o processo para funcionar 
+
+Comando | Descrição 
+--------|----------
+`systemctl disable ssh.service --now` | Da mesma forma acima porém aqui além de desabilitar ele para o serviço
+
+* Mascarar seriço
+Comando | Descrição 
+--------|----------
+`systemctl mask ssh` | Cria um link simbólico para o /dev/null, ou seja ele não mais iniciará mesmo usando os comandos de start, colocamos um serviço nesse status, quando não queremos que ele inicie.
+
+Comando | Descrição 
+--------|----------
+`systemctl unmask ssh.service |  Remove um serviço do status de mascarado
+
+* Obtendo informações de como um serviço funciona
+Comando | Descrição 
+--------|----------
+`cat ssh.service`| Poderá ver o arquivo responsável por esse serviço, cada serviço possui um arquivo de configuração que defin as informações que vemos, a exemplo a Descrição do serviço.
+
+* Runlevels do SystemD
+Comando | Descrição 
+--------|----------
+`systemctl X11-common.service`| Mostra o status do serviços gráfico 
+
+Comando | Descrição 
+--------|----------
+`systemctrl get-default`| Mostra o alvo padrão, iniciação padrão do sistema atual.
+
+Comando | Descrição 
+--------|----------
+`systemctl isolate multi-user.target`| Seta apenas as coisas que o alvo depende 
+
+Comando | Descrição 
+--------|----------
+`systemctl set-default multi-user.target`| Defini o alvo para o próximo boot, sem ambiente gráfico. 
+
+Comando | Descrição 
+--------|----------
+`sytemctrl isolate graphical.target` | Carrega ambiente gráfico 
+
+Comando | Descrição 
+--------|----------
+`systemctl status lightdm.servie` | Mostra status do gerenciador de login  gráfico.
+
+
+* Logs
+Comando | Descrição 
+--------|----------
+`journalctl -b`| Mostra todas as informações de log do boot atual, de forma paginada, desde o carregamento.
+`journalctl -xe`| Mostra detalhes de erro durante carregamento de um determinado serviço.
+`journalctl -f`|  Realiza o Fllowing, ele segue mostrando em tempo real os logs dos eventos. 
+`journalctl /usr/cron`| Mostra os logs que refernte ao binário passado.
+`journalctl -b -u networking.service`| Mostra os logs específicos de um serviço.
+
+>Nota: o comando `sytemctl --no-paper`Mostra os logs sem paginação, ou enviar para uma variável de ambiente com o comando `export SYSTEMD_PAGER=""`, para descarregar essa variável use `unset SYSTEMD_PAGER`
+
+* Comandos de desligamento
+Comando | Descrição 
+--------|----------
+`systemctl shutdown`| Desliga 
+`systemctl poweroff`|  Desliga
+`systemctl suspend`| Suspende a máquina
+`systemctl hibernate`| Coloca em hibernação
+`systemctl reboot`| Reinicia 
+`sytemctrl hybrid-sleep`| Coloca suspensão hibrida
+
+### Material de apoio
+[SystemD](https://en.wikipedia.org/wiki/Systemd)
+[Debate DEBIAN](https://wiki.debian.org/Debate/initsystem/systemd)
+
+
