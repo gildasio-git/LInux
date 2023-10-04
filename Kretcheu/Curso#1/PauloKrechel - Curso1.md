@@ -209,64 +209,62 @@ Comando | Descrição
 Forma de representação de codificação simplificada inicialmente por caractere - como ASCII (padrão americano para troca de informações) este usa 7 bits de 1 byte que possuem um tamanho de 8 para representar os caracteres - São representados nesse padrão o alfabeto como também alguns caractesrs especiais como ASPAS, CIFRÃO, PORCENTAGEM etc.. os primeiros 32 caracteres de 0 a 31  são caracteres de controle, a exemplo o BEEP, atualmente existe a necessidade muito mais representação de caracteres, porque possuem vários outros idiomas que adotam cacaractres que não estão inclusos dentre esses 128 disponíveis no ASCII. Com isso ele foi evoluindo e hoje existem vários outros padrões, ATUALMENTE o mais utilizado é o UTF-8 (também chamadao de UNICODE) que quer dizer Unicode Transformation Code, este usa também como unidade um BYTE, porém pode usar de 1 até 4 bytes para representar cada 1 dos caracteres e com isso a quantidade de caracteres podendo ser representada pelo UTF-8 passa de um muilhão de caracteres, uma observação é que o ele é também compatível com o padrão ASCII uma vez que este possui a mesma representação no UTF-8, em resumo os caracteres representados pelo ASCII também é representado no UTF-8.
 
 ### IMPORTÂNCIA
-   
-    * Linguagem de programação
-    * Unix-like
-    * Arquivos de configuração 
-    * Ambiente gráfico 
-    * pluma
-    * gedit
-    * geany
-    * kate
-    * kwrite 
+ * Linguagem de programação
+ * Unix-like
+ * Arquivos de configuração 
+ * Ambiente gráfico 
+ * pluma
+ * gedit
+ * geany
+ * kate
+ * kwrite 
 
 ### USO EM TERMINAIS
-    * Nano, joe
-    * vim vim-basic
-    * nvi -> 4.4BSD
-    * mcedit -> Midnight Commander.  
+ * Nano, joe
+ * vim vim-basic
+ * nvi -> 4.4BSD
+ * mcedit -> Midnight Commander.  
 
 ### Conteúdo adicional
-    * (https://pt.wikipedia.org/wiki/ASCII)
-    * (https://pt.wikipedia.org/wiki/UTF-8)
-    * (https://pt.wikipedia.org/wiki/Texto_simples)
+ * (https://pt.wikipedia.org/wiki/ASCII)
+ * (https://pt.wikipedia.org/wiki/UTF-8)
+ * (https://pt.wikipedia.org/wiki/Texto_simples)
 
 ### Repositório para estudo de funcionalidades
-    * (https://github.com/calangohc/apresentacoes/tree/master/vim-magnun)
+ * (https://github.com/calangohc/apresentacoes/tree/master/vim-magnun)
 
 ### Videos (palestra VIM)
-    * (https://www.youtube.com/watch?v=UUzW46SeLhg)
-    
+ * (https://www.youtube.com/watch?v=UUzW46SeLhg)  
 
 ### SOBREVIVÊNCIA NO "VIM"
  * [Material de apoio](https://github.com/calangohc/apresentacoes/tree/master/vim-magnun) 
 
 ### MODOS
-   * COMANDO
-   * VISUAL
-   * INSERÇÃO
-   * LINHA DE COMANDO
+ * COMANDO
+ * VISUAL
+ * INSERÇÃO
+ * LINHA DE COMANDO
 
 <h3>PACOTES</h3> 
 
 ### ASCII e derivados
-* Unicode -> utf-8 compatível 
+ * Unicode -> utf-8 compatível 
 
 <h3>SISTEMAS DE ARQUIVOS</h3>
 <h4>Conceitos</h4>
 
-* Código Fonte
-* Compilador
-* Biblioteca de desenvolvimento
-* Conhecimento Técnico Específico
+ * Código Fonte
+ * Compilador
+ * Biblioteca de desenvolvimento
+ * Conhecimento Técnico Específico
 
 ### PACOTE:
 Um pacote de software é a menor unidade que pode ser instalado que usa pacotes, um poacote pode contar um único programa. Algumas vezes funciona por si só, apenas pensas daquele programa. Em outras circunstãncias precisa de bibliotecas de funções que são usadas por vários programas, Logo um pacote pode ser compostos por várias dessas bibliotecas. Há pacores ainda de documentação, como dentre outros como :
-  * Fontes
-  * Icones 
-  * Temas de ambiente
-  * Dados
-  * Textos
+ * Fontes
+ * Icones 
+ * Temas de ambiente
+ * Dados
+ * Textos
 
 >Um pacote pode ter mais de um programa, e um programa para funcionar pode precisar de vários pacotes. Porém existem pacotes que podem precisar de dependências, o que são essas **DEPENDÊNCIAS** são outros pacotes que aquele pacote que eu quero instalar precisa para que ele funcione, ou seja um apcote precisa de outro pacote, para que seja instalao o pacote A precisa do pacote B que essa por é necessário para o funcionando do pacote B. Pacotes debian vem recomendando existalação de pacotes dependentes. 
 
