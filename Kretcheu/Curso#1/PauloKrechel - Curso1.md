@@ -3,28 +3,27 @@
 **MANUAL DEBIAN**
 * www.debian.org/releases/stable/amd64/index.pt.html
 
-* BOOT
+## BOOT
 >Indicar o dispositivo que ira iniciar o sistema. ou UEFI ou BIOS., a partir do debian BUSTER não precisa desabilitar o "SECURITY BOOT". comanado **DD - Despejo de disco**,as imagens ja credenciam os dois tipos de sistema, UEFI / BIOS., pode ainda calcular o rash da imagem baixada para checar se a imgaem baixada esta ok.
 
-* REDE
+### REDE
 >Alguns noteboks precisam de firmware não livres, e como isso pode se deparar com tela reportando com a referẽncia dessa necessidade de firmware não livre, pode baixar de outro computador e apontar a mídia contendo o firmware não livre. Quando tem mais de uma placa o sistema ira detectar e pedir para escolher qual placa deseja usar, rede que não atribui automaticamente ip via DHCP, pode checar primeramente problema físico, cabo por exemplo. Porém saiba o endereço de seguimento do ip pode configurar manualmente, mais ainda pode continuar a instalação, falta da rede não impede a instalação do sistema.
 
-* PARTICIONAMENTO
+### PARTICIONAMENTO
 >Ler atentamente a msg para não apagar disco inteiro, pode separar com atencedẽncia uma partição para instalar ou fazer manualmente os particonamento. Uma observação os sistemas microsoft utilizam um sistema chamaqdo FAST BOOT ,que faz parecer que a iniciação do sistema é mais rápido, porém o que ele faz é uma hibernação., digo isso porque aqui pode ter problema ao participar o disco e durante a instalação do LINux ele reclamar que o modo hibernação do windows, isso em caso de DUAL boot,  esta ligado, e ai precisa desabilitar esse recurso no windows.
 
-* GRUB
+### GRUB
 >Observer tipo de boot UEFI/GPT.
 
-* INTERRUPÇÃO
+### INTERRUPÇÃO
 >Interrução energia, pode ocorrer. com isso precisara realizar o boot e recomeçar o processo de instalação sem problemas.
-
 
 <h3>MODELO MENTAL DO BOOT</h3>
 
-* BIOS (BASIC INPUT OUTPUT SYSTEM)
+### BIOS (BASIC INPUT OUTPUT SYSTEM)
 >Sistema que funciona desde a década de 80 e computadores até uns 10 12 anos atrás ainda funcionava com esse mesmo esquema extremamente limitado sem praticamente nenhum recurso muito alimentar e o processo de boot então ele tinha que passar por uma quantidade bastante grande de etapas até que se conseguisse iteração com o sistema operacional.
 
-* UEFI->GPT,DOS,FAT,PE,secure-boot
+### UEFI->GPT,DOS,FAT,PE,secure-boot
 De uns anos para cá a maior parte das máquinas já possuem o que substitui o bios que é uefi ou efe tem diversas vantagens sobre a bios e eu vou citar algumas delas aqui em qual f conhece ela tem inteligência faz parte do software embutido.
 conhecimento o entendimento de como funciona o sistema de particionamento gpt, também conhece o funcionamento do particionamento DOS, conhece o sistema de arquivos fat a bios não conhece qualquer sistema de ar que é ficou esse também o formato de arquivos. Tem recursos programas ali dentro para poder implementar o **secure boot** security é um recurso que faz com que a bios só carregue aquilo que foi assinado por certificados que estão gravados na máquina fazendo com que o sistema não boot qualquer coisa, é um mecanismo bastante interessante muita gente achou que isso era apenas para impedir que os gnu-linux funcionar sem o jogador mais no fim das contas isso acaba servindo de um recurso bastante interessante de configuração e de segurança para corporações, e para uso em desktops.
 
@@ -48,7 +47,7 @@ conhecimento o entendimento de como funciona o sistema de particionamento gpt, t
  * stage 1,5
    
 
-* GPT 
+### GPT 
  * Possui Tabela GPT primária e secundária parao caso de algum problema ocorrer.
 
 ESTRUTURA| 
@@ -63,7 +62,7 @@ Entry1 Entry2 Entry3 Entry4 |
 Eentrries 5-18|
 Secundary GPT Header |
 
-* BOOTLOADER
+### BOOTLOADER
 
 GLUB | (Mais de um estágio)
 |----|----------------
@@ -74,7 +73,8 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 
 >Quando utilizamos a UEFI não precisa de vários estágios porque a UEFI é capaz de entender o sistema de arquivos, portando é capaz de pegar um glub todo, não sendo estágio por estágio e que constuma estar em um arquivo que no caso do **grub** se chama grub64.efi, e esse grub64 também contém os vários módulos necessários, como módulos de rede, sistema de arquivos etc.
 
-* KERNEL
+### KERNEL
+
 >O Kernel dentro da nossa estrutura de diretório, ele é um arquivo, apenas um arquivo **/vmlinuz/boot/vmlinuz-5.6.13-gnu5-> 15 MB**  esse **z** porquqe esse arquivo  [FHC](https://refspecs.linuxfoundation.org/fhs.shtml)
   * Wwol - Cadas programa de um jeito!
   * Unix like - "Cada coisa no lugar definido"fica compactado dentro da nossa estrutura de diretórios, localizaod dentro do /boot. Esse não tem tamanho fisico depedendo das complicações gerais, a menos que venha pdronizado da equipe do debian. mais nada impede de você compilar seu próprio kernel.
@@ -85,13 +85,10 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 * /INITRD.IMG 
   * /boot/initrd.img-5.6.13-gnu
 
->É uma imagem de disco, ou melhor é uma imgem de disco, se olharmos dentro ele terá uma porção do  kernel, módulos que não estão no arquivo do kernel mais que são necessários para a sua maquina conseguir ter acesso ao dispositivo principal onde eta o sistema, ou seja seu HD, ele vai incluir esses módulos que são necessário para dar boot ao seu sistema. Quando você instala uma nova versão de kernel, um novo **INITRD.IMG** é montado com as coisas fundamentais que a sua máquina precisa ter acesso a raiz de iretorios e montar o \ , ou seja ter acesso a esturuta de diretório, possui um tamanho 8 a 20 MB porque também tem como a gente interferir como ele é criado. A exemplo posso criar um initrd.img em minha maquina, leva ro hd para outra e não funcionar, dar boot até que refaça o arquivo com os módulos necessários, o nome do arquivo também apresenta o nome da versão ao kernel, cada kernel tem um INITRD.IMG.
-
-
+É uma imagem de disco, ou melhor é uma imgem de disco, se olharmos dentro ele terá uma porção do  kernel, módulos que não estão no arquivo do kernel mais que são necessários para a sua maquina conseguir ter acesso ao dispositivo principal onde eta o sistema, ou seja seu HD, ele vai incluir esses módulos que são necessário para dar boot ao seu sistema. Quando você instala uma nova versão de kernel, um novo **INITRD.IMG** é montado com as coisas fundamentais que a sua máquina precisa ter acesso a raiz de iretorios e montar o \ , ou seja ter acesso a esturuta de diretório, possui um tamanho 8 a 20 MB porque também tem como a gente interferir como ele é criado. A exemplo posso criar um initrd.img em minha maquina, leva ro hd para outra e não funcionar, dar boot até que refaça o arquivo com os módulos necessários, o nome do arquivo também apresenta o nome da versão ao kernel, cada kernel tem um INITRD.IMG.
 
 ![Alt text](image.png)
 >Estrutura do BOOT - inicialização
-
 
 ![Alt text](image-1.png)
 >BIOS - Identificando os dispositivos
@@ -114,10 +111,10 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 ![Alt text](image-7.png)
 >Ambiente DESKTOP, exemplo MATE, DE - Desktop Enviroment.
 
-
-* PRINCIPIOS DO UNIX
+### PRINCIPIOS DO UNIX
  * HISTÓRICO
- >1956 | KEN THOPSON E DENNIS RITCHIE que começaram nos laboratŕios BELL LABS, MIT, AT&ET, Desenvolvendo um sistema chamado **MULTICS** algo como múltiplus, mais essa junção dessas empresa não deu muuito certo devido terem finalidade divergentes, interesses específicos.
+
+>1956 | KEN THOPSON E DENNIS RITCHIE que começaram nos laboratŕios BELL LABS, MIT, AT&ET, Desenvolvendo um sistema chamado **MULTICS** algo como múltiplus, mais essa junção dessas empresa não deu muuito certo devido terem finalidade divergentes, interesses específicos.
 
 >1969 | Começaram a desenvolver um sitema chamado UNICs -> Unix origem do 'X' do GNULINUX em assembry.
 
@@ -137,7 +134,7 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 <h3>FHS</h3>
 >Filesystem Hierarchy Standart
 
-* Origem 
+### Origem 
 >Originado Em 1996 quando começaram os trabalhos para definição desse PADRÃO juntamente com a comunidade do BSD - Univserisdade da Califórnia. Hoje é mantido pela LINUX FUNDATION.
  * fonte:
  [FHC](https://refspecs.linuxfoundation.org/fhs.shtml)
@@ -148,31 +145,31 @@ módulos| para poder carregar sistema de aruqivos, módulos de vídeo, criptogra
 
 DIRETÓRIO | Descrição
 |--------|-----------
-/ | Diretório Raiz
-/proc| Processos
-/dev |Dispositivos
-/boot | Kernel, initrd
-/bin | binários (E) Binários essenciais para o sistema
-/sbin | binários (adm) Essenciais para adm do sistema 
-/lib | bibliotecas - Biblioteca de funçãos que são usadas pelos programas que estão no /bin e /sbin
-/etc | Configuração - Aqui todos os programs colocam seus arquivos de configs, para programas maiores com mais arquivos de config. tem um subdiretorio dentro do /etc
-/media | Removíveis | monta conteúdo pendrives HDs etc..
-/mnt | Temporários - MOntagem termporários de volumos 
-/root |Usuário ROOT - Diretório particular do usuário root 
-/home | usuários  - Perfil dos usuários 
-/var | Variável - Conteúdo variável, ex. servidores web suas páginas ficam em um subdiretório nessa pasta, assim como dentro desse diretíro esta o /var/log que serve para monitorar mensagem de programas.
-/tmp | Arquivos temporários - conteúdo desse diretório é apagado quando desliga o sistema 
-/usr/bin | Binários de instalação de programas que não são os oficiais encontram -se nesse diretório
-/usr/sbin | Binários de administração do sistema 
-/usr/lib | Biblioteca que os programas contidos no /usr/bin e usr/sbin estão aqui nesse diretório.
-/usr/share | Aquivos independente da arquitetura x86 x64
-/usr/share/doc | Documentação dos programas dentro desse diretório, cada programa tem seu subdiretório.
-/usr/share/man | Manuais dos programas. 
+`/` | Diretório Raiz
+`/proc`| Processos
+`/dev` |Dispositivos
+`/boot` | Kernel, initrd
+`/bin` | binários (E) Binários essenciais para o sistema
+`/sbin` | binários (adm) Essenciais para adm do sistema 
+`/lib` | bibliotecas - Biblioteca de funçãos que são usadas pelos programas que estão no /bin e /sbin
+`/etc` | Configuração - Aqui todos os programs colocam seus arquivos de configs, para programas maiores com mais arquivos de config. tem um subdiretorio dentro do /etc
+`/media` | Removíveis | monta conteúdo pendrives HDs etc..
+`/mnt` | Temporários - MOntagem termporários de volumos 
+`/root` |Usuário ROOT - Diretório particular do usuário root 
+`/home` | usuários  - Perfil dos usuários 
+`/var` | Variável - Conteúdo variável, ex. servidores web suas páginas ficam em um subdiretório nessa pasta, assim como dentro desse diretíro esta o /var/log que serve para monitorar mensagem de programas.
+`/tmp` | Arquivos temporários - conteúdo desse diretório é apagado quando desliga o sistema 
+`/usr/bin` | Binários de instalação de programas que não são os oficiais encontram -se nesse diretório
+`/usr/sbin` | Binários de administração do sistema 
+`/usr/lib` | Biblioteca que os programas contidos no /usr/bin e usr/sbin estão aqui nesse diretório.
+`/usr/share` | Aquivos independente da arquitetura x86 x64
+`/usr/share/doc` | Documentação dos programas dentro desse diretório, cada programa tem seu subdiretório.
+`/usr/share/man` | Manuais dos programas. 
 
 ![Alt text](image-8.png)
 
 
-<COMANDOS BÁSICOS - PROGRAMAS>
+### COMANDOS BÁSICOS - PROGRAMAS
 
 1.  cd (Alterar diretório)
 2.  ls (Listar conteúdo de diretórios)
@@ -196,8 +193,6 @@ DIRETÓRIO | Descrição
 * [MATERIAL DE APOIO](https://www.inf.ufpr.br/cursos/ci055/artigos_linux_veteranos/gbbs14.pdf)
 * [MATERIAL DE APOIO](https://cotidianoti.com.br/Comandos-basicos-linux/)
 
-
-
 * Referẽncias
 * Idéia Geral
 * Princípais Diretórios
@@ -207,10 +202,10 @@ DIRETÓRIO | Descrição
 
 ![Alt text](image-10.png)
 
-* Plain text
-  ```Forma de representação de codificação simplificada inicialmente por caractere - como ASCII (padrão americano para troca de informações) este usa 7 bits de 1 byte que possuem um tamanho de 8 para representar os caracteres - São representados nesse padrão o alfabeto como também alguns caractesrs especiais como ASPAS, CIFRÃO, PORCENTAGEM etc.. os primeiros 32 caracteres de 0 a 31  são caracteres de controle, a exemplo o BEEP, atualmente existe a necessidade muito mais representação de caracteres, porque possuem vários outros idiomas que adotam cacaractres que não estão inclusos dentre esses 128 disponíveis no ASCII. Com isso ele foi evoluindo e hoje existem vários outros padrões, ATUALMENTE o mais utilizado é o UTF-8 (também chamadao de UNICODE) que quer dizer Unicode Transformation Code, este usa também como unidade um BYTE, porém pode usar de 1 até 4 bytes para representar cada 1 dos caracteres e com isso a quantidade de caracteres podendo ser representada pelo UTF-8 passa de um muilhão de caracteres, uma observação é que o ele é também compatível com o padrão ASCII uma vez que este possui a mesma representação no UTF-8, em resumo os caracteres representados pelo ASCII também é representado no UTF-8```.
+### Plain text
+Forma de representação de codificação simplificada inicialmente por caractere - como ASCII (padrão americano para troca de informações) este usa 7 bits de 1 byte que possuem um tamanho de 8 para representar os caracteres - São representados nesse padrão o alfabeto como também alguns caractesrs especiais como ASPAS, CIFRÃO, PORCENTAGEM etc.. os primeiros 32 caracteres de 0 a 31  são caracteres de controle, a exemplo o BEEP, atualmente existe a necessidade muito mais representação de caracteres, porque possuem vários outros idiomas que adotam cacaractres que não estão inclusos dentre esses 128 disponíveis no ASCII. Com isso ele foi evoluindo e hoje existem vários outros padrões, ATUALMENTE o mais utilizado é o UTF-8 (também chamadao de UNICODE) que quer dizer Unicode Transformation Code, este usa também como unidade um BYTE, porém pode usar de 1 até 4 bytes para representar cada 1 dos caracteres e com isso a quantidade de caracteres podendo ser representada pelo UTF-8 passa de um muilhão de caracteres, uma observação é que o ele é também compatível com o padrão ASCII uma vez que este possui a mesma representação no UTF-8, em resumo os caracteres representados pelo ASCII também é representado no UTF-8.
 
-  * IMPORTÂNCIA
+### IMPORTÂNCIA
    
     * Linguagem de programação
     * Unix-like
@@ -222,28 +217,28 @@ DIRETÓRIO | Descrição
     * kate
     * kwrite 
 
-  * USO EM TERMINAIS
+### USO EM TERMINAIS
     * Nano, joe
     * vim vim-basic
     * nvi -> 4.4BSD
     * mcedit -> Midnight Commander.  
 
-* Conteúdo adicional
+### Conteúdo adicional
     * (https://pt.wikipedia.org/wiki/ASCII)
     * (https://pt.wikipedia.org/wiki/UTF-8)
     * (https://pt.wikipedia.org/wiki/Texto_simples)
 
-* Repositório para estudo de funcionalidades
+### Repositório para estudo de funcionalidades
     * (https://github.com/calangohc/apresentacoes/tree/master/vim-magnun)
 
-* Videos (palestra VIM)
+### Videos (palestra VIM)
     * (https://www.youtube.com/watch?v=UUzW46SeLhg)
     
 
-* SOBREVIVÊNCIA NO "VIM"
+### SOBREVIVÊNCIA NO "VIM"
  * [Material de apoio](https://github.com/calangohc/apresentacoes/tree/master/vim-magnun) 
 
- * MODOS
+### MODOS
    * COMANDO
    * VISUAL
    * INSERÇÃO
@@ -251,9 +246,7 @@ DIRETÓRIO | Descrição
 
 <h3>PACOTES</h3> 
 
-
-
-* ASCII e derivados
+### ASCII e derivados
 * Unicode -> utf-8 compatível 
 
 <h3>SISTEMAS DE ARQUIVOS</h3>
@@ -264,8 +257,8 @@ DIRETÓRIO | Descrição
 * Biblioteca de desenvolvimento
 * Conhecimento Técnico Específico
 
->PACOTE:
-* Um pacote de software é a menor unidade que pode ser instalado que usa pacotes, um poacote pode contar um único programa. Algumas vezes funciona por si só, apenas pensas daquele programa. Em outras circunstãncias precisa de bibliotecas de funções que são usadas por vários programas, Logo um pacote pode ser compostos por várias dessas bibliotecas. Há pacores ainda de documentação, como dentre outros como :
+### PACOTE:
+Um pacote de software é a menor unidade que pode ser instalado que usa pacotes, um poacote pode contar um único programa. Algumas vezes funciona por si só, apenas pensas daquele programa. Em outras circunstãncias precisa de bibliotecas de funções que são usadas por vários programas, Logo um pacote pode ser compostos por várias dessas bibliotecas. Há pacores ainda de documentação, como dentre outros como :
   * Fontes
   * Icones 
   * Temas de ambiente
@@ -298,17 +291,17 @@ DIRETÓRIO | Descrição
 * REMOVER 
   * Remove tudo que o pacote instalou, mais mantém por uma questão de facilidade em alguns pacotes específicos, arquivos de configuração, caso instale um novo pacote ele não substituirá os arquivos ce configuração.
 
-* ATUALIZAR LISTA 
+### ATUALIZAR LISTA 
 
-  * Durante a instalação de um pacote , a ferramenta irá verificar existẽncia de dependência e caso precise irá instalar. Importante de tempos em tempos atualizar a base de pacotes disponíveis.
+Durante a instalação de um pacote , a ferramenta irá verificar existẽncia de dependência e caso precise irá instalar. Importante de tempos em tempos atualizar a base de pacotes disponíveis.
 
-* ATUALIZAR SISTEMA 
+### ATUALIZAR SISTEMA 
   * compara a versão dos pacotes instalada com as versões diponíveis na lista para instalação, cabe isso ao gestor de pacotes realizar esse processo.
 
-* PURGAR 
+### PURGAR 
   * Remove o pacote instalado bem como suas ramificações, a exemplo: arquivos de configurações.
 
-* ARQUIVO DEB
+### ARQUIVO DEB
 
 <h3>REPOSITÓRIOS</h3>
 
@@ -407,10 +400,10 @@ FAT-32,NTFS, ExtFat(pendrivers atuais)  | Sistema de arquivos
 windows.
 hfs | Sistemas MAC-OS.
 
-* Visualizando sistema de arquivos.
+### Visualizando sistema de arquivos.
  * `cat/proc/fileystems`
 
- * MATERIAL DE APOIO 
+### MATERIAL DE APOIO 
 
   * [Inode](https://pt.wikipedia.org/wiki/N%C3%B3-i)
   * [Jornaling](https://pt.wikipedia.org/wiki/Journaling)
@@ -422,8 +415,8 @@ hfs | Sistemas MAC-OS.
 
 <h4>TRABALHANDO COM SISTEMA DE ARQUIVOS</h4>
 
- * Dipositivos 
-  * A representação dos dispositivos pousseum diretório específico para eles que é o `/dev` então os discos ou dispoistivos de armazenamento recebe o nome de um arquivo que vai permitir o acesso direto a esse dispositivo como na imagem abaixo:
+### Dipositivos 
+A representação dos dispositivos pousseum diretório específico para eles que é o `/dev` então os discos ou dispoistivos de armazenamento recebe o nome de um arquivo que vai permitir o acesso direto a esse dispositivo como na imagem abaixo:
 
   ![Alt text](image-20.png)
 
@@ -431,7 +424,7 @@ hfs | Sistemas MAC-OS.
 
   >Em tercnologias mais modernas que usam o discos NVME o arranjo ficará da seguinte forma: `/dev/nvme0n1p1 - Primeira parte  nvme0n1 - Disco, p1 - Partição`
 
- * Particionamento 
+### Particionamento 
   
   ![Alt text](image-21.png)
 
@@ -447,11 +440,11 @@ hfs | Sistemas MAC-OS.
    * `win hybernation`
    * "**embromation** - quando desligamos maquinas com sistemas windows, na realidade ele não desliga totalmente o equipamento, deixa a maquina em um estado intermediário(Hibernado) e caso vocẽ tente escrever nessa partição a partir de um sistema linux estando em dual boot você vai receber uma msg informando que a unidade esta hibernada. "
 
- * MONTAR MÍDIAS 
+### MONTAR MÍDIAS 
 
  ![Alt text](image-22.png)
  
- * Espaço
+### Espaço
 >Espaço usado em tese seria a soma to total de arquivos gravados no disco, porém lembre-se que nem sempre um arquivo ocupa totalmente um bloco, o que irá gerar uma sobra, sendo aqui um pouco menor do espaço ocupado, é o espaço que não pode ser usado. **AINDA ASSIM** existe um espaço reservado para o usuário **ROOT**.
 
  ![Alt text](image-23.png)
@@ -497,22 +490,22 @@ hfs | Sistemas MAC-OS.
 
 >NOTA - para visualizar lista de dispositivos de armazamento, bem como seus espaços utilizados e disponíveis use os comandos `df -h` ou `df -H`.
 
-* VERIFICAR A **INTEGRIDADE** DO DISCO
+### VERIFICAR A **INTEGRIDADE** DO DISCO
 
 >NOTA: Integridade é verificar se toda a estrutura da área de controle esta ok, se foi montada adequadamente ou desmontada, toda vez que montamos uma partição é escrito lá que ela foi montada 
 e quando desmontamos essa alteração e realizada para o status de desmontada.
 
  * `fsck.ext4 /dev/sda`
 
-* OBTER INFORMAÇÕES SOBRE O SISTEMA DE ARQUIVOS
+### OBTER INFORMAÇÕES SOBRE O SISTEMA DE ARQUIVOS
    
  * `dumpe2fs /dev/sda2` - Traz informações soebre o sistema de arquivos, são várias, uma bacana de ver é a última vez que foi checado, numero de INODES, DATA DE CRIAÇÃO DO SISTEMA DE ARQUIVOS, ULTIMA VEZ QUE ELE FOI MONTADO, ULTIMA VEZ QUE ELE FOI ESCRITO. 
 
-* OBTER O QUE ESTA TOMANDO MAIS ESPAÇO EM SEU DISCO
+### OBTER O QUE ESTA TOMANDO MAIS ESPAÇO EM SEU DISCO
  * `du -shc /*`  - Soma a quantidade de epaço usado em todos os diretórios, pode ser usado com a variação **SORT** para ordenar, pode também especificar um diretório  unico como:
  * `du -shc /home/*`
 
-* MATERIAL DE APOIO 
+### MATERIAL DE APOIO 
 
   * [Hibernação do Windows](https://learn.microsoft.com/pt-BR/troubleshoot/windows-client/deployment/disable-and-re-enable-hibernation)
 
@@ -522,8 +515,8 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
 <h3>AULA-18 | RESOLVER PROBLEMAS COM LOGs</h3>
 
 
-* LOGS
- * Mensagens recebidas e registradas no sistema que permite um adminsitrador realizar autitorias acerca de programas  ou do sistema, de modo que ajude na manutenção e correção de problemas no SO.
+### LOGS
+Mensagens recebidas e registradas no sistema que permite um adminsitrador realizar autitorias acerca de programas  ou do sistema, de modo que ajude na manutenção e correção de problemas no SO.
 
 
  * Localização dos arquivos de LOGs
@@ -540,13 +533,13 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
         * rsyslog
         * syslog-ng 
 
-* CONCEITOS
+### CONCEITOS
 
 ![Alt text](image-24.png)
  * Quadro acima destaca as principais categorias de mensagens recebidas dos logs, bem como seu nível crítico ou não de importância.
 
 
-* PRINCIPAIS ARQUIVOS 
+### PRINCIPAIS ARQUIVOS 
 
  Localização | Descrição
 |------------|-----------
@@ -554,12 +547,12 @@ e quando desmontamos essa alteração e realizada para o status de desmontada.
 `/var/log/auth.log` | Mantém mensagens de login no sistema, informações de sucesso, falha e tentativas de login.
 `/var/kernel.log` | Mantém mensagens relativas ao kernel do sistema, a exemplo um módulo do sistema que é carregado.
 
-* ENTENDENDO AS MENSAGENS 
+### ENTENDENDO AS MENSAGENS 
 
  * Estrutura de uma mensagem de log
   `horário:máquina:programa[processo]<criticidade>:mensagem`
 
-* LOGGER
+### LOGGER
  * Trata-se de um programa separado que serve para você usar em script, que através deste você pode encaminhar mensagems para os servidor de LOGs, de modo simples se você digitar o comando `logger e a mensagem` essa mensagem vai aparecer no servidor de log.
  ![Alt text](image-25.png)
 
@@ -604,7 +597,7 @@ Comando   | Descrição
 
 >**Resolver um problema é consequência de entender qual sua causa. Mais importante que funcionar é saber o porquê funcinou"**
 
-* GUIA 
+### GUIA 
 
  * Definir / Identificar o problema/atividade
  * Objetivo 
@@ -622,18 +615,18 @@ Comando   | Descrição
  * Porque X?
  * Causa e efeito.
 
-* DIRETRIZES GEARAIS 
+### DIRETRIZES GEARAIS 
  * Abstração x informática
  * Exemplo: foto/video
  
-* ABORDAGEM do funcionamento, tudo o que precisa para funcionar
+### ABORDAGEM do funcionamento, tudo o que precisa para funcionar
 
  * Calma
  * Paciência
  * Entender o que esta fazendo 
  * O que faz cada parte da linha decomando.
 
-* DIRETRIZES GERAIS 
+### DIRETRIZES GERAIS 
  * Observar / investigar
  * Identificar e entender
  * Estratégia
@@ -641,7 +634,7 @@ Comando   | Descrição
  * Uma coisa de cada vez 
  * Variáveis 
 
-* GUIA PRÁTICO 
+### GUIA PRÁTICO 
  * Rodar num terminal 
  * Ver logs 
  * Onde vejo os logs?
@@ -655,7 +648,7 @@ Comando   | Descrição
  * Debian/versão
  * Português / inglês
 
-* Como pesquisar?
+### Como pesquisar?
 
 >FONTES
  * [como pesquisar](https://hotmart.com/pt-br/blog/pesquisa-avancada-no-google) 
@@ -713,12 +706,12 @@ NOTA: Se vocẽ compilou um módulo que não veio na distribuição e vocẽ qui
 NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kenel ) e funciona em um espaço muito especial porque é um espaço de kernel, não espaço de usuário onde roda nossos aplicativos/programas , por isso que usar um módulo não livre é perigoso sendo usado em  espaço de kernel.
 
 
-* Automatizar
+### Automatizar
  * Existe mecanismos autmáticos de carregamentos dos módulos 
    * Udev
     * Incorporada dentro do sistema de inicialização que é o SYSTEMD e a gente pode alterar isso através de alguns arquivos chamados **.rules** que estão no diretório `/etc/udev/rules.d` que possue as definições de como um determinado módulos devem ser carregados, eu posso passar um número de dispositivo e dizer que módulo carregar e coisas desse tipo. 
 
-   * Durante o BOOT
+### Durante o BOOT
     * `/etc/modules.conf`
     * `/etc/modules-load.d` caminho das distros atualmente 
 
@@ -740,8 +733,7 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 
 >NOTA: Pode ocorrer falha no carreamento do módulo, caso esse dependa de outro módulo. Vocẽ pode consultar os arquivos de dependências de módulos no caminho `/lib/modules/"kernel"/` dentro desse diretório estão alocados uma série de arquivos, dentre eles um que trata das dependências que podera visualizar com o comando `less modules.dep` vai mostrar o nome do arquivo que tem o módulo e se possui dependẽncias vinculadas a ele.
 
-
- * Tem alguns módulos que podem ser carregados e descarregados porque eles foram compilados separadamente do KERNEL, podendo estes ser também compilados e inclusos no KERNEL, estes módulos não poderão ser descarregados com o kernel em funcionamento., esses módulos embutos também são visualizados no caminho `less /lib/modules/"kernel"/modules.dep`.
+Tem alguns módulos que podem ser carregados e descarregados porque eles foram compilados separadamente do KERNEL, podendo estes ser também compilados e inclusos no KERNEL, estes módulos não poderão ser descarregados com o kernel em funcionamento., esses módulos embutos também são visualizados no caminho `less /lib/modules/"kernel"/modules.dep`.
 
  * Exemplos de módlos que podem ser carregados automaticamente
   * Usando o comando `tail -f /var/log/syslog` e plugar um dispositivo/pendrive poderá observar o carregamento em tempo real desse dispositivo. Ao desconectar o dispositivo o módulo continuara com  o módulo carregado, podendo ser descarregado manualmente, atentando-se para as dependências.
@@ -752,7 +744,7 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 
 <h3>COMPILAR KERNEL</h3>
 
-* Porque?
+### Porque?
 
  * Pessoal
   * Para seu deleite, porque quer fazer uma coisa na sua maquina, aprender como tudo funciona.
@@ -763,16 +755,15 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 * Como?
 * Mão na massa!
 
-
-* O que é?
+### O que é?
 
  * Todo programa possui um código(as linhas de programação que um programador escreveu)aglumas dessas linguagens são interpretadas, o que é isso? Existe um programa na hora que vamos executar esse programa que foi inscrito, existe um outro programa chamado interpretador que vai intepretar cada uma das linhas de programação, que é um código em texto, por isso edição de texto puro, porque o código é um texto, um texto escrito produzidos por seres humanos que conseguem ler, modificar, entender. Alguns programas são interpletados no momento em que ele são executados, como por exemplos: programas feitos em python, shellscript, javascript entre outros. Existem progrmas que podem tanto serem interpretadas como compiladas.
 
-* Compilar 
+### Compilar 
 
   * **COMPILAÇÃO** tesmos um pograma que é o compilador que lê o código fonte escrito escrito em texto, e converte isso, transforma para uma quantidade outra de códigos, que são códigos das instruções de um determinado processador de uma determinada arquitetura, então um mesmo programa pode ser compilado pra arquitetura diferentes, porque o compilador conhece a linguagem de pgoramação e conhece o conjunto de instruções daquela arquitetura daquele processador. Logo esse processo de compilação é fazer essa transformação. Essa transformação é feita não hora que o programa vai ser executado, é realizada muito antes, então o programa é compilado apois isso pegamos a versão compliada e executar em um sistema operacional, a essa versão a gente chama de versão binária.
 
-* Kernel e Módulos
+### Kernel e Módulos
 
   * Quando a gente fala de compilar kernel, a gente ta falando  de compilar o kernel que é um arquivo de kernel, que é aquele que fica no `/boot/vmlinuz` `/lib/modules/versão` é aquele arquivo que a gente vai criar, mais não só aquele arquivo, aquele arquivo vai conter uma porção de partes do kernel como: "**gerenciador de memória", "gerenciador de disco", "gerenciador de processos**" e tudo mais que precisa ter no kernel pra poder funcionar. Mais também quando a gente compila o kernel, a gente compila uma porção de módulos, outros tantos que não estão embutidos naquele arquivo. Eetão os conceitos que estamos falando aqui, são os conceitos de módulos aqui é uma parte do kernel que é compilada separadamente, quando esse módulo é compilado junto desse arquivo a gente diz que é **BUITIN** embutido dentro desse arquivo **vmlinuz** carregado pelo bootloader e não é descarrgado enquanto equipamento esta em funcionamento. Em resumo quando compilmaos o kernel, compila esse arquivo VMLINUX, bem como uma porção de outros programas que são os módulos.
 
@@ -790,15 +781,12 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 
 >NOTA: Se você quiser compilar depois um outro conjunto de módulos, tem como fazer? tem sim, existem ferramentas que automatizam esse processo **DKMS**.
 
-* MÃO NA MASSA
+### MÃO NA MASSA
+
  * Cerca de 30 -> 3h.
-
-
  * Pacotes necessários
-
  * Para poder compliar o kernel é necessário ter os seguintes pacotes instalados, são eles.
-   
-
+ 
  1. `apt install build-essential bc kmod cpio flex liblz4-tool libncurses-dev libelf-dev`
 
  2. Baixando e desmpacotando os fontes, Agora vamos baixar os fontes do linux e desempacotar.
@@ -850,9 +838,8 @@ NOTA: O que é esse **MODINFO** (programa que entra em contato direto com o kene
 Tema mais de um tipo de usuário, logo podemos categorizar que existem usuários que são pessoas, usuário que ta ligado a uma pessoa que vai usar seu sistema, um usuário no sentido humano da palavra. E ela tem um usuário no sistema significa que ela tem um usuário no sistema, mais há outros tipos de usuários, são usuários de sistema, usuário que server para funcionar um programa,  que serve para funcionar um dispositivo, então o sistema GNU através do kernel linux, ele serpara, distingui essas coisas, conseguindo dar permissões diferentes,  previlégios diferentes, quem vai ou não ter acessos a determinado recurso. 
 Os programas que você executa com seu usuário são executados com as permissões de seu usuário, então isso implica em menores problemas de segurança, porque se houver uma falha em um programa e esse programa esta sendo executado com as suas próprias permissões, o seu usuário regular não tem permissão de alterar o sistema. Logo essa falha não se propaga ao ponto de comprometer todo o Sistema, aliás essa é uma das características principais que faz dos sistemas GNU muito mais seguro que os demais. Outro conceito são os usuários locais e usuários remotos. Porque? porque quando a genta fala de um sistema GNU estamos falando dos usuários que são daquele sistema, são usuários logais, mais alguns serviços podem usar sistemas de autenticação que são externos, que estão em outros computadores e para isso irá fazer  uso de um recurso  do GNU que é o **PAM** que é uma forma de se plugar módulos de autenticação separados, usando tecnologias das mais distintas. Então a gente tem os usuários locais e os usuários remotos. Usuários que são ligados a pessoas e os usuários que fazem parte do sistema.  e também temos o conceito de **GRUPOS** que são junõa de um grupo de usuários que fazem parte de um mesmo grupo. Tudo isso vai interferir no funcionamento do seu GNU linux.
 
- * Programas
+### Programas
 
-```
 Alguns programas que usamos para administrar os usuários são: 
 
 Programa | Descrição
@@ -866,7 +853,7 @@ userdel|
 usermod| Alterar informações de um usuário
 groupmod| Alterar informações de um grupo 
 
-* Os três primerios são scripts que usam o adduser, são outras ferramentas que também podem ser usadas assim como u serdel, usermod, groupmod, são programas que administram os usuários.
+Os três primerios são scripts que usam o adduser, são outras ferramentas que também podem ser usadas assim como u serdel, usermod, groupmod, são programas que administram os usuários.
   
 E a interface gráfica?  É possível realizar atlerações a nível de usuário e grupos utilizando a interface gráfica. Algumas sim, você pode alterar sua senha sem  necessáriamente abrir um terminal, Dependendo do ambiente desktop que você usa irá ter lá terá a possibilidade a alterar as informações do próprio usuário. Existem outros aplicativos gráficos com essa finalidade.
 
@@ -888,9 +875,8 @@ Se você tem um sistema utilizado por mais de uma pessoa não é recomendado edi
  * vigr -S
 
 Porque esses recursos fazem um lock nos arquivos, ele trava os arquivos de modo que durante o processo de mautenção de usuários, e um programa e/ou outra pessoa tentar alterar esses arquivos, o arquivo está travado, logo você não irá perder as informações nem bacunçar o conteúdo desses arquivos.
-```
 
- * Mão na Massa 
+### Mão na Massa 
 
  Programa | Descrição
 ----------|----------
