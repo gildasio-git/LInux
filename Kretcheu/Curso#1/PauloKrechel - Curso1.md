@@ -1240,9 +1240,41 @@ Comando | Descrição
 
 Comando | Descrição 
 --------|----------
-`systemctl status`| 
+`systemctl status`| Mostra um status da máquina, apontando o nome da maquina, duração do boot, bem como uma estrutura de árvore para melhor visualização, mostarndo a hierarquia, quem chamou quem, no processo de inicialização. De modo que é possível visualizar os processos que estão rodando como os serviços em funcionamento, ajuda para identificar algum problema.
 
+* Abaixo comandos para tratar serviços específicos.
+  
+Comando | Descrição 
+--------|----------
+`systemctl status ssh.service` | Mostra o status do serviço SSH, pode incluir tanto o ssh.service, como ssh, aqui mostra informações sobre o processo, activo, habilitado, tempo de carregamento, caminho dos arquivos de manuais, caminho do binário, e resumo dos últimos logs do serviço.
 
-      
+Comando | Descrição 
+--------|----------
+`systemctl stop ssh`| Para o serviço
 
+Comando | Descrição 
+--------|----------
+`systemctl restart ssh`| Para o serviço e reinicia com apenas uma linha de comando.
+
+Comando | Descrição 
+--------|----------
+`systemctl --fail`| Informa o serviço que não subiu 
+
+Comando | Descrição 
+--------|----------
+`journalctl -xe`| Mostra relatório do serviço com erro 
+
+Comando | Descrição 
+--------|----------
+`journalctl -b -u ssh`| Informa relatório detalhado dos erros encontrados com determinado processo que por ventura não tenha rodado.
+
+* Comandos de gestão do serviço (Coportamento que o serviço terá)
+
+Comando | Descrição 
+--------|----------
+`systemctl is-enabled ssh`| Pergunta se  um determinado serviço configurado para iniciar automaticamente. O que não quer dizer que esteja rodando  no momento. 
+
+Comando | Descrição 
+--------|----------
+`systemctl disable ssh`| Desabilita um serviço para não carregar automaticamente ao dar reboot na máquina
   
