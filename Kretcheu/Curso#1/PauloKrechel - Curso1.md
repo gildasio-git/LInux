@@ -975,7 +975,6 @@ NOTA: Caso queira consultar o conteúdo do conjunto de pastas do usuário quando
 
 **CONCEITOS** 
 
-```
 Quem é que recebe as permissões, a idédia do UNIX onde tudo é arquivo, ou seja em que há uma repsentação de tudo, um arquivo, um diretório, um processo rodando na máquina, ele é visto como um arquivo. E as permissões diz respeito justamente aos arquivos, e que vão interferir em todo o funcionamento de um sistema Unix Like.
 
 Então essas informações sobre os arquivos e permissões estão gravadas nas estruturas dos sistema de arquivos, são os **metadados** dos arquivos, não são as informações dos arquivos  como imagem, um programa, mais sim os metadados, informações que estão armazendas na estutura de controle do sistema de arquivos.
@@ -983,8 +982,6 @@ Então essas informações sobre os arquivos e permissões estão gravadas nas e
 É claro que sistema de arquivos diferentes terão de possibilidade de permissão diferentes também, aqui vamos falar do sistema de arquivos **POSIX** Sistemas Operacionais UNIX LIKE.
 
 Um arquivo vai ter uma propriedade, ele sempre tem uma propriedade, a quem ele pertence e as permissões serão dadas em virtude a quem pertence os arquivos.
-
-```
 
 PROPRIEDADE
 
