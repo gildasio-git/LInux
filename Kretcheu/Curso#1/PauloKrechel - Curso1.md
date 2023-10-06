@@ -1223,4 +1223,45 @@ Obs. esses alvos depende de outros serviços, ou seja ao escolher um alvo outros
 
 
 
-* Mão na Massa.
+<h3>PAM</h3>
+
+### PAM - PLUGGABLE AUTHENTICATION  MODULE - Módulos Encaixaveis de Autenticação.
+
+Qualquer programa que necessite de autenticação como:
+
+ * SSH
+ * GDM
+ * LIGHTDM
+
+Temos um serviço, e para que o acesso a esse serviço seja possível é preciso uma autenticação. Imagine que existe diversas formas de autenticação, por senha, por código, por um outro serviço que faz autenticação como LDAP, aqui chamado de autenticador, um serviço que tem a base de usuários que serve para fazer a autenticação. Acontece que o serviço nem sempre seta disponível para todos. Um exemplo um servidor web, todos pdoe acessar na maioria, porém existem serviços que não esta disponíveis para acesso a qualquer um, apenas para um grupo reservado, e esse grupo reservado de pessoas é que pode ter acesso aquele serviço, por isso precisamos de alguém que autentique, que diga que aquela pessoa, garantir autenticidade daquela pessoa, dentre os usuários que possue credencial para acessar aquele serviço.
+
+ * LDAP
+ * UNIX
+ * ACTIVE DIRECTORY - Que dentre outras coisas trata-se de um LDAP.
+ * RADIUS
+
+>Existem outros diversos autenticadores, tem uma infinidade de formas deferentes de se autenticar de se manter base de dados de usuários, de regular se vai ter senha, se vai possuir tokem, tantas e tantast outras, como também tem um monte de possíveis serviços, como ja mencionado acima **gdm, servidor web, gdm, shell, login** imagine que um desenvolvedor de um serviço, caso queira fazer que o  serviço dele possa vir a ser controlado por um autenticador, ele teria que desenvolver a forma de comunicação entre aquele serviço que esta desenvolvendo e todos os autenticadores possívels, o que seria bastante custoso. com isso qual a idéia do **PAM**.
+ 
+
+No PAM cria-se um módulo, esse módulo é uma parte desenvolvida por alguém que conhece o protocolo de um autenticador, esse módulo sabe como enviar infomrações para para o LDAP, então tem o módulo do LDAP, tem outro módulo que sabe como como é que faz para autenticar com os usuários e senhas de maquinas UNIX, tem um outro módulo que sabe como autenticar com o RADIUS e assim sucessivamente. A partir disso o que é realizado pelo desenvolvedor dos serviços, e estabelecer um jeito programado para conseguir se autenticar usando protocolo padrões do PAM, então o PAM estabelece uma forma de trocar informações para fazer essa autenticação. como o PAM possui um módulo par cada um dos autenticadores  de modo que estabelecendo esssa estrutura, o serviço conhece o meio necessário para ser autenticado pelo PAM, e o PAM com isso vai conseguir autenticar em vários serviços para os quais possuir um módulo. Então o que um criador de um autenticar.
+
+O que um criador de autenticador faz? Quando deseja fazer alguma forma diferente de se autenticar, ele cria um módulo para o PAM, então aquele novo autenticar criou um módulo um módulo para o PAM, todos os serviços ja disponíveis que conseguem conversar com o PAM também consegue se autenticar nele. Quando quero criar um novo serviço, o que esse serviço vai fazer? vai fazer a possibilidade de se autenticar com o PAM, então na hora que o novo serviço se autenticar com o PAM, ele consegue ja se autenticar com todos os serivços há um módulo disponível.
+
+Em resumo, o serviço consegue conversar com o PAM, o PAM troca informações com o serviço, aí o PAM através do módulo específico troca infomrações com o autenticador ai consegue-se fazer o serviço, o usuário se autenticar no serviços através do PAM.
+
+Cada um desses serviços precisa ter uma configuração, para justamente o serivço saber exatamente como vai ser feita essa autenticação, então dentro da estrutura do PAM, vamos ter arquivos de configuração  para cada um dos serviços que a gente que o PAM autentique. Logo teremos um arquivo de configuração para o ***SSH, GDM, LIGHTDM*** etc.
+
+
+A gente pode dizer que uma abstração porque o serviço em sí só conhece como ele troca informações com o PAM, e ele conhece como? porque ele foi preparado para ser possível autenticar no PAM. o PAM quando recebe essa solicitação, ele vai olhar uma configuração que é específica daquele serviço, Há o SSH é para funcionar dessa forma, não quer dizer que tenha que funcionar igual o GDM, LOGIN ou outro qualquer. Cada um tem seu próprio arquivo de configuração, recebe informação do servico verifica a configuração, identifica o serviço de autenticação, conversa com os servidor LDAP quando for o caso, devolve par o serviço ok ,e ai somente o serivço libera para autenticação. De forma que podemos dizer que trata-se de uma camada de abstração.
+
+
+![Alt text](image-32.png)
+
+
+O trabalhodo PAM não é somente na autenticação., mas também para estabeler critérios, a exemplo para altera uma senha, garantindo níveis de segurança, numero de caracteres entre outras. Esatabecendo assim critérios para a conta desse usuário.
+
+## Arquivo de configurações do PAM
+`/etc/pam.d`  
+
+>NOTA:Quando usuário for altera uma senha o passwd vai pegar essa senha passar para o módulo PAM que vai fazer os cáculos devidos e vai vefifiacr se bate o hash la com o que esta no /etc/shadow, caso não ele devolve para o passwd, caso não bata ele devolve para o passwd para notificar o usuário da invalidade da senha.
+
