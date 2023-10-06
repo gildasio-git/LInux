@@ -1222,7 +1222,6 @@ Obs. esses alvos depende de outros serviços, ou seja ao escolher um alvo outros
    * `journalctl  -f networking.service`
 
 
-
 <h3>PAM</h3>
 
 ### PAM - PLUGGABLE AUTHENTICATION  MODULE - Módulos Encaixaveis de Autenticação.
