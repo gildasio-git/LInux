@@ -1367,3 +1367,6 @@ Comando | Descrição
 
 `network-manager` - Pacote gerenciador de rede em modo texto ou gráfica.
 `nmtui` - Chama em moodo texto o software network manager.
+
+>MATERIAL DE APOIO 
+ * [Lista aulas de rede](https://github.com/kretcheu/dicas/blob/master/videos.redes.md)
