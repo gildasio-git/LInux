@@ -1232,7 +1232,7 @@ Qualquer programa que necessite de autenticação como:
  * GDM
  * LIGHTDM
 
-Temos um serviço, e para que o acesso a esse serviço seja possível é preciso uma autenticação. Imagine que existe diversas formas de autenticação, por senha, por código, por um outro serviço que faz autenticação como LDAP, aqui chamado de autenticador, um serviço que tem a base de usuários que serve para fazer a autenticação. Acontece que o serviço nem sempre seta disponível para todos. Um exemplo um servidor web, todos pdoe acessar na maioria, porém existem serviços que não esta disponíveis para acesso a qualquer um, apenas para um grupo reservado, e esse grupo reservado de pessoas é que pode ter acesso aquele serviço, por isso precisamos de alguém que autentique, que diga que aquela pessoa, garantir autenticidade daquela pessoa, dentre os usuários que possue credencial para acessar aquele serviço.
+Temos um serviço, e para que o acesso a esse serviço seja possível é preciso uma autenticação. Imagine que existe diversas formas de autenticação, por senha, por código, por um outro serviço que faz autenticação como LDAP, aqui chamado de autenticador, um serviço que tem a base de usuários que serve para fazer a autenticação. Acontece que o serviço nem sempre está disponível para todos. Um exemplo é um servidor web. Todos pódem acessar na maioria, porém existem serviços que não estão disponíveis para acesso a qualquer um, apenas para um grupo reservado, e esse grupo reservado de pessoas é que pode ter acesso aquele serviço, por isso precisamos de alguém que autentique, que identifique aquela pessoa, e  garanta autenticidade daquela pessoa dentre os usuários que possue credencial para acessar aquele serviço.
 
  * LDAP
  * UNIX
@@ -1242,25 +1242,128 @@ Temos um serviço, e para que o acesso a esse serviço seja possível é preciso
 >Existem outros diversos autenticadores, tem uma infinidade de formas deferentes de se autenticar de se manter base de dados de usuários, de regular se vai ter senha, se vai possuir tokem, tantas e tantast outras, como também tem um monte de possíveis serviços, como ja mencionado acima **gdm, servidor web, gdm, shell, login** imagine que um desenvolvedor de um serviço, caso queira fazer que o  serviço dele possa vir a ser controlado por um autenticador, ele teria que desenvolver a forma de comunicação entre aquele serviço que esta desenvolvendo e todos os autenticadores possívels, o que seria bastante custoso. com isso qual a idéia do **PAM**.
  
 
-No PAM cria-se um módulo, esse módulo é uma parte desenvolvida por alguém que conhece o protocolo de um autenticador, esse módulo sabe como enviar infomrações para para o LDAP, então tem o módulo do LDAP, tem outro módulo que sabe como como é que faz para autenticar com os usuários e senhas de maquinas UNIX, tem um outro módulo que sabe como autenticar com o RADIUS e assim sucessivamente. A partir disso o que é realizado pelo desenvolvedor dos serviços, e estabelecer um jeito programado para conseguir se autenticar usando protocolo padrões do PAM, então o PAM estabelece uma forma de trocar informações para fazer essa autenticação. como o PAM possui um módulo par cada um dos autenticadores  de modo que estabelecendo esssa estrutura, o serviço conhece o meio necessário para ser autenticado pelo PAM, e o PAM com isso vai conseguir autenticar em vários serviços para os quais possuir um módulo. Então o que um criador de um autenticar.
+No PAM cria-se um módulo, esse módulo é uma parte desenvolvida por alguém que conhece o protocolo de um autenticador, esse módulo sabe como enviar informações para para o LDAP, então tem o módulo do LDAP, tem outro módulo que sabe como como é que faz para autenticar com os usuários e senhas de maquinas UNIX, como tabmém um módulo que sabe como autenticar com o RADIUS e assim sucessivamente. A partir disso o que é realizado pelo desenvolvedor dos serviços, e estabelecer um jeito programado para conseguir se autenticar usando protocolo padrões do PAM, então o PAM estabelece uma forma de trocar informações para fazer essa autenticação. como o PAM possui um módulo para cada um dos autenticadores  de modo que estabelecendo esssa estrutura, o serviço conhece o meio necessário para ser autenticado pelo PAM, e o PAM com isso vai conseguir autenticar em vários serviços para os quais possuir um módulo.
 
-O que um criador de autenticador faz? Quando deseja fazer alguma forma diferente de se autenticar, ele cria um módulo para o PAM, então aquele novo autenticar criou um módulo um módulo para o PAM, todos os serviços ja disponíveis que conseguem conversar com o PAM também consegue se autenticar nele. Quando quero criar um novo serviço, o que esse serviço vai fazer? vai fazer a possibilidade de se autenticar com o PAM, então na hora que o novo serviço se autenticar com o PAM, ele consegue ja se autenticar com todos os serivços há um módulo disponível.
+O que um criador de autenticador faz? Quando deseja fazer alguma forma diferente de se autenticar, ele cria um módulo para o PAM, então aquele novo autenticar criou um módulo, um módulo para o PAM, todos os serviços ja disponíveis que conseguem conversar com o PAM também consegue se autenticar nele. Quando quero criar um novo serviço, o que esse serviço vai fazer? vai fazer a possibilidade de se autenticar com o PAM, então na hora que o novo serviço se autenticar com o PAM, ele consegue ja se autenticar com todos os serviços que possui um módulo disponível.
 
-Em resumo, o serviço consegue conversar com o PAM, o PAM troca informações com o serviço, aí o PAM através do módulo específico troca infomrações com o autenticador ai consegue-se fazer o serviço, o usuário se autenticar no serviços através do PAM.
+Em resumo, o serviço consegue conversar com o PAM, o PAM troca informações com o serviço, aí o PAM através do módulo específico troca informações com o autenticador que  consegue fazer o serviço, o usuário se autenticar no serviços através do PAM.
 
-Cada um desses serviços precisa ter uma configuração, para justamente o serivço saber exatamente como vai ser feita essa autenticação, então dentro da estrutura do PAM, vamos ter arquivos de configuração  para cada um dos serviços que a gente que o PAM autentique. Logo teremos um arquivo de configuração para o ***SSH, GDM, LIGHTDM*** etc.
+Cada um desses serviços precisa ter uma configuração, para justamente o serivço saber exatamente como vai ser feita essa autenticação, então dentro da estrutura do PAM, vamos ter arquivos de configuração  para cada um dos serviços que a gente deseja que o PAM autentique. Logo teremos um arquivo de configuração para o ***SSH, GDM, LIGHTDM*** etc.
 
 
-A gente pode dizer que uma abstração porque o serviço em sí só conhece como ele troca informações com o PAM, e ele conhece como? porque ele foi preparado para ser possível autenticar no PAM. o PAM quando recebe essa solicitação, ele vai olhar uma configuração que é específica daquele serviço, Há o SSH é para funcionar dessa forma, não quer dizer que tenha que funcionar igual o GDM, LOGIN ou outro qualquer. Cada um tem seu próprio arquivo de configuração, recebe informação do servico verifica a configuração, identifica o serviço de autenticação, conversa com os servidor LDAP quando for o caso, devolve par o serviço ok ,e ai somente o serivço libera para autenticação. De forma que podemos dizer que trata-se de uma camada de abstração. 
+A gente pode dizer que é uma abstração, porque o serviço em sí só conhece como ele troca informações com o PAM, e ele conhece como? porque ele foi preparado para ser possível autenticar no PAM. o PAM quando recebe essa solicitação, ele vai olhar uma configuração que é específica daquele serviço, a exemplo, o SSH é para funcionar dessa forma, não quer dizer que tenha que funcionar igual o GDM, LOGIN ou outro qualquer. Cada um tem seu próprio arquivo de configuração, recebe informação do servico, verifica a configuração, identifica o serviço de autenticação, conversa com os servidor LDAP quando for o caso, devolve par o serviço ok ,e ai somente o serviço libera para autenticação. De forma que podemos dizer que trata-se de uma camada de abstração. 
 
 
 ![Alt text](image-32.png)
 
 
-O trabalhodo PAM não é somente na autenticação., mas também para estabeler critérios, a exemplo para altera uma senha, garantindo níveis de segurança, numero de caracteres entre outras. Esatabecendo assim critérios para a conta desse usuário.
+O trabalhodo PAM não é somente na autenticação., mas também para estabeler critérios, a exemplo para altera uma senha, garantindo níveis de segurança, numero de caracteres entre outras. Estabelecendo  assim critérios para a conta desse usuário.
 
 ## Arquivo de configurações do PAM
 `/etc/pam.d`  
 
->NOTA:Quando usuário for altera uma senha o passwd vai pegar essa senha passar para o módulo PAM que vai fazer os cáculos devidos e vai vefifiacr se bate o hash la com o que esta no /etc/shadow, caso não ele devolve para o passwd, caso não bata ele devolve para o passwd para notificar o usuário da invalidade da senha.
+>NOTA:Quando usuário for altera uma senha, o passwd vai pegar essa senha passar para o módulo PAM que vai fazer os cáculos devidos e vai verificar se bate o hash  com o que esta no **/etc/shadow**, caso não ele devolve para o passwd para notificar o usuário da invalidade da senha.
 
+
+
+
+<h3>CONFIGURAÇÃO DE REDE  - IP </h3>
+
+ * Funcionamento 
+ * Dispositivos 
+ * Configuração 
+ * Resolução de nomes
+ * Desktop 
+ * Notebook 
+ * Mão na Massa
+
+# Funcionamento 
+
+![Alt text](image-33.png)
+
+## Dispositivos
+ * Os dispositivos estão ligados fundamentalmente ligados ao barramento PCI, ou ao barramento USB, não importa se é ou não uma placa dedicada, ou dispositivo conectados via sockete da placa mãe, o que importa é que como o kernel ja possui o módulo do PCI, usando os comandos descritos abaixo ja conseguimos obter informações cruciais para a gente conhecer qual é o nosso dispositivo.
+
+ ## PCI
+
+ Comando | Descrição
+ --------|---------
+ lspci -nnkd::0200 | Obtém infomrações do dispositivo de rede conectados ao barramento PCI, o que é esse **0200**, é a classe do dispositivo, no caso 0200 aparece normalmente as placas de rede ethernet que serão colocados cabos de rede.
+ lspçi -nnkd::0280 | Classes correspondentes as placas de rede sem fio.
+
+Comando | Descrição
+ --------|---------
+ lsusb -tv | Mostra informações dos dispositivos, aqui aparecem os dispositivos de rede wifi adaptadores conectados via USB.
+ 
+>Porque é importante saber informações desses dispositivos? Bem, se esta tudo funcionanto isso passa batido, mais se eventualmente algum dispsitivo apresente problemas, ai você precisa dessas informações para descobrir o que esta faltando para funcionar 
+
+
+## Módulo (driver)
+ * Um pedaço de programa que se acopla ao kernel ou que ja está embutido no kernel para conseguir conversar com o dispositivo. Maioria dos módulos dos dispositivos que estão conectados aos barramentos PCI e USB são **BUILTIN** ou seja, ja incluídos no kernel.
+
+## Firmware
+ * Também um pedaço de programa que roda não no processador principal da máquina, mais no processador do próprio dispositivo e muitas vezes é de  uma arquitetura de hardware diferente, isso desrepeito ao funcionamento do equipamento, mais não basta somente isso para termos rede, precisamos da infraestrutura de rede que são os protocolos.
+
+## Configuração de Rede
+A configuração de rede a gente usa um programa chamado IP  para ver/analisar qual é a configuração de rede em dado momento, via terminal podemos usar os comandos abaixo:
+
+Comando | Descrição
+ --------|---------
+ip link -> ip l | Lista todos os dispositivos habilitado como também se estão em estado **up** ou **down**
+ip address -> ip a | Conseguimos ver de todas as interfaces de rede disponível, qual foi o ip atribuido a elas, qual é o **MAC ADDRESS**, bem como outras informações, como tamanho de pacote, nome da interface etc..
+ip foute -> ip r | Mostra as rotas que os pacote terão que tomar para acesso internet, outras redes.
+iw | Equivalentes ao IP mais para dispositivos **WIFI**
+iwconfig | 
+
+
+>NOTA: Podemos usar esse programa ip para aplica configurações de IP/ROTA aos dispositivos porém essas informações são temporárias, servem apenas para enquanto a máquina estiver ligada.Para atribuir configurações de rede de forma permanente precisaremos alterar arquivos de configuração.
+
+## Conectividade 
+Quanto uma máquina consegue alcançar a outra, consegue enviar um pacote de rede para outra e assim obter resposta dessa requisição.
+
+Comando | Descrição
+--------|---------
+ping -c 3 1.1.1.1 | Envia 3  pacotes **ICMP** para um ip/Máquina e set udo estiver ok devolve uma resposta chamada **ICMP RESPONSE**
+
+
+## RESOLUÇÃO DE NOMES
+Resolução de nomes é a maneira que a gente fala para uma consulta de DNS.  O que é isso? na internet a gente acessa as coisas, sempre usando um número de identificação da máquina que a gente quer acessar. Mais como isso é dificil de ser memorizado por seres humanos, a gente usa nomes de máquinas, pore exemplo **wikipedia.org** é o nome de uma máquina que possui um servidor web instalado onde esta o site da wikipedia. Quem faz a conversão desse nome para IP é o servidor de DNS, para resolver o nome, saber se a gente esta resolvendo o nome, podemos usar o programa **host**  se digitarmos o comando **host wikipedia.org** nossa estrutura de rede vai tentar consultar isso, descobrindo o ip da maquina que possui esse site hospedado. Toda vez que vai haver uma requisição de nome, um arquivo muito importanteu que é o **/etc/resolv.conf** é consultado. O que tem nesse arquivo? nesse arquivo tem uma lista de quais são os servidores DNS que a gente esta usando naquele momento, logo se quiser mudar basta alterar esse arquivo.
+
+
+## PERFIL SERVIDOR
+**SERVIDOR** Perfil não alterável com frequência, logo se pussui um servidor hospdado ness máquina, a rede é  configurada de modo que não fique cosntamente alterando as configuração nesse equipamento. Da mesma forma o **DESKTOP** da sua casa, você não fica trocando toda hora quais as confiurações de rede que quer usar. A menos que tenha deixado como configuração dinâmica, nesse caso o seu roteador na sua residência é que vai sugerir as  configurações para essa máquina. A configuração pode ser realizada no arquivo:
+`/etc/network/interfaces`
+
+## PERFIL NOTEBOOK
+As configurações de rede podem mudar toda hora, você pode estar na sua casa e usar a sua rede WIFI, porém no trabalho estar utilizando uma rede wifi diferente ou em alguns casos, pode também esta usando uma rede cabeada. Para esse tipo de configuração existe um softwara **Network-Manager** ou **Wicd** ambos com interface gráfica. Mais recentemente tem uma outra forma de fazer configuração no DEBIAN que usa uma ferramenta chamada **Netctl** que se baseia inclusive nessa idéia de pefis, é um pacote que veio do arch linux.
+
+
+## MÃO NA MASSA
+
+ * Teste
+ * Configuração 
+ * Servidor - Desktop 
+ 
+ * Notebook manager
+ * Modo texto
+ * Gráfico 
+
+Comando | Descrição
+--------|---------
+`ip -l`ou `ip link` | Lista os nomes das interfaces de rede que possui na máquina, bem como informações de status ligado ou desligado, UP ou DOWN.
+`ip a`| Lista os dispositivos de rede com informações de endereçamento IP, nível melhor  de detalhes
+`ping -c 3 1.1.1.1` | Testa conectividade entre máquina locais ou internet.
+`ip route` | Mostra as rotas definidas
+`host wikipedia.org` | Realiza uma consulta DNS devolvendo informações do dominio pesquisado, trazendo seu número ip e respectivos servidores de email.
+`iwconfig` | Pertencente ao `Wireless tools` Devolve informações da rede WIFI
+`iw dev wlo1 scan | grep SSID` | Scaneia a rede, envia e recebe pacotes de todas as redes wifi dentro do alcance, e lista todas a redes alcançaveis.
+
+## ARQUIVO DE CONFIGURAÇÃO DE REDE 
+
+![Alt text](image-34.png)
+
+
+`systemctl restart networking.service0` - Reinicia serviço de rede após alterações 
+
+`network-manager` - Pacote gerenciador de rede em modo texto ou gráfica.
+`nmtui` - Chama em moodo texto o software network manager.
