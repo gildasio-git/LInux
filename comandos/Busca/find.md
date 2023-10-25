@@ -51,7 +51,7 @@ Comando | Descrição
 `find /etc -maxdepth 2 - iname *.conf` | #Pesquisa arquivos até segundo nível de diretório, ignorando palavras maiusculas e minusculas todos os arquivos .conf contido nesse diretório.
 
 
-
+#
 
 
 
