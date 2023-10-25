@@ -50,7 +50,7 @@ Comando | Descrição
 `find /etc/ -type f -name *login* -exec cp {} /tmp ";"` | #Variação do comando acima, porém agora esta copiando o resultado para o diretório /tmp, lembre-se que o resultado estará dentro de '{}'.
 `find /etc -maxdepth 2 - iname *.conf` | #Pesquisa arquivos até segundo nível de diretório, ignorando palavras maiusculas e minusculas todos os arquivos .conf contido nesse diretório.
 
-#
+teste
 
 
 
