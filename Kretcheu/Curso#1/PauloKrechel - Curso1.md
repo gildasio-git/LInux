@@ -1372,5 +1372,4 @@ Comando | Descrição
  * [Lista aulas de rede](https://github.com/kretcheu/dicas/blob/master/videos.redes.md)
 
 
-### [GITHUB - DICAS KRETCHEU](https://github.com/kretcheu/dicas)
-
+### [GITHUB - DICAS KRETCHEU](https://github.com/kretcheu/dicas).
