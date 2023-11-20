@@ -1221,6 +1221,24 @@ Obs. esses alvos depende de outros serviços, ou seja ao escolher um alvo outros
    * `journalctl -b -u networking.service` - Análise os logs de um serviço específico.
    * `journalctl  -f networking.service`
 
+>Nota: o comando `sytemctl --no-paper`Mostra os logs sem paginação, ou enviar para uma variável de ambiente com o comando `export SYSTEMD_PAGER=""`, para descarregar essa variável use `unset SYSTEMD_PAGER`
+
+### Gerencimanto da máquina
+
+Comando | Descrição 
+--------|----------
+`systemctl shutdown`| Desliga 
+`systemctl poweroff`|  Desliga
+`systemctl suspend`| Suspende a máquina
+`systemctl hibernate`| Coloca em hibernação
+`systemctl reboot`| Reinicia 
+`sytemctrl hybrid-sleep`| Coloca suspensão hibrida
+
+### Material de apoio
+
+* [SystemD](https://en.wikipedia.org/wiki/Systemd)
+* [Debate DEBIAN](https://wiki.debian.org/Debate/initsystem/systemd)
+
 
 <h3>PAM</h3>
 
