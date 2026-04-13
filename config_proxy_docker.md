@@ -191,7 +191,28 @@ O erro real estava no daemon não utilizando o proxy configurado.
 
 ---
 
+## Recomentação final 
+Sempre que a senah do proxy mudar, lembre-se se atualizar estes 2 pontos principais 
+
+Sistema
+```bash
+sudo nano /etc/environment
+```
+
+Docker (caso tenha)
+```bash
+sudo chmod 600 /etc/docker/daemon.json
+sudo chown root:root /etc/docker/daemon.json
+```
+
+Configuração Snap 
+``
+sudo snap set system proxy.http="http://44448:NOVA_SENHA@10.20.0.4:3128"
+sudo snap set system proxy.https="http://44448:NOVA_SENHA@10.20.0.4:3128"
+``
+
 ## Conclusão
+
 
 Problema resolvido com sucesso através de:
 
