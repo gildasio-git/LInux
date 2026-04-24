@@ -1,5 +1,6 @@
 # 📦 Manual Completo — Backup Docker + Agendamento (Produção)
 # obs. editar o crontab do root (sudo crontab -e)
+# linha do crontab "0 3 */15 * * /opt/scripts/backup_docker.sh >> /var/log/backup_cron.log 2>&1"
 ---
 
 # 🧾 1. Script Definitivo de Backup
